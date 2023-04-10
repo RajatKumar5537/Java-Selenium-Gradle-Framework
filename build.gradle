@@ -1,0 +1,63 @@
+apply plugin: 'application'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+group = 'application'
+version = '0.0.1'
+
+description = """"""
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets {
+main {
+java {
+if(System.getProperty('idea.active')){
+srcDir 'src'
+}
+else if(System.getProperty('eclipse.active')){
+srcDir 'src/main/java'
+}
+}
+}
+}
+eclipse.classpath.file.whenMerged {
+    entries.findAll { it instanceof org.gradle.plugins.ide.eclipse.model.SourceFolder }.each { it.entryAttributes.remove("gradle_used_by_scope"); it.entryAttributes.remove("gradle_scope"); it.entryAttributes.remove("test"); it.output = "bin" }
+    entries.findAll { it instanceof org.gradle.plugins.ide.eclipse.model.Library }.each { it.entryAttributes.remove("gradle_used_by_scope"); it.entryAttributes.remove("gradle_scope"); it.entryAttributes.remove("test") }
+}
+repositories {   
+  mavenCentral()
+}
+dependencies {    
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.2'
+   	implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.0.3'
+   	implementation('org.testng:testng:7.1.0')
+   implementation group: 'org.apache.poi', name: 'poi-ooxml', version:'5.1.0'
+    // https://mvnrepository.com/artifact/com.github.ozlerhakan/poiji
+implementation group: 'com.github.ozlerhakan', name: 'poiji', version: '2.2.0'
+    
+	implementation('com.aventstack:extentreports:5.0.0')
+    implementation('com.aventstack:extentreports-testng-adapter:1.0.3')
+   	implementation('io.appium:java-client:8.0.0')
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.0'
+    implementation group: 'com.oracle.database.jdbc', name: 'ojdbc8', version: '21.3.0.0'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version:'1.1.1'
+	implementation('net.sf.json-lib:json-lib:2.4:jdk15')
+    implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '8.4.1.jre8'
+    implementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3' 
+   	implementation 'com.github.javafaker:javafaker:1.0.2'
+}
+
+
+task runTests(type: Test) {
+	 	useTestNG() {
+        testLogging.showStandardStreams = true
+	    useDefaultListeners = true
+        suites 'testng.xml'
+    }
+    testLogging {
+      events "PASSED", "FAILED", "SKIPPED"
+   }
+reports.html.enabled = true
+}
