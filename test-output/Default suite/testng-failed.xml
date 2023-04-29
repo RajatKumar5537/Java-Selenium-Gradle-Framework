@@ -3,18 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jivi.auto.employeetest.RoaserSetup">
+      <class name="com.jivi.auto.employeetest.JiViewsEmployeeTest">
         <methods>
-          <include name="createShiftBandDefinition"/>
           <include name="beforeMethod"/>
-          <include name="endTest"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
+          <include name="VerifyTerminateAndLoginwithNewEmployee"/>
           <include name="afterTestSuite"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.jivi.auto.employeetest.RoaserSetup -->
+      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

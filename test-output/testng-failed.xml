@@ -4,52 +4,20 @@
   <listeners>
     <listener class-name="com.jivi.auto.reports.ExtentITestListenerClassAdapter"/>
   </listeners>
-  <test thread-count="5" name="Test1(failed)">
-    <classes>
-      <class name="com.jivi.auto.employeetest.JiViewsEmployeeTest">
-        <methods>
-          <include name="VerifyEmpUpdateMisc"/>
-          <include name="VerifyEmpProCreationFiveEmp"/>
-          <include name="beforeMethod"/>
-          <include name="VerifEmpIDSerach"/>
-          <include name="afterClass"/>
-          <include name="afterTestSuite"/>
-          <include name="VerifyEmpUpdateAddRolesNegative"/>
-          <include name="VerifyEmpAddinEmpProfileAlreadyExist"/>
-          <include name="VerifyEmpUpdateDuplicate"/>
-          <include name="VerifyEmpAddinEmpProfile"/>
-          <include name="VerifyLoginwithNewEmployee"/>
-          <include name="VerifyEmpUpdateESS"/>
-          <include name="VerifyEmpUpdateSecurity"/>
-          <include name="beforeSuiteSetup"/>
-          <include name="afterMethod"/>
-          <include name="VerifyEmpUpdate"/>
-          <include name="setUpClass"/>
-        </methods>
-      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeTest -->
-    </classes>
-  </test> <!-- Test1(failed) -->
   <test thread-count="5" name="Test2(failed)">
     <classes>
-      <class name="com.jivi.auto.employeetest.RoaserSetup">
+      <class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
         <methods>
-          <include name="createShiftBandDefinition"/>
-          <include name="rosterCreation"/>
-          <include name="rosterGroupAssignmentAddingAllEmp"/>
           <include name="beforeMethod"/>
-          <include name="endTest"/>
-          <include name="rosterGroupAssignmentRemoveAllEmp"/>
-          <include name="afterClass"/>
-          <include name="rosterGroupAssignmentRemoveSelectedEmp"/>
-          <include name="afterTestSuite"/>
-          <include name="editShiftBandDefinition"/>
-          <include name="rosterGroupAssignmentAddingSelectedEmp"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
-          <include name="reActivatedeletedShiftBandDefinition"/>
+          <include name="afterClass"/>
+          <include name="VerifyEmpUpdateAddRolesNegative"/>
+          <include name="VerifyEmpUpdateMisc"/>
+          <include name="afterTestSuite"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.jivi.auto.employeetest.RoaserSetup -->
+      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
     </classes>
   </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

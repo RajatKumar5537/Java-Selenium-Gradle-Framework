@@ -1,6 +1,8 @@
 package com.jivi.auto.employeepages;
 
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,19 +12,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.jivi.auto.business_reusablecomponents.ReusableComponents;
 import com.jivi.auto.pageobjectutils.DropDown;
 import com.jivi.auto.pageobjectutils.WebElementKeys;
 import com.jivi.auto.reusablecomponents.FrameHandler;
 import com.jivi.auto.utilities.BaseTest;
+
 import junit.framework.Assert;;
 
 
 
-public class JiViewsEmployee extends BaseTest{
+public class JiViewsEmployeeAdministration extends BaseTest{
 	private WebDriver driver;
 	
 	FrameHandler mousehandler = new FrameHandler();
@@ -377,8 +378,37 @@ public class JiViewsEmployee extends BaseTest{
 			WebElement confirmPassSave;
 			
 			
+	//Terminate Employee
+			@FindBy(xpath="//*[text()='Disciplinary']")
+			WebElement disciplinary;
+			
+			@FindBy(xpath="//*[@id=\"emp-disciplinary\"]/div[2]/div[2]/div[1]/div/div/div/div")
+			WebElement chkEmployeeTerminated;
+			
+			@FindBy(xpath="//button[text()='Yes']")
+			WebElement yesOptionTerminated;
+			
+			//@FindBy(xpath="//table[@class='table-condensed']/tbody//tr//td[@class='active day']")
+			Date date = new Date(); 
+		
+			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy"); 
+			String formattedDate = sdf. format(date); 
+			String cdate=formattedDate.substring(0, 2);
+			
+			//@FindBy(xpath="//table[@class='table-condensed']/tbody/tr//td[text()='"+cdate"+']")
+			@FindBy(xpath="//td[text()='13']")
+			WebElement selectCurrentDate;
+			
+			
+			
+			@FindBy(id="txtEmployeeTerminationRemarks")
+			WebElement termindatedRemarks;
+			
+			@FindBy(id="btnSaveEmployee")
+			WebElement desciplinarySave;
+			
 	// Constructor
-	public JiViewsEmployee(WebDriver driver) {
+	public JiViewsEmployeeAdministration(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -1232,12 +1262,64 @@ public class JiViewsEmployee extends BaseTest{
 				
 				
 				
-				/*
-				 * String Ex="Update Skill Competency - Success"; String
-				 * Actual=successToast_Message.getText(); System.out.println(Actual);
-				 * Assert.assertTrue(Actual.contains("Update Skill Competency - Success"));
-				 */
+				
 				 
+		
+		return false;
+		
+	}
+	
+	public boolean empTermindate(String a) throws Exception {
+		//webAction.click(demo);
+		
+		
+		
+		
+				Thread.sleep(500);
+				webAction.clickUsingJavaScript(olm);
+				Thread.sleep(1000);
+				webAction.click(olmLink);
+
+				
+				webAction.click(systemSetup);
+				webAction.click(employeeAdmin);
+				webAction.click(empProfile);
+				
+				Thread.sleep(5000);
+				webAction.setText(searchEmp, a);
+				//Thread.sleep(10000);
+				
+				webAction.click(empProfileEdit);
+				Thread.sleep(3000);
+				webAction.clickUsingJavaScript(disciplinary);
+				Thread.sleep(3000);
+				webAction.scrollDown();
+				//webAction.scrollIntoeEement(chkEmployeeTerminated);
+				
+				webAction.click(chkEmployeeTerminated);
+				webAction.click(yesOptionTerminated);
+				
+				List<WebElement> t =driver.findElements(By.xpath("//table[@class='table-condensed']/tbody/tr/td"));
+				
+				System.out.println("Date:"+cdate);
+			
+			      //list traversal
+			      for (int k = 0; k<t.size(); k++) {
+			         //check date
+			         String dt = t.get(k).getText();
+			         if (dt.equals(cdate)) {
+			        	 webAction.clickUsingJavaScript( t.get(k));
+			            //t.get(k).click();
+			            break;
+			         }
+			      }
+				//webAction.click(selectCurrentDate);
+				webAction.setText(termindatedRemarks, "Testing Disciplinary");
+				webAction.scrollUp();
+				webAction.clickUsingJavaScript(desciplinarySave);
+				Thread.sleep(5000);
+				System.out.println("Testing");
+				
 				 
 		
 		return false;
@@ -1245,3 +1327,5 @@ public class JiViewsEmployee extends BaseTest{
 	}
 	
 }
+	      
+	

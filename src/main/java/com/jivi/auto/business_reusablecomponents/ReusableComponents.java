@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -20,7 +21,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-//import com.jivi.auto.driver.JiviewsMainClass;
+import com.jivi.auto.driver.JiviewsMainClass;
 import com.jivi.auto.reusablecomponents.Browser;
 import com.jivi.auto.reusablecomponents.Common;
 import com.jivi.auto.reusablecomponents.GlobalVariables;
@@ -36,8 +37,8 @@ import com.jivi.auto.webelements.TextBox;
 
 public class ReusableComponents extends BaseTest {
 	
-	//static WebDriver driver = Browser.getInstance().getDriver();
-	
+	//public WebDriver driver = Browser.getInstance().getDriver();
+	//private WebDriver driver;
 	static String url;
 	static Button button = new Button();
 	static CheckBox checkBox = new CheckBox();
@@ -53,7 +54,7 @@ public class ReusableComponents extends BaseTest {
 	static Common objCommon = new Common();
 	//static JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
 	static String strMethodName = "";
-	Wait wait = new Wait();
+	static Wait wait = new Wait();
 	
 		
 
@@ -94,7 +95,7 @@ public class ReusableComponents extends BaseTest {
 			objCommon.click("ContinueButton_id");
 
 			ReusableComponents.waitTill_PageLoads(30000);
-			//JiviewsMainClass.bLoginStatus = false;
+			JiviewsMainClass.bLoginStatus = false;
 
 		}catch(Exception e){
 			e.printStackTrace();
@@ -170,7 +171,7 @@ public class ReusableComponents extends BaseTest {
 			System.out.println("From try block of waitTill_PageLoads, Outside while......");
 			WebDriverWait oWait;
 
-			oWait = new WebDriverWait(driver,Duration.ofSeconds(30));;
+			oWait = new WebDriverWait(driver, lngTimeOutSeconds);
 			oWait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));//wait till body tag is visible
 		}catch(Exception e)
 		{
@@ -215,28 +216,28 @@ public class ReusableComponents extends BaseTest {
 
 	//--------------------------------------------------------------------------------------
 
-	public static void verifyimageActive(WebElement eImageElement){
-
-		strMethodName = "verifyimageActive";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);
-
-		try{
-			HttpClient cClient = HttpClientBuilder.create().build();
-			HttpGet gRequest = new HttpGet(eImageElement.getAttribute("src"));
-			HttpResponse rResponse = cClient.execute(gRequest);
-
-			if(rResponse.getStatusLine().getStatusCode()!= 200)
-			{
-				iInvalidImageCount++;
-
-			}		
-
-		}catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-	}
+//	public static void verifyimageActive(WebElement eImageElement){
+//
+//		strMethodName = "verifyimageActive";
+//		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+//		System.out.println("Log: Inside method - "+ strMethodName);
+//
+//		try{
+//			HttpClient cClient = HttpClientBuilder.create().build();
+//			HttpGet gRequest = new HttpGet(eImageElement.getAttribute("src"));
+//			HttpResponse rResponse = cClient.execute(gRequest);
+//
+//			if(rResponse.getStatusLine().getStatusCode()!= 200)
+//			{
+//				iInvalidImageCount++;
+//
+//			}
+//
+//		}catch(Exception e)
+//		{
+//			e.printStackTrace();
+//		}
+//	}
 
 	public static int getDataRow(String module,  String testScript){
 
@@ -381,6 +382,8 @@ public class ReusableComponents extends BaseTest {
 		}while(!(js.executeScript("return document.readyState").equals("complete")) || count == 10);
 
 	}
+
+
 	
 	public String getElementValueUsingJS(String idvalue) {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -404,6 +407,7 @@ public class ReusableComponents extends BaseTest {
 	}
 	
 	public void waitforClickable(WebElement element) {
+		WebDriver driver = Browser.getInstance().getDriver();
 		//WebDriverWait wait = new WebDriverWait(driver, 5); 
 	    WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 		element = wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -411,6 +415,7 @@ public class ReusableComponents extends BaseTest {
 	
 	
 	public void performWebElementRightClick(WebElement ele) {
+		WebDriver driver = Browser.getInstance().getDriver();
 		Actions oAct = new Actions(driver);
 		oAct.moveToElement(ele).contextClick(ele).build().perform();
 	}

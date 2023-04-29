@@ -213,9 +213,17 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 	}
 
 
-	public void navigateToWorkLoadPLanning() throws InterruptedException {
-		menuItems.click();
+	public void navigateToWorkLoadPLanning() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.click(olmLink);
+		
 		waitforLoadingIcon();
+	//	menuItems.click();
+		//waitforLoadingIcon();
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(2000);
+		//menuItems.click();
+		//waitforLoadingIcon();
 		planningExecutionMenu.click();
 		waitforLoadingIcon();
 		workLoadPlanner.click();

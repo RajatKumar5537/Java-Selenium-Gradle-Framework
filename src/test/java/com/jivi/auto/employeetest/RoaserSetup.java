@@ -16,7 +16,7 @@ import com.jivi.auto.employeepages.ResourceSetPage;
 import com.jivi.auto.employeepages.Roaster;
 import com.jivi.auto.pageobjectutils.WebElementKeys;
 import com.jivi.auto.employeepages.LoginPage;
-import com.jivi.auto.employeepages.JiViewsEmployee;
+import com.jivi.auto.employeepages.JiViewsEmployeeAdministration;
 //import com.jivi.auto.employeepages.LeaveAdminPage;
 //import com.auto.utilities.BaseTest;
 import com.jivi.auto.utilities.BaseTest;
@@ -38,7 +38,7 @@ public class RoaserSetup extends BaseTest{
 	//ReportHelper reportHelper;
 	//excelUtilities excelObject;
 	
-	JiViewsEmployee jiviewsHomePage;
+	JiViewsEmployeeAdministration jiviewsHomePage;
 	WebElementKeys webAction = new WebElementKeys();
 	
 	@FindBy(id = "dvApplicationMenuItems")
@@ -93,7 +93,7 @@ public class RoaserSetup extends BaseTest{
 		System.out.println("testing roaster");
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
 	
@@ -122,7 +122,7 @@ public class RoaserSetup extends BaseTest{
 		System.out.println("Roster Group: emp admin-->Roster Group Assignment");
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
 	
@@ -151,7 +151,7 @@ public class RoaserSetup extends BaseTest{
 		System.out.println("Roster Group: emp admin-->Roster Group Assignment");
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
 	
@@ -183,7 +183,7 @@ public class RoaserSetup extends BaseTest{
 		System.out.println("Roster Group: emp admin-->Roster Group Assignment");
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
 	
@@ -212,7 +212,7 @@ public class RoaserSetup extends BaseTest{
 		System.out.println("Roster Group: emp admin-->Roster Group Assignment");
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
 	
@@ -242,7 +242,7 @@ public class RoaserSetup extends BaseTest{
 		System.out.println("Testing Roaster Creation");
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
 	
@@ -269,7 +269,7 @@ public class RoaserSetup extends BaseTest{
 	@Test
 	public void editShiftBandDefinition() throws Exception {
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
 		
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
@@ -289,7 +289,7 @@ public class RoaserSetup extends BaseTest{
 	@Test 
 	public void deleteShiftBandDefinition() throws Exception {
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
@@ -311,7 +311,7 @@ public class RoaserSetup extends BaseTest{
 	@Test 
 	public void reActivatedeletedShiftBandDefinition() throws Exception {
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
@@ -337,7 +337,7 @@ public class RoaserSetup extends BaseTest{
 	@Test
 	public void scheduleCreationRules() throws Exception {
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-		JiViewsEmployee jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployee.class);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		
