@@ -553,10 +553,15 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 		webAction.setText(lastName, d);
 		webAction.setText(birthDate, e);
 		webAction.setText(addressLine1, f);
+		Thread.sleep(100);
 		webAction.setText(postCode, g);
+		Thread.sleep(100);
 		webAction.setText(cityName, h);
+		Thread.sleep(100);
 		dropdown.selectByIndex(gender, 0);
+		Thread.sleep(100);
 		dropdown.selectByIndex(countryName, 0);
+		Thread.sleep(100);
 		dropdown.selectByIndex(employmentBasis, 0);
 	//	dropdown.selectByIndex(payGroup, 1);
 		dropdown.selectByIndex(scheduleRule, 0);

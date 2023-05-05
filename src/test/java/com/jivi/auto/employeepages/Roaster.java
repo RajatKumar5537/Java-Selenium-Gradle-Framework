@@ -230,6 +230,10 @@ public class Roaster extends BaseTest {
 	@FindBy(id= "btnSaveTemplateRoster")
 	WebElement saveTemplateRoster;
 
+
+	@FindBy(id= "btnAddSaveRosterPattern")
+	WebElement saveTemplateName;
+
 	
 	@FindBy(xpath= "//*[@id='dpRosterPattern']/div[2]")
 	WebElement rosterPattern;
@@ -238,7 +242,22 @@ public class Roaster extends BaseTest {
 	@FindBy(id= "btnPublishRosterPattern")
 	WebElement publishRosterPattern;
 
+	@FindBy(xpath= "//*[@id='dtPublishFrom144']")
+	WebElement publishRosterFrom;
 	
+	@FindBy(xpath= "//*[@id='dtPublishTo144']")
+	WebElement publishRosterTo;
+	
+	
+	@FindBy(id= "btnSaveTemplateRoster")
+	WebElement publishRosterPatternButton;
+
+
+	@FindBy(xpath= "//*[@id='144']")
+	WebElement selectRosterGroup;
+	
+	@FindBy(xpath= "//button[text()='Publish Now']")
+	WebElement publishNow;
 	
 	//Roster Creation
 	
@@ -433,7 +452,7 @@ public String createRosterGroupAssignmentAddingAllEmp() throws Exception {
 		rosterGroupAssnmtAdd.click();
 		Thread.sleep(3000);
 		System.out.println("testing Roster Group Assignment");
-		
+			
 		
 		rosterGroupName.sendKeys("Roster Group Name"+" "+coun+" "+publicempNum);
 		rosterGroupDesc.sendKeys("Roster Group Description for Testing"+" "+coun+" "+publicempNum);
@@ -445,7 +464,7 @@ public String createRosterGroupAssignmentAddingAllEmp() throws Exception {
 		threeDotAvailableEmp.click();
 		addAll.click();
 		//addSelected.click();
-		
+			
 		webAction.clickUsingJavaScript(rosterGroupSave);
 		//rosterGroupSave.click();
 		
@@ -560,42 +579,61 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 		saveTemplateRoster.click();
 		Thread.sleep(1000);
 		
+		saveTemplateName.click();
+		Thread.sleep(5000);
 		//First Day
 		rosterCreation1stDay.click();
 		System.out.println(shiftBandNew);
+		Thread.sleep(1000);
 		dropdown.selectByvisibleText(shiftBandInSelection, shiftBandNew);
 		shiftBandInSelectionNotes.sendKeys("Testing Purpose");
 		webAction.clickUsingJavaScript(shiftBandInSelectionSave);
 		
 		//Second Day
 		rosterCreation2stDay.click();
+		Thread.sleep(1000);
 		dropdown.selectByvisibleText(shiftBandInSelection, shiftBandNew);
 		shiftBandInSelectionNotes.sendKeys("Testing Purpose");
 		webAction.clickUsingJavaScript(shiftBandInSelectionSave);
 		
 		//Third Day
 		rosterCreation3stDay.click();
+		Thread.sleep(1000);
 		dropdown.selectByvisibleText(shiftBandInSelection, shiftBandNew);
 		shiftBandInSelectionNotes.sendKeys("Testing Purpose");
 		webAction.clickUsingJavaScript(shiftBandInSelectionSave);
 		
 		//Fourth Day
 		rosterCreation4stDay.click();
+		Thread.sleep(1000);
 		dropdown.selectByvisibleText(shiftBandInSelection, shiftBandNew);
 		shiftBandInSelectionNotes.sendKeys("Testing Purpose");
 		webAction.clickUsingJavaScript(shiftBandInSelectionSave);
 		
 		//Fifth Day
 		rosterCreation5stDay.click();
+		Thread.sleep(1000);
 		dropdown.selectByvisibleText(shiftBandInSelection, shiftBandNew);
 		shiftBandInSelectionNotes.sendKeys("Testing Purpose");
 		webAction.clickUsingJavaScript(shiftBandInSelectionSave);
 		//shiftBandInSelectionSave
 		
 		//shiftBandInSelectionSave
-		
-		publishRosterPattern.click();
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(publishRosterPattern);
+		//publishRosterPattern.click();
 		Thread.sleep(3000);
+		publishRosterFrom.sendKeys("01-05-2023");
+		Thread.sleep(1000);
+		publishRosterTo.sendKeys("07-05-2023");
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(selectRosterGroup);
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(publishRosterPatternButton);
+		//publishRosterPatternButton.click();
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(publishNow);
+		Thread.sleep(4000);
 		return rosterGroupNAme;
 		
 	}	
