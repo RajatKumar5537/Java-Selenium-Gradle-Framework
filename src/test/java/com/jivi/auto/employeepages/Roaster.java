@@ -242,10 +242,10 @@ public class Roaster extends BaseTest {
 	@FindBy(id= "btnPublishRosterPattern")
 	WebElement publishRosterPattern;
 
-	@FindBy(xpath= "//*[@id='dtPublishFrom144']")
+	@FindBy(xpath= "(//input[@placeholder='Publish From'])[2]")
 	WebElement publishRosterFrom;
 	
-	@FindBy(xpath= "//*[@id='dtPublishTo144']")
+	@FindBy(xpath= "//*[@placeholder='PublishTo dd-mm-yyyy']")
 	WebElement publishRosterTo;
 	
 	
@@ -253,7 +253,7 @@ public class Roaster extends BaseTest {
 	WebElement publishRosterPatternButton;
 
 
-	@FindBy(xpath= "//*[@id='144']")
+	@FindBy(xpath= "(//input[@placeholder='Publish From'])[1]")
 	WebElement selectRosterGroup;
 	
 	@FindBy(xpath= "//button[text()='Publish Now']")
@@ -285,6 +285,7 @@ public class Roaster extends BaseTest {
 	@FindBy(id= "btnSelectShiftBand")
 	WebElement shiftBandInSelectionSave;
 
+	
 	
 	public String createShiftBand() throws Exception {
 		
@@ -373,15 +374,15 @@ public class Roaster extends BaseTest {
 		String coun=faker.company().industry();
 		String des=faker.company().industry();
 		
-		String rosterGroupNAme="Shift"+" "+coun+" "+publicempNum;
-		System.out.println("Roster Group Name: "+"Shift"+" "+coun+" "+publicempNum);
+		String rosterGroupNAme="Roster Group "+"Shift"+" "+coun+" "+publicempNum;
+		//System.out.println("Roster Group Name: "+"Shift"+" "+coun+" "+publicempNum);
 		//setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		rosterGroupAssnmtAdd.click();
 		Thread.sleep(3000);
 		System.out.println("testing Roster Group Assignment");
 		
-		
-		rosterGroupName.sendKeys("Roster Group Name"+" "+coun+" "+publicempNum);
+		System.out.println(rosterGroupNAme);
+		rosterGroupName.sendKeys(rosterGroupNAme);
 		rosterGroupDesc.sendKeys("Roster Group Description for Testing"+" "+coun+" "+publicempNum);
 		rosterGroupRemarks.sendKeys("Adding remarks for roster Group"+" "+coun+" "+publicempNum);
 		webAction.scrollDown();
@@ -436,6 +437,9 @@ public class Roaster extends BaseTest {
 		//rosterGroupSave.click();
 		Thread.sleep(2000);
 		
+		RosterGroupNameforRosterCreation=rosterGroupNAme;
+		System.out.println(rosterGroupNAme);
+		System.out.println(RosterGroupNameforRosterCreation);
 		return rosterGroupNAme;
 	}
 	
@@ -554,11 +558,11 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 		String coun=faker.company().industry();
 		String des=faker.company().industry();
 		
-		String rosterGroupNAme="Shift"+" "+coun+" "+publicempNum;
-		System.out.println("Roster Group Name: "+"Shift"+" "+coun+" "+publicempNum);
+		//String rosterGroupNAme="Shift"+" "+coun+" "+publicempNum;
+		//System.out.println("Roster Group Name: "+"Shift"+" "+coun+" "+publicempNum);
 		//setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		
-		
+		Thread.sleep(3000);
 		rosterCreationAdd.click();
 		Thread.sleep(3000);
 		
@@ -571,13 +575,32 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 	//	dropdown.selectByValue(rosterAvailGroup, "Roster Group Test 123");
 		//dropdown.selectByvisibleText(rosterAvailGroup, "Roster Group Test 123");
 		//dropdown.selectByValue(rosterAvailGroup, shiftBandNew);
-		dropdown.selectByIndex(rosterAvailGroup, 5);
+		
+		//dropdown.selectByIndex(rosterAvailGroup, 5);
+		
+		//@FindBy(xpath= "//*[@id='bootstrap-duallistbox-nonselected-list_']/option")
+		List<WebElement> availableRosterGroups=rosterAvailGroup.findElements(By.xpath("//*[@id='bootstrap-duallistbox-nonselected-list_']/option"));
+		
+		//String avaialbleRogsterGroupsText=availableRosterGroups
+		for ( WebElement we: availableRosterGroups) { 
+			//rosterAvailGroup.sendKeys( Keys.DOWN ); //simulate visual movement
+	       Thread.sleep(500);      
+	       //System.out.println(we.getText());
+	       //RosterGroupNameforRosterCreation
+	     //  System.out.println(RosterGroupNameforRosterCreation);
+	       if(RosterGroupNameforRosterCreation.equals(we.getText()))
+	        //if (we.getText().equalsIgnoreCase(RosterGroupNameforRosterCreation)) 
+	    	   we.click();
+	        	//dropdown.selectByvisibleText(we, RosterGroupNameforRosterCreation);
+	        
+	        	//dropdown.selectByVisibleText("Value1");
+	    }
 		//dropdown.selectByIndex(rosterAvailGroup, 1);
 		//dropdown.selectByIndex(rosterAvailGroup, 2);
 		moveSelect.click();
 		Thread.sleep(1000);
 		saveTemplateRoster.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		
 		saveTemplateName.click();
 		Thread.sleep(5000);
@@ -618,14 +641,15 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 		webAction.clickUsingJavaScript(shiftBandInSelectionSave);
 		//shiftBandInSelectionSave
 		
+		webAction.clickUsingJavaScript(saveTemplateName);
 		//shiftBandInSelectionSave
 		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(publishRosterPattern);
 		//publishRosterPattern.click();
 		Thread.sleep(3000);
-		publishRosterFrom.sendKeys("01-05-2023");
+		publishRosterFrom.sendKeys("08-05-2023");
 		Thread.sleep(1000);
-		publishRosterTo.sendKeys("07-05-2023");
+		publishRosterTo.sendKeys("12-05-2023");
 		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(selectRosterGroup);
 		Thread.sleep(1000);
@@ -634,7 +658,7 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(publishNow);
 		Thread.sleep(4000);
-		return rosterGroupNAme;
+		return RosterGroupNameforRosterCreation;
 		
 	}	
 	

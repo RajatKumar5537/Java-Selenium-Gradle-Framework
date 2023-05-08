@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="createShiftBandDefinition">createShiftBandDefinition</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,37 +131,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="createShiftBandDefinition">createShiftBandDefinition</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="editShiftBandDefinition">editShiftBandDefinition</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterCreation">rosterCreation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterGroupAssignmentAddingAllEmp">rosterGroupAssignmentAddingAllEmp</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterGroupAssignmentAddingSelectedEmp">rosterGroupAssignmentAddingSelectedEmp</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterGroupAssignmentRemoveAllEmp">rosterGroupAssignmentRemoveAllEmp</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterGroupAssignmentRemoveSelectedEmp">rosterGroupAssignmentRemoveSelectedEmp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -162,6 +151,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.jivi.auto.employeetest.RoaserSetup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createShiftBandDefinition">
+                  </a> <!-- createShiftBandDefinition -->
+                  <span class="method-name">createShiftBandDefinition</span>
+                  <div class="stack-trace">java.lang.AssertionError: ShiftBand Creation expected [true] but found [false]
+	at com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition(RoaserSetup.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -207,20 +217,6 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createShiftBandDefinition">
-                  </a> <!-- createShiftBandDefinition -->
-                  <span class="method-name">createShiftBandDefinition</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="editShiftBandDefinition">
-                  </a> <!-- editShiftBandDefinition -->
-                  <span class="method-name">editShiftBandDefinition</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="rosterCreation">
                   </a> <!-- rosterCreation -->
                   <span class="method-name">rosterCreation</span>
@@ -228,30 +224,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="rosterGroupAssignmentAddingAllEmp">
-                  </a> <!-- rosterGroupAssignmentAddingAllEmp -->
-                  <span class="method-name">rosterGroupAssignmentAddingAllEmp</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="rosterGroupAssignmentAddingSelectedEmp">
                   </a> <!-- rosterGroupAssignmentAddingSelectedEmp -->
                   <span class="method-name">rosterGroupAssignmentAddingSelectedEmp</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="rosterGroupAssignmentRemoveAllEmp">
-                  </a> <!-- rosterGroupAssignmentRemoveAllEmp -->
-                  <span class="method-name">rosterGroupAssignmentRemoveAllEmp</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="rosterGroupAssignmentRemoveSelectedEmp">
-                  </a> <!-- rosterGroupAssignmentRemoveSelectedEmp -->
-                  <span class="method-name">rosterGroupAssignmentRemoveSelectedEmp</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -293,12 +268,7 @@
       &lt;class name=&quot;com.jivi.auto.employeetest.RoaserSetup&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;createShiftBandDefinition&quot;/&gt;
-          &lt;include name=&quot;editShiftBandDefinition&quot;/&gt;
           &lt;include name=&quot;rosterGroupAssignmentAddingSelectedEmp&quot;/&gt;
-          &lt;include name=&quot;rosterGroupAssignmentAddingAllEmp&quot;/&gt;
-          &lt;include name=&quot;rosterGroupAssignmentRemoveSelectedEmp&quot;/&gt;
-          &lt;include name=&quot;rosterGroupAssignmentRemoveAllEmp&quot;/&gt;
-          &lt;include name=&quot;rosterGroupAssignment&quot;/&gt;
           &lt;include name=&quot;rosterCreation&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.jivi.auto.employeetest.RoaserSetup --&gt;
@@ -347,52 +317,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyEmpProCreationFiveEmp')
 data.setCell(0, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
-data.setCell(0, 3, 282426);
+data.setCell(0, 3, 298796);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'rosterGroupAssignmentRemoveSelectedEmp')
+data.setCell(1, 1, 'rosterCreation')
 data.setCell(1, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(1, 3, 104341);
+data.setCell(1, 3, 147339);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'rosterGroupAssignmentAddingAllEmp')
+data.setCell(2, 1, 'createShiftBandDefinition')
 data.setCell(2, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(2, 3, 103308);
+data.setCell(2, 3, 118222);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'rosterCreation')
+data.setCell(3, 1, 'rosterGroupAssignmentAddingSelectedEmp')
 data.setCell(3, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(3, 3, 100044);
+data.setCell(3, 3, 88893);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'VerifyEmpAddinEmpProfile')
 data.setCell(4, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
-data.setCell(4, 3, 91242);
+data.setCell(4, 3, 84055);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'rosterGroupAssignmentAddingSelectedEmp')
-data.setCell(5, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(5, 3, 90133);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'rosterGroupAssignmentRemoveAllEmp')
-data.setCell(6, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(6, 3, 69283);
-data.setCell(7, 0, 7)
-data.setCell(7, 1, 'createShiftBandDefinition')
-data.setCell(7, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(7, 3, 68133);
-data.setCell(8, 0, 8)
-data.setCell(8, 1, 'editShiftBandDefinition')
-data.setCell(8, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(8, 3, 60374);
-data.setCell(9, 0, 9)
-data.setCell(9, 1, 'VerifyLogin')
-data.setCell(9, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
-data.setCell(9, 3, 19843);
+data.setCell(5, 1, 'VerifyLogin')
+data.setCell(5, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
+data.setCell(5, 3, 15030);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 minutes</span>
+              <span class="suite-total-time">Total running time: 12 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -407,7 +361,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">50 ignored methods</span>
+            <span class="header-content">54 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -519,9 +473,17 @@ return data;
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">deleteShiftBandDefinition</span>
                 <br/>
+                <span class="ignored-method-name">rosterGroupAssignmentAddingAllEmp</span>
+                <br/>
                 <span class="ignored-method-name">scheduleCreationRules</span>
                 <br/>
+                <span class="ignored-method-name">rosterGroupAssignmentRemoveAllEmp</span>
+                <br/>
+                <span class="ignored-method-name">rosterGroupAssignmentRemoveSelectedEmp</span>
+                <br/>
                 <span class="ignored-method-name">reActivatedeletedShiftBandDefinition</span>
+                <br/>
+                <span class="ignored-method-name">editShiftBandDefinition</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -543,161 +505,115 @@ return data;
               <div class="chronological-class-name">com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">316 ms</span>
+                <span class="method-start">475 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest.VerifyLogin() throws java.lang.E...)</span>
-                <span class="method-start">330 ms</span>
+                <span class="method-start">519 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyLogin</span>
-                <span class="method-start">2100 ms</span>
+                <span class="method-start">4397 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyLogin status=SUCCESS method=JiViewsSystemDefinitionsTest.VerifyLogin()[pri:0,...)</span>
-                <span class="method-start">21947 ms</span>
+                <span class="method-start">19434 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">22391 ms</span>
+                <span class="method-start">20521 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">22413 ms</span>
+                <span class="method-start">20571 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest.VerifyEmpAddinEmpProfile() ...)</span>
-                <span class="method-start">22413 ms</span>
+                <span class="method-start">20572 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpAddinEmpProfile</span>
-                <span class="method-start">23043 ms</span>
+                <span class="method-start">22526 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyEmpAddinEmpProfile status=SUCCESS method=JiViewsEmployeeAdministrationTest.Ve...)</span>
-                <span class="method-start">114285 ms</span>
+                <span class="method-start">106582 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest.VerifyEmpProCreationFiveEmp...)</span>
-                <span class="method-start">114553 ms</span>
+                <span class="method-start">107213 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpProCreationFiveEmp</span>
-                <span class="method-start">115272 ms</span>
+                <span class="method-start">108963 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyEmpProCreationFiveEmp status=SUCCESS method=JiViewsEmployeeAdministrationTest...)</span>
-                <span class="method-start">397698 ms</span>
+                <span class="method-start">407762 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">397948 ms</span>
+                <span class="method-start">408428 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.RoaserSetup</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">397958 ms</span>
+                <span class="method-start">408449 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition() throws java.lang.Exce...)</span>
-                <span class="method-start">397958 ms</span>
+                <span class="method-start">408449 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">createShiftBandDefinition</span>
-                <span class="method-start">398643 ms</span>
+                <span class="method-start">409799 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=createShiftBandDefinition status=SUCCESS method=RoaserSetup.createShiftBandDefiniti...)</span>
-                <span class="method-start">466776 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.editShiftBandDefinition() throws java.lang.Except...)</span>
-                <span class="method-start">467040 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">editShiftBandDefinition</span>
-                <span class="method-start">467713 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=editShiftBandDefinition status=SUCCESS method=RoaserSetup.editShiftBandDefinition()...)</span>
-                <span class="method-start">528088 ms</span>
+                <span class="method-name">afterMethod([TestResult name=createShiftBandDefinition status=FAILURE method=RoaserSetup.createShiftBandDefiniti...)</span>
+                <span class="method-start">528024 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.rosterGroupAssignmentAddingSelectedEmp() throws j...)</span>
-                <span class="method-start">528360 ms</span>
+                <span class="method-start">528539 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">rosterGroupAssignmentAddingSelectedEmp</span>
-                <span class="method-start">529028 ms</span>
+                <span class="method-start">529469 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=rosterGroupAssignmentAddingSelectedEmp status=SUCCESS method=RoaserSetup.rosterGrou...)</span>
-                <span class="method-start">619161 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.rosterGroupAssignmentAddingAllEmp() throws java.l...)</span>
-                <span class="method-start">619427 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">rosterGroupAssignmentAddingAllEmp</span>
-                <span class="method-start">620129 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=rosterGroupAssignmentAddingAllEmp status=SUCCESS method=RoaserSetup.rosterGroupAssi...)</span>
-                <span class="method-start">723437 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.rosterGroupAssignmentRemoveSelectedEmp() throws j...)</span>
-                <span class="method-start">723776 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">rosterGroupAssignmentRemoveSelectedEmp</span>
-                <span class="method-start">724440 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=rosterGroupAssignmentRemoveSelectedEmp status=SUCCESS method=RoaserSetup.rosterGrou...)</span>
-                <span class="method-start">828782 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.rosterGroupAssignmentRemoveAllEmp() throws java.l...)</span>
-                <span class="method-start">829060 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">rosterGroupAssignmentRemoveAllEmp</span>
-                <span class="method-start">829721 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=rosterGroupAssignmentRemoveAllEmp status=SUCCESS method=RoaserSetup.rosterGroupAssi...)</span>
-                <span class="method-start">899005 ms</span>
+                <span class="method-start">618368 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.rosterCreation() throws java.lang.Exception)</span>
-                <span class="method-start">899188 ms</span>
+                <span class="method-start">618892 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">rosterCreation</span>
-                <span class="method-start">899787 ms</span>
+                <span class="method-start">620055 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=rosterCreation status=SUCCESS method=RoaserSetup.rosterCreation()[pri:0, instance:c...)</span>
-                <span class="method-start">999832 ms</span>
+                <span class="method-start">767394 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">1000031 ms</span>
+                <span class="method-start">767893 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">1000031 ms</span>
+                <span class="method-start">767893 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterTestSuite</span>
-                <span class="method-start">1000034 ms</span>
+                <span class="method-start">767905 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

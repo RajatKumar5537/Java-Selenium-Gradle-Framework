@@ -160,10 +160,12 @@ public class MenuNavigation extends BaseTest {
 		webAction.clickUsingJavaScript(systemDefinitionsMenu);
 		//systemDefinitionsMenu.click();
 		waitforLoadingIcon();
-		roasterSetup.click();
+		webAction.clickUsingJavaScript(roasterSetup);
+		//roasterSetup.click();
 		waitforLoadingIcon();
 		Thread.sleep(200);
-		shifitBandDefinition.click();
+		webAction.clickUsingJavaScript(shifitBandDefinition);
+		//shifitBandDefinition.click();
 		waitforLoadingIcon();
 
 	}

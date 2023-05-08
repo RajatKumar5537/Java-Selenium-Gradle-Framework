@@ -8,15 +8,13 @@
     <classes>
       <class name="com.jivi.auto.employeetest.RoaserSetup">
         <methods>
-          <include name="rosterGroupAssignmentAddingAllEmp"/>
+          <include name="createShiftBandDefinition"/>
           <include name="beforeMethod"/>
           <include name="endTest"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
-          <include name="rosterGroupAssignmentRemoveSelectedEmp"/>
           <include name="afterTestSuite"/>
-          <include name="editShiftBandDefinition"/>
           <include name="setUpClass"/>
         </methods>
       </class> <!-- com.jivi.auto.employeetest.RoaserSetup -->

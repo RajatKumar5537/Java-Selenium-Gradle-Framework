@@ -44,5 +44,6 @@ public class GlobalVariables {
 	public static String NumberFour;
 	public static String NumberFive;
 	public static String shiftBandNew;
+	public static String RosterGroupNameforRosterCreation;
 	
 }
