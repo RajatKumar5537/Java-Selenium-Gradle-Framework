@@ -256,6 +256,10 @@ public class Roaster extends BaseTest {
 	@FindBy(xpath= "(//input[@placeholder='Publish From'])[1]")
 	WebElement selectRosterGroup;
 	
+	@FindBy(xpath= "//*[@name='NoOfBlocks']")
+	WebElement noOfBlocks;
+	
+	
 	@FindBy(xpath= "//button[text()='Publish Now']")
 	WebElement publishNow;
 	
@@ -647,9 +651,13 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 		webAction.clickUsingJavaScript(publishRosterPattern);
 		//publishRosterPattern.click();
 		Thread.sleep(3000);
-		publishRosterFrom.sendKeys("08-05-2023");
+		Date date = new Date(); 
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy"); 
+		String formattedDate = sdf. format(date); 
+		publishRosterFrom.sendKeys(formattedDate);
 		Thread.sleep(1000);
-		publishRosterTo.sendKeys("12-05-2023");
+		noOfBlocks.sendKeys("2");
+		//publishRosterTo.sendKeys("12-05-2023");
 		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(selectRosterGroup);
 		Thread.sleep(1000);

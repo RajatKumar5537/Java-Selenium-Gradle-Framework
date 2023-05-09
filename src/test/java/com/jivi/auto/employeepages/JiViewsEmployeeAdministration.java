@@ -534,18 +534,22 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 	
 		//Thread.sleep(500);
 		
-		webAction.waitUntilElementIsClickable(olm);
+		Thread.sleep(3000);
 		webAction.clickUsingJavaScript(olm);
-		
-		webAction.waitUntilElementIsClickable(olmLink);
+		Thread.sleep(3000);
+		//webAction.waitUntilElementIsClickable(olmLink);
 		webAction.clickUsingJavaScript(olmLink);
 		
 		//webAction.wa
-		Thread.sleep(2000);
-		webAction.click(systemSetup);
-		webAction.click(employeeAdmin);
-		webAction.click(empProfile);
-		webAction.click(empAddEmp);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(employeeAdmin);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(empProfile);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(empAddEmp);
+		Thread.sleep(500);
 		webAction.setText(employeeNumber, a);
 		
 		webAction.setText(badgeNumber, b);
