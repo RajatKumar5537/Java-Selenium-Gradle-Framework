@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                    <span class="method-stats">6 methods, 2 failed,  2 skipped,  2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,10 +102,34 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest" class="method navigator-link" hash-for-method="VerifyEmpProCreationFiveEmp">VerifyEmpProCreationFiveEmp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="createShiftBandDefinition">createShiftBandDefinition</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterCreation">rosterCreation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterGroupAssignmentAddingSelectedEmp">rosterGroupAssignmentAddingSelectedEmp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -121,22 +145,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest" class="method navigator-link" hash-for-method="VerifyEmpProCreationFiveEmp">VerifyEmpProCreationFiveEmp</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest" class="method navigator-link" hash-for-method="VerifyLogin">VerifyLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterCreation">rosterCreation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterGroupAssignmentAddingSelectedEmp">rosterGroupAssignmentAddingSelectedEmp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -154,6 +163,58 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyEmpProCreationFiveEmp">
+                  </a> <!-- VerifyEmpProCreationFiveEmp -->
+                  <span class="method-name">VerifyEmpProCreationFiveEmp</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.104&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, findElement {using=xpath, value=//*[text()=&apos;Employee Administration&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at com.jivi.auto.pageobjectutils.POMCommon.waitUntilElementIsVisible(POMCommon.java:45)
+	at com.jivi.auto.pageobjectutils.POMCommon.getObject(POMCommon.java:32)
+	at com.jivi.auto.pageobjectutils.WebElementKeys.clickUsingJavaScript(WebElementKeys.java:64)
+	at com.jivi.auto.employeepages.JiViewsEmployeeAdministration.empProfileAdd(JiViewsEmployeeAdministration.java:547)
+	at com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest.VerifyEmpProCreationFiveEmp(JiViewsEmployeeAdministrationTest.java:798)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">com.jivi.auto.employeetest.RoaserSetup</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -162,16 +223,113 @@
                   <a name="createShiftBandDefinition">
                   </a> <!-- createShiftBandDefinition -->
                   <span class="method-name">createShiftBandDefinition</span>
-                  <div class="stack-trace">java.lang.AssertionError: ShiftBand Creation expected [true] but found [false]
-	at com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition(RoaserSetup.java:114)
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.104&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:327)
+	at com.jivi.auto.utilities.BaseTest.goTo(BaseTest.java:247)
+	at com.jivi.auto.utilities.BaseTest.launchBrowser(BaseTest.java:234)
+	at com.jivi.auto.utilities.BaseTest.setupTest(BaseTest.java:157)
+	at com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition(RoaserSetup.java:95)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
-... Removed 27 stack frames
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.jivi.auto.employeetest.RoaserSetup</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="rosterCreation">
+                  </a> <!-- rosterCreation -->
+                  <span class="method-name">rosterCreation</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.104&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:348)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShotBASE64(ReportUtils.java:145)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShot(ReportUtils.java:115)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShotOnFailure(ReportUtils.java:100)
+	at com.jivi.auto.utilities.ReportUtils.addInfoOnValidations(ReportUtils.java:72)
+	at com.jivi.auto.utilities.BaseTest.afterMethod(BaseTest.java:180)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="rosterGroupAssignmentAddingSelectedEmp">
+                  </a> <!-- rosterGroupAssignmentAddingSelectedEmp -->
+                  <span class="method-name">rosterGroupAssignmentAddingSelectedEmp</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.104&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:348)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShotBASE64(ReportUtils.java:145)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShot(ReportUtils.java:115)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShotOnFailure(ReportUtils.java:100)
+	at com.jivi.auto.utilities.ReportUtils.addInfoOnValidations(ReportUtils.java:72)
+	at com.jivi.auto.utilities.BaseTest.afterMethod(BaseTest.java:180)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -183,13 +341,6 @@
                   <a name="VerifyEmpAddinEmpProfile">
                   </a> <!-- VerifyEmpAddinEmpProfile -->
                   <span class="method-name">VerifyEmpAddinEmpProfile</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyEmpProCreationFiveEmp">
-                  </a> <!-- VerifyEmpProCreationFiveEmp -->
-                  <span class="method-name">VerifyEmpProCreationFiveEmp</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,28 +356,6 @@
                   <a name="VerifyLogin">
                   </a> <!-- VerifyLogin -->
                   <span class="method-name">VerifyLogin</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.jivi.auto.employeetest.RoaserSetup</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="rosterCreation">
-                  </a> <!-- rosterCreation -->
-                  <span class="method-name">rosterCreation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="rosterGroupAssignmentAddingSelectedEmp">
-                  </a> <!-- rosterGroupAssignmentAddingSelectedEmp -->
-                  <span class="method-name">rosterGroupAssignmentAddingSelectedEmp</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -269,6 +398,7 @@
         &lt;methods&gt;
           &lt;include name=&quot;createShiftBandDefinition&quot;/&gt;
           &lt;include name=&quot;rosterGroupAssignmentAddingSelectedEmp&quot;/&gt;
+          &lt;include name=&quot;rosterGroupAssignment&quot;/&gt;
           &lt;include name=&quot;rosterCreation&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.jivi.auto.employeetest.RoaserSetup --&gt;
@@ -321,32 +451,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyEmpProCreationFiveEmp')
 data.setCell(0, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
-data.setCell(0, 3, 298796);
+data.setCell(0, 3, 300841);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'rosterCreation')
-data.setCell(1, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(1, 3, 147339);
+data.setCell(1, 1, 'VerifyEmpAddinEmpProfile')
+data.setCell(1, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
+data.setCell(1, 3, 93226);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'createShiftBandDefinition')
-data.setCell(2, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(2, 3, 118222);
+data.setCell(2, 1, 'VerifyLogin')
+data.setCell(2, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
+data.setCell(2, 3, 24977);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'rosterGroupAssignmentAddingSelectedEmp')
+data.setCell(3, 1, 'createShiftBandDefinition')
 data.setCell(3, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(3, 3, 88893);
+data.setCell(3, 3, 2);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'VerifyEmpAddinEmpProfile')
-data.setCell(4, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
-data.setCell(4, 3, 84055);
+data.setCell(4, 1, 'rosterGroupAssignmentAddingSelectedEmp')
+data.setCell(4, 2, 'com.jivi.auto.employeetest.RoaserSetup')
+data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'VerifyLogin')
-data.setCell(5, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
-data.setCell(5, 3, 15030);
+data.setCell(5, 1, 'rosterCreation')
+data.setCell(5, 2, 'com.jivi.auto.employeetest.RoaserSetup')
+data.setCell(5, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -505,115 +635,121 @@ return data;
               <div class="chronological-class-name">com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">475 ms</span>
+                <span class="method-start">250 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest.VerifyLogin() throws java.lang.E...)</span>
-                <span class="method-start">519 ms</span>
+                <span class="method-start">278 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyLogin</span>
-                <span class="method-start">4397 ms</span>
+                <span class="method-start">2965 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyLogin status=SUCCESS method=JiViewsSystemDefinitionsTest.VerifyLogin()[pri:0,...)</span>
-                <span class="method-start">19434 ms</span>
+                <span class="method-start">27949 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">20521 ms</span>
+                <span class="method-start">28376 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">20571 ms</span>
+                <span class="method-start">28402 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest.VerifyEmpAddinEmpProfile() ...)</span>
-                <span class="method-start">20572 ms</span>
+                <span class="method-start">28402 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpAddinEmpProfile</span>
-                <span class="method-start">22526 ms</span>
+                <span class="method-start">29086 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerifyEmpAddinEmpProfile status=SUCCESS method=JiViewsEmployeeAdministrationTest.Ve...)</span>
-                <span class="method-start">106582 ms</span>
+                <span class="method-start">122312 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest.VerifyEmpProCreationFiveEmp...)</span>
-                <span class="method-start">107213 ms</span>
+                <span class="method-start">122586 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">VerifyEmpProCreationFiveEmp</span>
-                <span class="method-start">108963 ms</span>
+                <span class="method-start">123270 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=VerifyEmpProCreationFiveEmp status=SUCCESS method=JiViewsEmployeeAdministrationTest...)</span>
-                <span class="method-start">407762 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name=VerifyEmpProCreationFiveEmp status=FAILURE method=JiViewsEmployeeAdministrationTest...)</span>
+                <span class="method-start">424114 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">408428 ms</span>
+                <span class="method-start">424130 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.RoaserSetup</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">408449 ms</span>
+                <span class="method-start">424156 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition() throws java.lang.Exce...)</span>
-                <span class="method-start">408449 ms</span>
+                <span class="method-start">424156 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">createShiftBandDefinition</span>
-                <span class="method-start">409799 ms</span>
+                <span class="method-start">424157 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">afterMethod([TestResult name=createShiftBandDefinition status=FAILURE method=RoaserSetup.createShiftBandDefiniti...)</span>
-                <span class="method-start">528024 ms</span>
+                <span class="method-start">424159 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.rosterGroupAssignmentAddingSelectedEmp() throws j...)</span>
-                <span class="method-start">528539 ms</span>
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">424164 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">rosterGroupAssignmentAddingSelectedEmp</span>
-                <span class="method-start">529469 ms</span>
+                <span class="method-start">424165 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=rosterGroupAssignmentAddingSelectedEmp status=SUCCESS method=RoaserSetup.rosterGrou...)</span>
-                <span class="method-start">618368 ms</span>
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">424165 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.rosterCreation() throws java.lang.Exception)</span>
-                <span class="method-start">618892 ms</span>
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">424165 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">rosterCreation</span>
-                <span class="method-start">620055 ms</span>
+                <span class="method-start">424165 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=rosterCreation status=SUCCESS method=RoaserSetup.rosterCreation()[pri:0, instance:c...)</span>
-                <span class="method-start">767394 ms</span>
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">424165 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">767893 ms</span>
+                <span class="method-start">424165 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">767893 ms</span>
+                <span class="method-start">424166 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterTestSuite</span>
-                <span class="method-start">767905 ms</span>
+                <span class="method-start">424181 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

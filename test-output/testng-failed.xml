@@ -4,13 +4,30 @@
   <listeners>
     <listener class-name="com.jivi.auto.reports.ExtentITestListenerClassAdapter"/>
   </listeners>
+  <test thread-count="5" name="Test2(failed)">
+    <classes>
+      <class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeSuiteSetup"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="afterTestSuite"/>
+          <include name="setUpClass"/>
+          <include name="VerifyEmpProCreationFiveEmp"/>
+        </methods>
+      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
   <test thread-count="5" name="Test3(failed)">
     <classes>
       <class name="com.jivi.auto.employeetest.RoaserSetup">
         <methods>
           <include name="createShiftBandDefinition"/>
+          <include name="rosterCreation"/>
           <include name="beforeMethod"/>
           <include name="endTest"/>
+          <include name="rosterGroupAssignmentAddingSelectedEmp"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>

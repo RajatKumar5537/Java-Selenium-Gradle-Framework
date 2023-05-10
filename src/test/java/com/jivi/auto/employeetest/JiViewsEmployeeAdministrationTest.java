@@ -763,12 +763,14 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		String publicempN1=faker.numerify("10######");
 		System.out.println("Employee Number One : "+publicempN1);
 		NumberOne=publicempN1;
-		
+		Thread.sleep(10000);
 		//empArray.add(publicempN1);
 		jiviewsHomePage.empProfileAdd(publicempN1,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		
 				//jiviewsSystemDef.empAdd(empid,
 		//webAction.waitForPageLoad(2000);
+		
+		
 		Thread.sleep(10000);
 		String publicempN2=faker.numerify("10######");
 		System.out.println("Employee Number Two : "+publicempN2);
@@ -780,6 +782,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		String publicempN3=faker.numerify("10######");
 		System.out.println("Employee Number Three : "+publicempN3);
 		NumberThree=publicempN3;
+		Thread.sleep(10000);
 		jiviewsHomePage.empProfileAdd(publicempN3,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		
 		
@@ -788,6 +791,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		String publicempN4=faker.numerify("10######");
 		System.out.println("Employee Number Four : "+publicempN4);
 		NumberFour=publicempN4;
+		Thread.sleep(10000);
 		jiviewsHomePage.empProfileAdd(publicempN4,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		
 	//	webAction.waitForPageLoad(2000);
@@ -795,6 +799,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		String publicempN5=faker.numerify("10######");
 		System.out.println("Employee Number Five : "+publicempN5);
 		NumberFive=publicempN5;
+		Thread.sleep(10000);
 		jiviewsHomePage.empProfileAdd(publicempN5,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		Thread.sleep(1000);
 		

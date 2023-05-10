@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="54" total="60" passed="5" failed="1" skipped="0">
+<testng-results ignored="54" total="60" passed="2" failed="2" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-08T09:45:58 IST" name="Suite" finished-at="2023-05-08T09:58:46 IST" duration-ms="767729">
+  <suite started-at="2023-05-09T23:00:35 IST" name="Suite" finished-at="2023-05-09T23:07:39 IST" duration-ms="424072">
     <groups>
     </groups>
-    <test started-at="2023-05-08T09:45:58 IST" name="Test1" finished-at="2023-05-08T09:46:19 IST" duration-ms="20358">
+    <test started-at="2023-05-09T23:00:35 IST" name="Test1" finished-at="2023-05-09T23:01:03 IST" duration-ms="28284">
       <class name="com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-08T09:45:59 IST" name="setUpClass" finished-at="2023-05-08T09:45:59 IST" duration-ms="31" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-09T23:00:35 IST" name="setUpClass" finished-at="2023-05-09T23:00:35 IST" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-08T09:45:59 IST" name="beforeMethod" finished-at="2023-05-08T09:46:03 IST" duration-ms="3877" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-09T23:00:35 IST" name="beforeMethod" finished-at="2023-05-09T23:00:38 IST" duration-ms="2686" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,11 +22,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VerifyLogin()[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-08T09:46:03 IST" name="VerifyLogin" finished-at="2023-05-08T09:46:18 IST" duration-ms="15030" status="PASS">
+        <test-method signature="VerifyLogin()[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-09T23:00:38 IST" name="VerifyLogin" finished-at="2023-05-09T23:01:03 IST" duration-ms="24977" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-08T09:46:18 IST" name="afterMethod" finished-at="2023-05-08T09:46:19 IST" duration-ms="1086" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-09T23:01:03 IST" name="afterMethod" finished-at="2023-05-09T23:01:03 IST" duration-ms="427" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,19 +37,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-08T09:46:19 IST" name="afterClass" finished-at="2023-05-08T09:46:19 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest@1883871b]" started-at="2023-05-09T23:01:03 IST" name="afterClass" finished-at="2023-05-09T23:01:03 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest -->
     </test> <!-- Test1 -->
-    <test started-at="2023-05-08T09:46:19 IST" name="Test2" finished-at="2023-05-08T09:52:47 IST" duration-ms="387859">
+    <test started-at="2023-05-09T23:01:03 IST" name="Test2" finished-at="2023-05-09T23:07:39 IST" duration-ms="395729">
       <class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-08T09:46:19 IST" name="setUpClass" finished-at="2023-05-08T09:46:19 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-09T23:01:03 IST" name="setUpClass" finished-at="2023-05-09T23:01:03 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-08T09:46:19 IST" name="beforeMethod" finished-at="2023-05-08T09:46:21 IST" duration-ms="1954" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-09T23:01:03 IST" name="beforeMethod" finished-at="2023-05-09T23:01:04 IST" duration-ms="684" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,11 +60,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VerifyEmpAddinEmpProfile()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-08T09:46:21 IST" name="VerifyEmpAddinEmpProfile" finished-at="2023-05-08T09:47:45 IST" duration-ms="84055" status="PASS">
+        <test-method signature="VerifyEmpAddinEmpProfile()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-09T23:01:04 IST" name="VerifyEmpAddinEmpProfile" finished-at="2023-05-09T23:02:37 IST" duration-ms="93226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyEmpAddinEmpProfile -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-08T09:47:45 IST" name="afterMethod" finished-at="2023-05-08T09:47:45 IST" duration-ms="620" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-09T23:02:37 IST" name="afterMethod" finished-at="2023-05-09T23:02:38 IST" duration-ms="274" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,7 +75,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-08T09:47:45 IST" name="beforeMethod" finished-at="2023-05-08T09:47:47 IST" duration-ms="1749" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-09T23:02:38 IST" name="beforeMethod" finished-at="2023-05-09T23:02:38 IST" duration-ms="684" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -86,59 +86,58 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="VerifyEmpProCreationFiveEmp()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-08T09:47:47 IST" name="VerifyEmpProCreationFiveEmp" finished-at="2023-05-08T09:52:46 IST" duration-ms="298796" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyEmpProCreationFiveEmp -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-08T09:52:46 IST" name="afterMethod" finished-at="2023-05-08T09:52:47 IST" duration-ms="666" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=VerifyEmpProCreationFiveEmp status=SUCCESS method=JiViewsEmployeeAdministrationTest.VerifyEmpProCreationFiveEmp()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-08T09:52:47 IST" name="afterClass" finished-at="2023-05-08T09:52:47 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
-    </test> <!-- Test2 -->
-    <test started-at="2023-05-08T09:52:47 IST" name="Test3" finished-at="2023-05-08T09:58:46 IST" duration-ms="359447">
-      <class name="com.jivi.auto.employeetest.RoaserSetup">
-        <test-method is-config="true" signature="beforeSuiteSetup()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:45:58 IST" name="beforeSuiteSetup" finished-at="2023-05-08T09:45:58 IST" duration-ms="164" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuiteSetup -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:52:47 IST" name="setUpClass" finished-at="2023-05-08T09:52:47 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:52:47 IST" name="beforeMethod" finished-at="2023-05-08T09:52:48 IST" duration-ms="1350" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="createShiftBandDefinition()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:52:48 IST" name="createShiftBandDefinition" finished-at="2023-05-08T09:54:46 IST" duration-ms="118222" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="VerifyEmpProCreationFiveEmp()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-09T23:02:38 IST" name="VerifyEmpProCreationFiveEmp" finished-at="2023-05-09T23:07:39 IST" duration-ms="300841" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[ShiftBand Creation expected [true] but found [false]]]>
+              <![CDATA[disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, findElement {using=xpath, value=//*[text()='Employee Administration']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: ShiftBand Creation expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:97)
-at org.testng.Assert.failNotEquals(Assert.java:969)
-at org.testng.Assert.assertTrue(Assert.java:43)
-at com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition(RoaserSetup.java:114)
+              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, findElement {using=xpath, value=//*[text()='Employee Administration']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy18.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+at com.jivi.auto.pageobjectutils.POMCommon.waitUntilElementIsVisible(POMCommon.java:45)
+at com.jivi.auto.pageobjectutils.POMCommon.getObject(POMCommon.java:32)
+at com.jivi.auto.pageobjectutils.WebElementKeys.clickUsingJavaScript(WebElementKeys.java:64)
+at com.jivi.auto.employeepages.JiViewsEmployeeAdministration.empProfileAdd(JiViewsEmployeeAdministration.java:547)
+at com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest.VerifyEmpProCreationFiveEmp(JiViewsEmployeeAdministrationTest.java:798)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -167,11 +166,197 @@ at org.testng.TestNG.run(TestNG.java:1007)
 at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyEmpProCreationFiveEmp -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-09T23:07:39 IST" name="afterMethod" finished-at="2023-05-09T23:07:39 IST" duration-ms="15" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=VerifyEmpProCreationFiveEmp status=FAILURE method=JiViewsEmployeeAdministrationTest.VerifyEmpProCreationFiveEmp()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:348)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShotBASE64(ReportUtils.java:145)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShot(ReportUtils.java:115)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShotOnFailure(ReportUtils.java:100)
+at com.jivi.auto.utilities.ReportUtils.addInfoOnValidations(ReportUtils.java:72)
+at com.jivi.auto.utilities.BaseTest.afterMethod(BaseTest.java:180)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest@57617a75]" started-at="2023-05-09T23:07:39 IST" name="afterClass" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1683653859677" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
+    </test> <!-- Test2 -->
+    <test started-at="2023-05-09T23:07:39 IST" name="Test3" finished-at="2023-05-09T23:07:39 IST" duration-ms="11">
+      <class name="com.jivi.auto.employeetest.RoaserSetup">
+        <test-method is-config="true" signature="beforeSuiteSetup()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:00:35 IST" name="beforeSuiteSetup" finished-at="2023-05-09T23:00:35 IST" duration-ms="94" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuiteSetup -->
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="setUpClass" finished-at="2023-05-09T23:07:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="beforeMethod" finished-at="2023-05-09T23:07:39 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createShiftBandDefinition()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="createShiftBandDefinition" finished-at="2023-05-09T23:07:39 IST" duration-ms="2" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:327)
+at com.jivi.auto.utilities.BaseTest.goTo(BaseTest.java:247)
+at com.jivi.auto.utilities.BaseTest.launchBrowser(BaseTest.java:234)
+at com.jivi.auto.utilities.BaseTest.setupTest(BaseTest.java:157)
+at com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition(RoaserSetup.java:95)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createShiftBandDefinition -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:54:46 IST" name="afterMethod" finished-at="2023-05-08T09:54:47 IST" duration-ms="515" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="afterMethod" finished-at="2023-05-09T23:07:39 IST" duration-ms="5" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -179,70 +364,270 @@ at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:348)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShotBASE64(ReportUtils.java:145)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShot(ReportUtils.java:115)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShotOnFailure(ReportUtils.java:100)
+at com.jivi.auto.utilities.ReportUtils.addInfoOnValidations(ReportUtils.java:72)
+at com.jivi.auto.utilities.BaseTest.afterMethod(BaseTest.java:180)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:54:47 IST" name="beforeMethod" finished-at="2023-05-08T09:54:48 IST" duration-ms="930" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.jivi.auto.employeetest.RoaserSetup.rosterGroupAssignmentAddingSelectedEmp() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="beforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1683653859711" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="rosterGroupAssignmentAddingSelectedEmp()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:54:48 IST" name="rosterGroupAssignmentAddingSelectedEmp" finished-at="2023-05-08T09:56:17 IST" duration-ms="88893" status="PASS">
+        <test-method signature="rosterGroupAssignmentAddingSelectedEmp()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="rosterGroupAssignmentAddingSelectedEmp" finished-at="2023-05-09T23:07:39 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:348)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShotBASE64(ReportUtils.java:145)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShot(ReportUtils.java:115)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShotOnFailure(ReportUtils.java:100)
+at com.jivi.auto.utilities.ReportUtils.addInfoOnValidations(ReportUtils.java:72)
+at com.jivi.auto.utilities.BaseTest.afterMethod(BaseTest.java:180)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rosterGroupAssignmentAddingSelectedEmp -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:56:17 IST" name="afterMethod" finished-at="2023-05-08T09:56:17 IST" duration-ms="524" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=rosterGroupAssignmentAddingSelectedEmp status=SUCCESS method=RoaserSetup.rosterGroupAssignmentAddingSelectedEmp()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:56:17 IST" name="beforeMethod" finished-at="2023-05-08T09:56:18 IST" duration-ms="1163" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.jivi.auto.employeetest.RoaserSetup.rosterCreation() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="rosterCreation()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:56:18 IST" name="rosterCreation" finished-at="2023-05-08T09:58:46 IST" duration-ms="147339" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- rosterCreation -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:58:46 IST" name="afterMethod" finished-at="2023-05-08T09:58:46 IST" duration-ms="499" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=rosterCreation status=SUCCESS method=RoaserSetup.rosterCreation()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:58:46 IST" name="afterClass" finished-at="2023-05-08T09:58:46 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="afterClass" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1683653859712" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:58:46 IST" name="endTest" finished-at="2023-05-08T09:58:46 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="beforeMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1683653859712" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1683653859712" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="rosterCreation()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="rosterCreation" finished-at="2023-05-09T23:07:39 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=113.0.5672.93)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'ASHOK', ip: '192.168.0.104', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9d274380f6b5047c06b7e813e3683b3a, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55490/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d274380f6b5047c06b7e813e3683b3a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:348)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShotBASE64(ReportUtils.java:145)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShot(ReportUtils.java:115)
+at com.jivi.auto.utilities.ReportUtils.takeScreenShotOnFailure(ReportUtils.java:100)
+at com.jivi.auto.utilities.ReportUtils.addInfoOnValidations(ReportUtils.java:72)
+at com.jivi.auto.utilities.BaseTest.afterMethod(BaseTest.java:180)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:671)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:655)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rosterCreation -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="afterMethod" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1683653859712" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="endTest" finished-at="2023-05-09T23:07:39 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-        <test-method is-config="true" signature="afterTestSuite()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-08T09:58:46 IST" name="afterTestSuite" finished-at="2023-05-08T09:58:46 IST" duration-ms="34" status="PASS">
+        <test-method is-config="true" signature="afterTestSuite()[pri:0, instance:com.jivi.auto.employeetest.RoaserSetup@2d758472]" started-at="2023-05-09T23:07:39 IST" name="afterTestSuite" finished-at="2023-05-09T23:07:39 IST" duration-ms="24" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTestSuite -->
