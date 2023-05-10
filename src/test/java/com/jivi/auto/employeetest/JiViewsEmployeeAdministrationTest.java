@@ -775,6 +775,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		String publicempN2=faker.numerify("10######");
 		System.out.println("Employee Number Two : "+publicempN2);
 		NumberTwo=publicempN2;
+		Thread.sleep(10000);
 		jiviewsHomePage.empProfileAdd(publicempN2,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		
 	//	webAction.waitForPageLoad(2000);
