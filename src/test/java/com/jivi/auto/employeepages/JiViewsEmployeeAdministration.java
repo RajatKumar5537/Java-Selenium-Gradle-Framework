@@ -541,22 +541,100 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 		webAction.clickUsingJavaScript(olmLink);
 		
 		//webAction.wa
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(systemSetup);
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(employeeAdmin);
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(empProfile);
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(empAddEmp);
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		webAction.setText(employeeNumber, a);
-		
+		Thread.sleep(100);
 		webAction.setText(badgeNumber, b);
+		Thread.sleep(100);
 		webAction.setText(firstName, c);
+		Thread.sleep(100);
 		webAction.setText(lastName, d);
+		Thread.sleep(100);
 		webAction.setText(birthDate, e);
+		Thread.sleep(100);
 		webAction.setText(addressLine1, f);
+		Thread.sleep(100);
+		Thread.sleep(100);
+		webAction.setText(postCode, g);
+		Thread.sleep(100);
+		webAction.setText(cityName, h);
+		Thread.sleep(100);
+		dropdown.selectByIndex(gender, 0);
+		Thread.sleep(100);
+		dropdown.selectByIndex(countryName, 0);
+		Thread.sleep(100);
+		dropdown.selectByIndex(employmentBasis, 0);
+	//	dropdown.selectByIndex(payGroup, 1);
+		dropdown.selectByIndex(scheduleRule, 0);
+		
+		
+		dropdown.selectByIndex(payGroup, 1);
+		//String test=dropdown.alertGettext();
+		//System.out.println(test);
+		//dropdown.selectByIndex(payGroup, 1);
+		//Thread.sleep(2000);
+		//dropdown.sele
+		webAction.waitUntilElementIsClickable(saveEmployees);
+		webAction.clickUsingJavaScript(saveEmployees);
+	//	saveEmployee.click();
+		Thread.sleep(2000);
+		// String Expected="Employee Number [10021] already exists. Please choose another name.";
+		//  String Ex="Employee Profile created successfully"; 
+		  String Actual=successToast_Message.getText(); 
+		  System.out.println(Actual);
+		  Assert.assertTrue(Actual.contains("Profile created successfully")); 
+		  System.out.println("testing completed");
+		 		return true;
+		
+	}
+	
+	public boolean menuNavigationEmpProfile() throws Exception
+	{
+		Thread.sleep(3000);
+		webAction.clickUsingJavaScript(olm);
+		Thread.sleep(3000);
+		//webAction.waitUntilElementIsClickable(olmLink);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		//webAction.wa
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(employeeAdmin);
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(empProfile);
+		Thread.sleep(1000);
+		return true;
+		
+	}
+	
+	public boolean empProfileAddFive(String a,String b,String c,String d,String e,String f,String g,String h) throws Exception {
+		
+		//Thread.sleep(500);
+		
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(empAddEmp);
+		Thread.sleep(1000);
+		webAction.setText(employeeNumber, a);
+		Thread.sleep(100);
+		webAction.setText(badgeNumber, b);
+		Thread.sleep(100);
+		webAction.setText(firstName, c);
+		Thread.sleep(100);
+		webAction.setText(lastName, d);
+		Thread.sleep(100);
+		webAction.setText(birthDate, e);
+		Thread.sleep(100);
+		webAction.setText(addressLine1, f);
+		Thread.sleep(100);
 		Thread.sleep(100);
 		webAction.setText(postCode, g);
 		Thread.sleep(100);
@@ -1109,23 +1187,25 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.clickUsingJavaScript(olm);
 			//	webAction.click(olm);
 				Thread.sleep(1000);
-				webAction.click(olmLink);
+				webAction.clickUsingJavaScript(olmLink);
 
+				Thread.sleep(500);
+				webAction.clickUsingJavaScript(systemSetup);
+				Thread.sleep(500);
+				webAction.clickUsingJavaScript(employeeAdmin);
+				Thread.sleep(500);
+				webAction.clickUsingJavaScript(empProfile);
 				
-				webAction.click(systemSetup);
-				webAction.click(employeeAdmin);
-				webAction.click(empProfile);
-				
-				Thread.sleep(5000);
+				Thread.sleep(1000);
 				webAction.setText(searchEmp, a);
 				//Thread.sleep(10000);
-				
-				webAction.click(empProfileEdit);
+				Thread.sleep(500);
+				webAction.clickUsingJavaScript(empProfileEdit);
 			
 				//webAction.waitUntilElementIsClickable(securitySubMenu);
 				Thread.sleep(5000);
 				
-				webAction.click(securitySubMenu);
+				webAction.clickUsingJavaScript(securitySubMenu);
 				
 			//	Actions action = new Actions(driver);
 				//WebElement we = driver.findElement(By.xpath("//*[text()='Security']"));
@@ -1212,7 +1292,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.clickUsingJavaScript(ESSSubMenu);
 				webAction.clickUsingJavaScript(AddLeaveProfile);
 				Thread.sleep(200);
-				dropdown.selectByIndex(empLeaveProfileName, 0);
+				dropdown.selectByIndex(empLeaveProfileName, 1);
 				webAction.click(saveLeaveProfile);
 				
 				webAction.click(addEmpWorkflowRoute);

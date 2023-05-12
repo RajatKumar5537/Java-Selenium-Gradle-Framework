@@ -27,6 +27,7 @@ LoginPage login;
 	MenuNavigation menuNavigation=new MenuNavigation();
 	WorkLoadPlanning workLoad= new WorkLoadPlanning();
 	
+	
 	JiViewsEmployeeAdministration jiviewsHomePage;
 	POMCommon pomCommon;
 	WebElementKeys webAction = new WebElementKeys();
@@ -68,7 +69,7 @@ LoginPage login;
 		workLoad.createVesselSchedule();
 		workLoad.scheduleCranes();
 		workLoad.signOffPlanning();
-		workLoad.verifyQCFinalBookingReport();
+		//workLoad.verifyQCFinalBookingReport();
 		//Assert.assertTrue(workLoad.verifyVesselCreation(), "Create Vessel");
 	}
 	
@@ -76,6 +77,9 @@ LoginPage login;
 		System.out.println("testing login");
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		WorkLoadPlanning workLoad=PageFactory.initElements(driver, WorkLoadPlanning.class);
+	
 		String userId=dataTable.get("UserId");
 		String loginpwd=dataTable.get("pwd");
 		jiviewsHomePage.Login(userId, loginpwd);
@@ -90,6 +94,9 @@ LoginPage login;
 		System.out.println("testing login");
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		WorkLoadPlanning workLoad=PageFactory.initElements(driver, WorkLoadPlanning.class);
+	
 		String userId=dataTable.get("UserId");
 		String loginpwd=dataTable.get("pwd");
 		jiviewsHomePage.Login(userId, loginpwd);

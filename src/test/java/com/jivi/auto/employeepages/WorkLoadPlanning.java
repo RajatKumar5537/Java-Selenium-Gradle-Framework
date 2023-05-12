@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -72,10 +73,19 @@ public class WorkLoadPlanning extends BaseTest {
 	WebElement lstResourceSet;
 	@FindBy(id = "btnSaveVesselSchedule")
 	WebElement btnSaveVesselSchedule;
+	
 	@FindBy(xpath = "//span[@class='select2-selection__choice__remove']")
 	WebElement removeSelection;
+	
 	@FindBy(id = "cmbShiftBand")
 	WebElement lstShiftBand;
+	
+	@FindBy(xpath = "//*[@id=\"dailyPlanningAccordion-1\"]/form/div/div[1]/div[2]/div/span[1]/span[1]/span/ul/li/input")
+	WebElement lstShiftBandSelection;
+	
+	@FindBy(xpath = "//*[@id='cmbShiftBand']/option")
+	List<WebElement> lstShiftBandList;
+	
 	@FindBy(id = "btnSearchDailyPlanning")
 	WebElement btnSearchDailyPlanning;
 	@FindBys(@FindBy(xpath = "//div[contains(text(),'Vessel Schedule created successfully')]"))
@@ -101,35 +111,60 @@ public class WorkLoadPlanning extends BaseTest {
 	
 	@FindBy(xpath = "//*[@id='432']/a/div")
 	WebElement qcFinalBookingReport;
+	
+	@FindBy(id = "cmbShiftBand")
+	WebElement cmbShiftBandInQCFinalBookingReport;
 
+	@FindBy(xpath = "//select[@id='cmbShiftBand']/option")
+	List<WebElement> cmbShiftBandInQCFinalBookingReportList;
+	
+	@FindBy(id = "btnSearch")
+	WebElement btnSearchInQCFinalBookingReport;
+	
 	public void createVesselSchedule() throws Exception {
 		Date date=new Date();
-		SimpleDateFormat dateformat=new SimpleDateFormat("yyyy-MM-dd");
+		SimpleDateFormat dateformat=new SimpleDateFormat("dd-mm-yyyy");
 		String formateddate=dateformat.format(date);
-		Thread.sleep(5000);
-		//dtPlanning.clear();
-		//Thread.sleep(500);
-	//	dtPlanning.sendKeys(excelObject.getData("CreateVesselSchedule", "Date", "WorkLoadPlanning"));
-	//	webAction.setText(dtPlanning, formateddate);
-		//dtPlanning.sendKeys(formateddate);
-		//reuse.performWebElementTab(formateddate);
-		Thread.sleep(1500);
-
-		try {
-			reuse.waitforClickable(removeSelection);
-			removeSelection.click();
-		} catch (Exception E) {
-			Thread.sleep(200);
+		//System.out.println(formateddate);
+		//Thread.sleep(2000);
+		//webAction.clearText(dtPlanning);
+		//webAction.setText(dtPlanning, formateddate);
+		Thread.sleep(2000);
+		
+			//reuse.waitforClickable(removeSelection);
+			//removeSelection.click();
+			webAction.clickUsingJavaScript(removeSelection);
+			Thread.sleep(500);
 		//	reuse.waitforClickable(lstShiftBand);
 		//	lstShiftBand.click();
+		
+		//Thread.sleep(500);
+		//System.out.println(shiftBandNew);
+			String shiftBandNewone="Auto Band code 9572";
+		//webAction.clickUsingJavaScript(lstShiftBand);
+		//Thread.sleep(500);
+	//	webAction.setValueUsingJavaScript(lstShiftBandSelection, "Auto Band code 88093");
+		//lstShiftBand.sendKeys("Auto Band code 88093");
+		//webAction.setText(lstShiftBand, "Auto Band code 88093");
+		Thread.sleep(500);
+		//lstShiftBandSelection.sendKeys(Keys.ARROW_DOWN);
+		//lstShiftBandSelection.sendKeys(Keys.ENTER);
+		
+		List<WebElement> listShiftBand=lstShiftBandSelection.findElements(By.xpath("//*[@id='cmbShiftBand']/option"));
+		for( WebElement we: listShiftBand) { 
+		Thread.sleep(500);      
+		//we.sendKeys(Keys.ARROW_DOWN);
+		if(shiftBandNew.equals(we.getText()))
+		we.click();
+		//Thread.sleep(500);
 		}
-
-		Thread.sleep(200);
+		
+		Thread.sleep(500);
 	//	driver.findElement(By.xpath("//li[text()='Shift 22']")).click();
 		btnSearchDailyPlanning.click();
-		Thread.sleep(100);
+		Thread.sleep(1000);
 	//	menuNavigation.waitforLoadingIcon();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		reuse.performWebElementRightClick(berth);
 		//Actions oAct = new Actions(driver);
 		//oAct.moveToElement(berth).contextClick(berth).build().perform();
@@ -185,14 +220,29 @@ public class WorkLoadPlanning extends BaseTest {
 		Thread.sleep(500);
 		menuNavigation.waitforLoadingIcon();
 		webAction.clickUsingJavaScript(btnPerformActivityGenerationTask);
+		
 		//btnPerformActivityGenerationTask.click();
-		menuNavigation.waitforLoadingIcon();
+		//menuNavigation.waitforLoadingIcon();
 		Thread.sleep(500);
-		lstManningRatio.click();
-		driver.findElement(By.xpath("//li[text()='Default Manning Ratio']")).click();
+		webAction.clickUsingJavaScript(lstManningRatio);
+		
+		String ratio="Default Ratio";
+		List<WebElement> lstManningRatioSe=lstManningRatio.findElements(By.xpath("//select[@id='cmbActivityGenRule']/option"));
+		for( WebElement we: lstManningRatioSe) { 
+		Thread.sleep(500);      
+		//we.sendKeys(Keys.ARROW_DOWN);
+		if(ratio.equals(we.getText()))
+		we.click();
+		//Thread.sleep(500);
+		}
+		
+		//lstManningRatio.click();
+		//lstManningRatio.sendKeys(Keys.TAB);
+		//driver.findElement(By.xpath("//li[text()='Default Manning Ratio']")).click();
 		Thread.sleep(1000);
-		btnPerformActivityGenerationTask.click();
-		menuNavigation.waitforLoadingIcon();
+		webAction.clickUsingJavaScript(btnPerformActivityGenerationTask);
+		//btnPerformActivityGenerationTask.click();
+		//menuNavigation.waitforLoadingIcon();
 		Thread.sleep(2000);
 	}
 
@@ -224,10 +274,23 @@ public class WorkLoadPlanning extends BaseTest {
 
 	}
 	
-	public boolean verifyQCFinalBookingReport() throws IOException, InterruptedException {
+	public boolean verifyQCFinalBookingReport() throws Exception {
 		Thread.sleep(100);
-		workForceExecution.click();
-		qcFinalBookingReport.click();
+		webAction.click(workForceExecution);
+		webAction.click(qcFinalBookingReport);
+		webAction.click(cmbShiftBandInQCFinalBookingReport);
+		
+		//temp name for to view the functionality is working or not
+		//Actual name for shiftBand: shiftBandNew (Global variable)
+		String shiftBandNewone="Auto Band code 9572";
+		
+		List<WebElement> listShiftBand=cmbShiftBandInQCFinalBookingReport.findElements(By.xpath("//select[@id='cmbShiftBand']/option"));
+		for( WebElement we: listShiftBand) { 
+		Thread.sleep(500);      
+		if(shiftBandNew.equals(we.getText()))
+		we.click();
+		}
+		
 		return false;
 
 	}

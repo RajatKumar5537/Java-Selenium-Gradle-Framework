@@ -84,6 +84,7 @@ public class MenuNavigation extends BaseTest {
 	@FindBy(xpath = "//div[text()='Workload Planner']")
 	WebElement workLoadPlanner;
 	
+	
 	@FindBy(xpath = "//div[text()='Shift Band Definition']")
 	WebElement shifitBandDefinition;
 	
@@ -103,6 +104,13 @@ public class MenuNavigation extends BaseTest {
 	WebElement processAdministration;
 
 
+	@FindBy(xpath = "//span[text()='Time & Attendance']")
+	WebElement timeAndAttendance;
+	
+	@FindBy(xpath = "//div[text()='Attendance Reconciliation']")
+	WebElement attendRecon;
+	
+	
 	public MenuNavigation() throws FileNotFoundException {
 		PageFactory.initElements(driver, this);
 
@@ -199,7 +207,7 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		Thread.sleep(2000);
 		System.out.println("Landed To Roaster Group Assignment Method");
 		webAction.clickUsingJavaScript(olm);
-		webAction.click(olmLink);
+		webAction.clickUsingJavaScript(olmLink);
 		
 		waitforLoadingIcon();
 	//	menuItems.click();
@@ -207,6 +215,7 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		webAction.clickUsingJavaScript(systemSetup);
 		//Thread.sleep(100);
 		//webAction.waitUntilElementIsClickable(systemDefinitionsMenu);
+		Thread.sleep(500);
 		webAction.clickUsingJavaScript(empAdministration);
 		//systemDefinitionsMenu.clickwaitforLoadingIcon();
 		webAction.clickUsingJavaScript(rosterGroupAssnmt);
@@ -217,23 +226,33 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 
 	public void navigateToWorkLoadPLanning() throws Exception {
 		webAction.clickUsingJavaScript(olm);
-		webAction.click(olmLink);
+		webAction.clickUsingJavaScript(olmLink);
 		
-		waitforLoadingIcon();
-	//	menuItems.click();
-		//waitforLoadingIcon();
+		Thread.sleep(500);
 		webAction.clickUsingJavaScript(systemSetup);
-		Thread.sleep(2000);
-		//menuItems.click();
-		//waitforLoadingIcon();
-		planningExecutionMenu.click();
-		waitforLoadingIcon();
-		workLoadPlanner.click();
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(workLoadPlanner);
 		waitforLoadingIcon();
 		Thread.sleep(10000);
-		waitforLoadingIcon();
-
 	}
+	
+	public void navigateToTimeAndAttendance() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(timeAndAttendance);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(attendRecon);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
+	
 	public void navigateToProcessAdministration() throws InterruptedException {
 		menuItems.click();
 		waitforLoadingIcon();

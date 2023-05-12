@@ -295,11 +295,11 @@ public class Roaster extends BaseTest {
 		
 		
 
-		String publicempNum=faker.numerify("9###");
+		String publicempNum=faker.numerify("8####");
 		String coun=faker.company().industry();
 		String des=faker.company().industry();
 		
-		String shiftbandname="Shift"+" "+coun+" "+publicempNum;
+		String shiftbandname="Shift Band"+" "+coun+" "+publicempNum;
 		
 		//setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		btnAddNew.click();
@@ -469,13 +469,16 @@ public String createRosterGroupAssignmentAddingAllEmp() throws Exception {
 		Thread.sleep(2000);
 		
 		//firstEmp.click();
-		threeDotAvailableEmp.click();
-		addAll.click();
-		//addSelected.click();
-			
+		webAction.clickUsingJavaScript(threeDotAvailableEmp);
+		Thread.sleep(500);
+		//threeDotAvailableEmp.click();
+		webAction.clickUsingJavaScript(addAll);
+		Thread.sleep(500);
+		webAction.scrollUp();
+		Thread.sleep(500);
 		webAction.clickUsingJavaScript(rosterGroupSave);
 		//rosterGroupSave.click();
-		
+		Thread.sleep(1000);
 		
 		return rosterGroupNAme;
 	}
@@ -489,7 +492,8 @@ public String createRosterGroupAssignmentRemoveSelected() throws Exception {
 	String rosterGroupNAme="Shift"+" "+coun+" "+publicempNum;
 	System.out.println("Roster Group Name: "+"Shift"+" "+coun+" "+publicempNum);
 	//setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-	rosterGroupAssnmtAdd.click();
+	webAction.clickUsingJavaScript(rosterGroupAssnmtAdd);
+	//rosterGroupAssnmtAdd.click();
 	Thread.sleep(3000);
 	System.out.println("testing Roster Group Assignment");
 	
@@ -501,16 +505,22 @@ public String createRosterGroupAssignmentRemoveSelected() throws Exception {
 	Thread.sleep(2000);
 	
 	//firstEmp.click();
-	threeDotAvailableEmp.click();
-	addAll.click();
-	firstEmpCurrentEmp.click();
-	threeDotCurrentEmp.click();
-	removeSelected.click();
-	//addSelected.click();
-	
+	webAction.clickUsingJavaScript(threeDotAvailableEmp);
+	Thread.sleep(500);
+	webAction.clickUsingJavaScript(addAll);
+	Thread.sleep(500);
+	webAction.clickUsingJavaScript(firstEmpCurrentEmp);
+	Thread.sleep(500);
+	webAction.clickUsingJavaScript(threeDotCurrentEmp);
+	Thread.sleep(500);
+	webAction.clickUsingJavaScript(removeSelected);
+	Thread.sleep(500);
+
+	webAction.scrollUp();
+	Thread.sleep(500);
 	webAction.clickUsingJavaScript(rosterGroupSave);
 	//rosterGroupSave.click();
-	
+	Thread.sleep(500);	
 	
 	return rosterGroupNAme;
 }
@@ -524,7 +534,8 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 	String rosterGroupNAme="Shift"+" "+coun+" "+publicempNum;
 	System.out.println("Roster Group Name: "+"Shift"+" "+coun+" "+publicempNum);
 	//setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
-	rosterGroupAssnmtAdd.click();
+	webAction.clickUsingJavaScript(rosterGroupAssnmtAdd);
+	//rosterGroupAssnmtAdd.click();
 	Thread.sleep(3000);
 	System.out.println("testing Roster Group Assignment");
 	
@@ -536,14 +547,18 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 	Thread.sleep(2000);
 	
 	//firstEmp.click();
-	threeDotAvailableEmp.click();
-	addAll.click();
+	webAction.clickUsingJavaScript(threeDotAvailableEmp);
+	//threeDotAvailableEmp.clickUsingJavaScript();
+	webAction.clickUsingJavaScript(addAll);
+	//addAll.click();
 	Thread.sleep(2000);
-	threeDotCurrentEmp.click();
-	removeAll.click();
+	webAction.clickUsingJavaScript(threeDotCurrentEmp);
+	//threeDotCurrentEmp.clickUsingJavaScript();
+	webAction.clickUsingJavaScript(removeAll);
+	//removeAll.click();
 	Thread.sleep(2000);
 	//addSelected.click();
-	
+	webAction.scrollUp();
 	webAction.clickUsingJavaScript(rosterGroupSave);
 	//rosterGroupSave.click();
 	
@@ -711,7 +726,7 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 		txtShiftbandDesc.clear();
 		txtShiftbandDesc.sendKeys("Updating Shift band "+publicempNum);
 		btnSaveshiftbandDtls.click();
-		Thread.sleep(100);
+		Thread.sleep(3000);
 	}
 
 	public void deleteShiftBand() throws Exception {

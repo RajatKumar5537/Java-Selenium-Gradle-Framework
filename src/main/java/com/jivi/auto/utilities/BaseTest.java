@@ -216,7 +216,10 @@ public class BaseTest extends GlobalVariables {
 			else
 				System.setProperty("webdriver.chrome.driver", configData.get("ChromeDriverPath"));
 			ChromeOptions options = new ChromeOptions();
-			options.addArguments("chrome.switches", "--disable-extensions");
+			options.addArguments("--remote-allow-origins=*");
+		    options.addArguments("--no-sandbox");
+		    options.addArguments("--disable-dev-shm-usage");
+		//	options.addArguments("chrome.switches", "--disable-extensions");
 			options.addArguments("test-type");
 			//WebDriver reportDriver = new ChromeDriver(options);
 			//reportDriver.manage().window().maximize();
