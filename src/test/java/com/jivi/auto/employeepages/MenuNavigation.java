@@ -11,11 +11,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.jivi.auto.utilities.BaseTest;
+import com.jivi.auto.pageobjectutils.MouseHandler;
 import com.jivi.auto.pageobjectutils.WebElementKeys;
 
 public class MenuNavigation extends BaseTest {
 
 	WebElementKeys webAction = new WebElementKeys();
+	MouseHandler handler=new MouseHandler();
 	
 	@FindBy(xpath="//*[@id=\"dvOrgUnitDropdown\"]/a/i")
 	WebElement olm;

@@ -1196,8 +1196,9 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				Thread.sleep(500);
 				webAction.clickUsingJavaScript(empProfile);
 				
-				Thread.sleep(1000);
-				webAction.setText(searchEmp, a);
+				webAction.waitUntilElementIsVisible(searchEmp);
+				webAction.setValueUsingJavaScript(searchEmp, a);
+				//webAction.setText(searchEmp, a);
 				//Thread.sleep(10000);
 				Thread.sleep(500);
 				webAction.clickUsingJavaScript(empProfileEdit);
@@ -1291,8 +1292,10 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				
 				webAction.clickUsingJavaScript(ESSSubMenu);
 				webAction.clickUsingJavaScript(AddLeaveProfile);
+				Thread.sleep(500);
+				//dropdown.selectByIndex(empLeaveProfileName, 1);
+				dropdown.selectByValue(empLeaveProfileName, "Leave Profile  One");
 				Thread.sleep(200);
-				dropdown.selectByIndex(empLeaveProfileName, 1);
 				webAction.click(saveLeaveProfile);
 				
 				webAction.click(addEmpWorkflowRoute);

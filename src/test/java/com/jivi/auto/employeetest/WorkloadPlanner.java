@@ -69,6 +69,10 @@ LoginPage login;
 		workLoad.createVesselSchedule();
 		workLoad.scheduleCranes();
 		workLoad.signOffPlanning();
+		Thread.sleep(3000);
+		workLoad.validateEquipmentSummary();
+		Thread.sleep(1000);
+		workLoad.validateSkillSummary();
 		//workLoad.verifyQCFinalBookingReport();
 		//Assert.assertTrue(workLoad.verifyVesselCreation(), "Create Vessel");
 	}
@@ -105,5 +109,6 @@ LoginPage login;
 		menuNavigation.navigateToWorkLoadPLanning();
 		workLoad.signOffPlanning();
 		Assert.assertTrue(workLoad.verifyPlanningSignoff(), "Create Crane Schedule");
+		
 	}
 }

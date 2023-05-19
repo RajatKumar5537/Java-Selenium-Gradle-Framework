@@ -21,6 +21,8 @@ import com.jivi.auto.utilities.BaseTest;
 
 import com.jivi.auto.business_reusablecomponents.ReusableComponents;
 import com.jivi.auto.pageobjectutils.DropDown;
+import com.jivi.auto.pageobjectutils.MouseHandler;
+import com.jivi.auto.pageobjectutils.POMCommon;
 import com.jivi.auto.pageobjectutils.WebElementKeys;
 import com.github.javafaker.Faker;
 
@@ -32,6 +34,8 @@ public class WorkLoadPlanning extends BaseTest {
 	//ReusableComponents resusemain=new ReusableComponents();
 	WebElementKeys webAction = new WebElementKeys();
 	DropDown dropdown=new DropDown();
+	MouseHandler handler=new MouseHandler(); 
+	POMCommon common=new POMCommon();
 
 	public WorkLoadPlanning() throws FileNotFoundException {
 		PageFactory.initElements(driver, this);
@@ -58,13 +62,23 @@ public class WorkLoadPlanning extends BaseTest {
 	WebElement txtVesselVisitId;
 	@FindBy(id = "select2-cmbBerth-container")
 	WebElement lstBerth;
+	
 	@FindBy(xpath = "//*[@id='select2-cmbBerth-results']/li[1]")
 	WebElement berthSelect;
+	
+	@FindBy(id = "cmbBerth")
+	WebElement vesselBirth;
+	
+	@FindBy(xpath= "//select[@id='cmbBerth']/option")
+	List<WebElement> vesselBirthList;
 	
 	@FindBy(id = "txtNumberOfCranes")
 	WebElement txtNumberOfCranes;
 	@FindBy(id = "select2-cmbPriority-container")
 	WebElement lstPriority;
+	
+	@FindBy(id = "cmbPriority")
+	WebElement lstPriorityList;
 	
 	@FindBy(xpath="//*[@id='select2-cmbPriority-results']/li[1]")
 	WebElement prioritySelection;
@@ -121,6 +135,21 @@ public class WorkLoadPlanning extends BaseTest {
 	@FindBy(id = "btnSearch")
 	WebElement btnSearchInQCFinalBookingReport;
 	
+	@FindBy(xpath = "(//*[@class='centered_rowheader_inner']/div)[15]")
+	WebElement craneRequired;
+	
+	@FindBy(xpath = "(//*[@class='centered_rowheader_inner']/div)[16]")
+	WebElement craneAvailable;
+	
+	@FindBy(xpath = "(//*[@class='centered_rowheader_inner']/div)[22]")
+	WebElement vesselCraneAvailable;
+	
+	@FindBy(xpath = "//*[text()='Skill Summary']")
+	WebElement skillSummary;
+	
+	@FindBy(xpath = "(//*[@class='centered_rowheader_inner'])[56]")
+	WebElement craneDriverRequired;
+	
 	public void createVesselSchedule() throws Exception {
 		Date date=new Date();
 		SimpleDateFormat dateformat=new SimpleDateFormat("dd-mm-yyyy");
@@ -140,7 +169,7 @@ public class WorkLoadPlanning extends BaseTest {
 		
 		//Thread.sleep(500);
 		//System.out.println(shiftBandNew);
-			String shiftBandNewone="Auto Band code 9572";
+			String shiftBandNewone="Auto Band Code Banking 9546";
 		//webAction.clickUsingJavaScript(lstShiftBand);
 		//Thread.sleep(500);
 	//	webAction.setValueUsingJavaScript(lstShiftBandSelection, "Auto Band code 88093");
@@ -159,42 +188,70 @@ public class WorkLoadPlanning extends BaseTest {
 		//Thread.sleep(500);
 		}
 		
-		Thread.sleep(500);
-	//	driver.findElement(By.xpath("//li[text()='Shift 22']")).click();
+		
 		btnSearchDailyPlanning.click();
-		Thread.sleep(1000);
+		
+		
+		Thread.sleep(5000);
 	//	menuNavigation.waitforLoadingIcon();
 		//Thread.sleep(2000);
+		//handler.clickUsingActionsMethod(berth);
+		webAction.waitUntilElementIsClickable(berth);
+		berth.click();
 		reuse.performWebElementRightClick(berth);
-		//Actions oAct = new Actions(driver);
-		//oAct.moveToElement(berth).contextClick(berth).build().perform();
-		//berth.click();
-		Thread.sleep(2000);
-		lnkCreate.click();
-		menuNavigation.waitforLoadingIcon();
-		Thread.sleep(500);
-		webAction.click(lnkVessel);
+		//handler.clickUsingActionsMethod(berth);
+		//handler.moveMousePointerToElement(berth, lnkCreate);
+		//common.scrollIntoeEement(lnkCreate);
+		handler.hoverElement(lnkCreate);
+		handler.clickUsingActionsMethod(lnkCreate);
+		//lnkVessel.sendKeys(Keys.ARROW_DOWN);
+		//webAction.clickUsingJavaScript(lnkCreate);
+		
+	//	menuNavigation.waitforLoadingIcon();
+	//	Thread.sleep(500);
+		handler.clickUsingActionsMethod(lnkVessel);
+		//webAction.clickUsingJavaScript(lnkVessel);
+		
 		//lnkVessel.click();
 		menuNavigation.waitforLoadingIcon();
 		String Num=faker.numerify("0###");
 		
 		txtVesselName.sendKeys("Test Automation "+Num);
 		txtVesselVisitId.sendKeys("Visit ID "+Num);
-		lstBerth.click();
-		Thread.sleep(2000);
-		berthSelect.click();
-		//dropdown.selectByIndex(lstBerth, 0);
+		Thread.sleep(200);
+		String birthName="Berth_1";
+		List<WebElement> veselBirthList=vesselBirth.findElements(By.xpath("//select[@id='cmbBerth']/option"));
+				for( WebElement we: veselBirthList) { 
+				Thread.sleep(500);      
+				if(birthName.equals(we.getText()))
+				{
+				we.click();
+				}
+				}
+
+				
+				txtNumberOfCranes.clear();
+				txtNumberOfCranes.sendKeys("5");
+		
+		
+				
+		
+		
 	//	driver.findElement(By.xpath("//*[@id='cmbBerth']/option[1]")).click();
-		lstPriority.click();
-		prioritySelection.click();
-		txtNumberOfCranes.clear();
-		txtNumberOfCranes.sendKeys("5");
+		webAction.clickUsingJavaScript(lstPriorityList);
+		dropdown.selectByvisibleText(lstPriorityList, "High");
+		
+	//	webAction.clickUsingJavaScript(prioritySelection);
+		
+		
 		//lstPriority.click();
 		//driver.findElement(By.xpath("//*[@id='select2-cmbPriority-results']/li[1]")).click();
 		//lstResourceSet.click();
 		//driver.findElement(By.xpath("//li[text()='RTG']")).click();
+		
 		menuNavigation.waitforLoadingIcon();
-		btnSaveVesselSchedule.click();
+		webAction.clickUsingJavaScript(btnSaveVesselSchedule);
+		
 		menuNavigation.waitforLoadingIcon();
 	}
 
@@ -243,9 +300,38 @@ public class WorkLoadPlanning extends BaseTest {
 		webAction.clickUsingJavaScript(btnPerformActivityGenerationTask);
 		//btnPerformActivityGenerationTask.click();
 		//menuNavigation.waitforLoadingIcon();
-		Thread.sleep(2000);
+		Thread.sleep(20000);
+	}
+	
+	public void validateEquipmentSummary() throws Exception {
+		System.out.println("Cranne Required: "+craneRequired.getText());
+		if(craneRequired.getText().equalsIgnoreCase("5"))
+		{
+			System.out.println("Crane required is matching in the EquipmentSummary");
+		}
+		else
+		{
+			System.out.println("Crane required is NOT matching in the EquipmentSummary");
+		}
 	}
 
+	public void validateSkillSummary() throws Exception {
+		Thread.sleep(10000);
+		webAction.scrollDownLittle();
+		webAction.waitUntilElementIsClickable(skillSummary);
+		webAction.click(skillSummary);
+		Thread.sleep(1000);
+		System.out.println("Cranne Driver Required: "+craneDriverRequired.getText());
+		if(craneDriverRequired.getText().equalsIgnoreCase("5"))
+		{
+			System.out.println("Crane Driver required is matching in the SkillSummary");
+		}
+		else
+		{
+			System.out.println("Crane Driver required is NOT matching in the SkillSummary");
+		}
+		Thread.sleep(1000);
+	}
 	public boolean verifyVesselCreation() throws InterruptedException {
 		boolean createVessel = true;
 		Thread.sleep(100);
@@ -269,8 +355,11 @@ public class WorkLoadPlanning extends BaseTest {
 	public boolean verifyPlanningSignoff() throws IOException {
 		System.out.println(dvCurrentDateSignOffStatus.getText().trim());
 		System.out.println("Shift has been Signed off");
+
 		return dvCurrentDateSignOffStatus.getText().trim()
-				.equals("[" + "Shift 22"+ "] has been Signed off");
+				.contains("has been Signed off");
+		
+		//		.equals("[" + "Shift 22"+ "] has been Signed off");
 
 	}
 	

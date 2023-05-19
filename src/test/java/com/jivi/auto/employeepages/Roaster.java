@@ -21,6 +21,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.jivi.auto.business_reusablecomponents.ReusableComponents;
 import com.jivi.auto.pageobjectutils.DropDown;
+import com.jivi.auto.pageobjectutils.MouseHandler;
 import com.jivi.auto.pageobjectutils.WebElementKeys;
 import com.jivi.auto.utilities.BaseTest;
 //import com.auto.utilities.excelUtilities;
@@ -35,6 +36,7 @@ public class Roaster extends BaseTest {
 	ReusableComponents resusemain=new ReusableComponents();
 	WebElementKeys webAction = new WebElementKeys();
 	DropDown dropdown=new DropDown();
+	MouseHandler handler=new MouseHandler();
 	
 	Faker faker = new Faker();
 
@@ -475,10 +477,11 @@ public String createRosterGroupAssignmentAddingAllEmp() throws Exception {
 		webAction.clickUsingJavaScript(addAll);
 		Thread.sleep(500);
 		webAction.scrollUp();
-		Thread.sleep(500);
+		webAction.waitUntilElementIsClickable(rosterGroupSave);
 		webAction.clickUsingJavaScript(rosterGroupSave);
+		//webAction.clickUsingJavaScript(rosterGroupSave);
 		//rosterGroupSave.click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		
 		return rosterGroupNAme;
 	}
@@ -725,6 +728,7 @@ public String createRosterGroupAssignmentRemoveAll() throws Exception {
 		Thread.sleep(1000);
 		txtShiftbandDesc.clear();
 		txtShiftbandDesc.sendKeys("Updating Shift band "+publicempNum);
+		Thread.sleep(500);
 		btnSaveshiftbandDtls.click();
 		Thread.sleep(3000);
 	}

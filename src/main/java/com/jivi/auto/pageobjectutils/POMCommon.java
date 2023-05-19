@@ -150,6 +150,12 @@ public class POMCommon extends GlobalVariables {
 		js.executeScript("window.scrollBy(0,350)");
 	}
 	
+	public void scrollDownLittle() {
+		WebDriver driver = Browser.getInstance().getDriver();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,500)");
+	}
+	
 	public void scrollIntoeEement(WebElement locator) {
 		WebDriver driver = Browser.getInstance().getDriver();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
