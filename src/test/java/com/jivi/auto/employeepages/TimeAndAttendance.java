@@ -102,7 +102,7 @@ public class TimeAndAttendance extends BaseTest {
 	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[7]/td[1]")
 	WebElement empSeven;
 	
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[9]/td[1]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[10]/td[1]")
 	WebElement empEight;
 
 	@FindBy(xpath = "//*[@id=\"ManageAttendance-list\"]/tbody/tr/td[14]")
