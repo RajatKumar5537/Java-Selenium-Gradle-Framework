@@ -32,7 +32,8 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 	String firstName = faker.name().firstName();
 	String lastName = faker.name().lastName(); 
 	String streetAddress = faker.address().streetAddress(); 
-	public String publicempNum=faker.numerify("10######");
+	public final String publicempNum=faker.numerify("10######");
+	public String empNameSearch="Jivi";
 	
 	
 	@FindBy(xpath="//*[@class='toast-message']")
@@ -210,7 +211,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		jiviewsHomePage.empProfileAdd(publicempNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
-		//return empNum;
+		//return publicempNum;
 		
 	}
 	
@@ -226,7 +227,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		String userId=dataTable.get("UserId");
 		String loginpwd=dataTable.get("pwd");
-		//String empNum=dataTable.get("EmpId");
+		String empNum=dataTable.get("EmpId");
 		String badgeNum = faker.idNumber().invalid();
 		System.out.println(badgeNum);
 		
@@ -244,7 +245,8 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
-		jiviewsHomePage.empProfileAddAlreadyExisting(publicempNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
+	
+		jiviewsHomePage.empProfileAddAlreadyExisting(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
 		
@@ -257,12 +259,13 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		String userId=dataTable.get("UserId");
 		String loginpwd=dataTable.get("pwd");
-		//String empNum=dataTable.get("EmpId");
+		String empNum=dataTable.get("EmpId");
 		
 		jiviewsHomePage.Login(userId, loginpwd);
 		//String empNum= VerifyEmpAddinEmpProfile();
-		System.out.println(publicempNum);
-		jiviewsHomePage.empSearch(publicempNum);
+
+		
+		jiviewsHomePage.empSearch(empNum);
 		
 	}
 	
@@ -275,8 +278,9 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		String userId=dataTable.get("UserId");
 		String loginpwd=dataTable.get("pwd");
 		String empNum=dataTable.get("EmpId");
+		
 		jiviewsHomePage.Login(userId, loginpwd);
-		jiviewsHomePage.empSearchByName(empNum);
+		jiviewsHomePage.empSearchByName(empNameSearch);
 		
 		
 		
@@ -315,6 +319,8 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+	
+	
 		jiviewsHomePage.empUpdate(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city,state,country,sRule,pGroup);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -349,6 +355,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+	
 		jiviewsHomePage.empUpdateDuplicate(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -381,6 +388,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+
 		jiviewsHomePage.empAddContacts_Positive(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -413,6 +421,8 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+	
+
 		jiviewsHomePage.empAddContacts_Negative(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -445,6 +455,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+
 		jiviewsHomePage.empAddexcludedSkills_Positive(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -476,6 +487,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+	
 		jiviewsHomePage.empAddexcludedSkills_Negative(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -507,6 +519,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+
 		jiviewsHomePage.empAddexcludedSkills_Negative(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -538,6 +551,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+
 		jiviewsHomePage.empAddRoles_RemoveAllRoles(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -569,6 +583,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+
 		jiviewsHomePage.empAdd_security(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -601,6 +616,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+
 		jiviewsHomePage.empAdd_ESSAdd(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -633,6 +649,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
+
 		jiviewsHomePage.empAdd_Misc(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		
@@ -648,7 +665,8 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String loginpwd=dataTable.get("pwd");
 		String loginpwd="Emp"+publicempNum+"$1";
 		System.out.println(loginpwd);
-		jiviewsHomePage.Login(publicempNum, loginpwd);
+		String nn="10082308";
+		jiviewsHomePage.Login(nn, loginpwd);
 		String homeAssert=driver.getTitle();
 		System.out.println(homeAssert);
 		Assert.assertEquals(homeAssert, "Login - JIVIEWS");
@@ -682,7 +700,8 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		
 		//String loginpwdnew="AdminDEMO$1";
 		//jiviewsHomePage.Login(publicempNum, loginpwdnew);
-		String tes="10024638";
+	
+		String tes="10085722";
 		jiviewsHomePage.empTermindate(tes);
 		
 			
@@ -720,7 +739,8 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		
 		//String loginpwdnew="AdminDEMO$1";
 		//jiviewsHomePage.Login(publicempNum, loginpwdnew);
-		String tes="10143417";
+	
+		String tes="10085722";
 		jiviewsHomePage.empTermindate(tes);
 		
 			

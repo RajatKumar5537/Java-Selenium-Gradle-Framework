@@ -19,12 +19,14 @@ public class MenuNavigation extends BaseTest {
 	WebElementKeys webAction = new WebElementKeys();
 	MouseHandler handler=new MouseHandler();
 	
-	@FindBy(xpath="//*[@id=\"dvOrgUnitDropdown\"]/a/i")
+	@FindBy(xpath="//*[@id='dvOrgUnitDropdown']/a/i")
 	WebElement olm;
 	
-	@FindBy(xpath="//*[@id='dvGlobalOrganizationUnitTreeView']/ul/li[4]")
-	WebElement olmLink;
+	@FindBy(xpath="(//*[contains(@class,'dvGlobalOrganizationUnitTreeView')])[2]")
+	WebElement olmLinkESS;
 	
+	@FindBy(xpath="(//*[contains(@class,'dvGlobalOrganizationUnitTreeView')])[4]")
+	WebElement olmLink;
 	
 	@FindBy(xpath="//*[text()=\"Demo\"]")
 	WebElement demo;
@@ -218,6 +220,7 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		//Thread.sleep(100);
 		//webAction.waitUntilElementIsClickable(systemDefinitionsMenu);
 		Thread.sleep(500);
+		webAction.scrollIntoeEement(empAdministration);
 		webAction.clickUsingJavaScript(empAdministration);
 		//systemDefinitionsMenu.clickwaitforLoadingIcon();
 		webAction.clickUsingJavaScript(rosterGroupAssnmt);
@@ -296,4 +299,14 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 
 		}
 	}
+	
+	public void navigateToOLMSelfService() throws Exception {
+		Thread.sleep(3000);
+		webAction.clickUsingJavaScript(olm);
+		Thread.sleep(2000);
+		webAction.clickUsingJavaScript(olmLinkESS);
+		
+		Thread.sleep(5000);
+	}
+	
 }

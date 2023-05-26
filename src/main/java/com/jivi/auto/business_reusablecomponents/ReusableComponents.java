@@ -7,11 +7,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.HttpClientBuilder;
+//import org.apache.http.HttpResponse;
+//import org.apache.http.client.HttpClient;
+//import org.apache.http.client.methods.HttpGet;
+//import org.apache.http.impl.client.HttpClientBuilder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -34,11 +33,14 @@ import com.jivi.auto.webelements.DropDown;
 import com.jivi.auto.webelements.RadioButton;
 import com.jivi.auto.webelements.TextBox;
 
-
+/**
+ *
+ * @author Automation Team
+ */
 public class ReusableComponents extends BaseTest {
 	
-	//public WebDriver driver = Browser.getInstance().getDriver();
-	//private WebDriver driver;
+	//static WebDriver driver = Browser.getInstance().getDriver();
+	
 	static String url;
 	static Button button = new Button();
 	static CheckBox checkBox = new CheckBox();
@@ -171,7 +173,7 @@ public class ReusableComponents extends BaseTest {
 			System.out.println("From try block of waitTill_PageLoads, Outside while......");
 			WebDriverWait oWait;
 
-			oWait = new WebDriverWait(driver, lngTimeOutSeconds);
+			oWait = new WebDriverWait(driver, Duration.ofSeconds(lngTimeOutSeconds));
 			oWait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));//wait till body tag is visible
 		}catch(Exception e)
 		{
@@ -381,14 +383,6 @@ public class ReusableComponents extends BaseTest {
 			Thread.sleep(5000);
 		}while(!(js.executeScript("return document.readyState").equals("complete")) || count == 10);
 
-	}
-
-
-	
-	public String getElementValueUsingJS(String idvalue) {
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		String  myValue = (String) js.executeScript("return document.getElementById('" + idvalue + "').value");
-		return myValue;
 	}
 	
 	public void performWebElementTab(WebElement ele) {

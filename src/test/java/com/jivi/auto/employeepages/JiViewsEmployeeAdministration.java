@@ -335,7 +335,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 			@FindBy(id="btnAddLeaveProfile")
 			WebElement AddLeaveProfile;
 			
-			@FindBy(id="cmbEmpLeaveProfileName")
+			@FindBy(xpath="//select[@id='cmbEmpLeaveProfileName']")
 			WebElement empLeaveProfileName;
 			
 			@FindBy(id="btnSaveLeaveProfile")
@@ -631,7 +631,8 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 		Thread.sleep(100);
 		webAction.setText(lastName, d);
 		Thread.sleep(100);
-		webAction.setText(birthDate, e);
+		webAction.setValueUsingJavaScript(birthDate, e);
+		//webAction.setText(birthDate, e);
 		Thread.sleep(100);
 		webAction.setText(addressLine1, f);
 		Thread.sleep(100);
@@ -766,7 +767,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				
 				Thread.sleep(5000);
 				webAction.setText(searchEmp, a);
-				//Thread.sleep(10000);
+				Thread.sleep(5000);
 				
 				
 				WebElement baseTable = driver.findElement(By.tagName("table"));
@@ -1257,7 +1258,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				
 					Thread.sleep(2000);
 					 webAction.clickUsingJavaScript(saveEmployees);
-					 Thread.sleep(2000);
+					 Thread.sleep(1000);
 					System.out.println("testing");
 				// webAction.clickUsingJavaScript(saveEmployees);
 				  String Ex="Update Skill Competency - Success"; 
@@ -1293,14 +1294,17 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.clickUsingJavaScript(ESSSubMenu);
 				webAction.clickUsingJavaScript(AddLeaveProfile);
 				Thread.sleep(500);
-				//dropdown.selectByIndex(empLeaveProfileName, 1);
-				dropdown.selectByValue(empLeaveProfileName, "Leave Profile  One");
+				dropdown.selectByIndex(empLeaveProfileName, 0);
+				//dropdown.selectByvisibleText(empLeaveProfileName, "Leave Profile One");
 				Thread.sleep(200);
 				webAction.click(saveLeaveProfile);
 				
 				webAction.click(addEmpWorkflowRoute);
+				Thread.sleep(200);
 				dropdown.selectByIndex(workFlowModuleName, 0);
+				Thread.sleep(200);
 				dropdown.selectByIndex(workflowRouteName, 0);
+				Thread.sleep(200);
 				webAction.click(saveEmpWorkflowRoute);
 				
 				Thread.sleep(5000);
@@ -1308,7 +1312,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				//webAction.click(saveEmployees);
 				webAction.clickUsingJavaScript(saveEmployees);
 				
-				
+				Thread.sleep(200);
 				
 				/*
 				 * String Ex="Update Skill Competency - Success"; String

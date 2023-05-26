@@ -177,7 +177,7 @@ public class Roaster extends BaseTest {
 	@FindBy(id= "txtRemarks")
 	WebElement rosterGroupRemarks;
 	
-	@FindBy(id= "btnSaveRosterGroup")
+	@FindBy(xpath= "//*[@id='btnSaveRosterGroup']")
 	WebElement rosterGroupSave;
 		
 	
@@ -476,12 +476,16 @@ public String createRosterGroupAssignmentAddingAllEmp() throws Exception {
 		//threeDotAvailableEmp.click();
 		webAction.clickUsingJavaScript(addAll);
 		Thread.sleep(500);
-		webAction.scrollUp();
-		webAction.waitUntilElementIsClickable(rosterGroupSave);
-		webAction.clickUsingJavaScript(rosterGroupSave);
+		//webAction.scrollUp();
+		//webAction.waitUntilElementIsClickable(rosterGroupSave);
+		Actions action=new Actions(driver);
+		action.moveToElement(rosterGroupSave).click().perform();
+		//webAction.clickUsingJavaScript(rosterGroupSave);
+
+		
 		//webAction.clickUsingJavaScript(rosterGroupSave);
 		//rosterGroupSave.click();
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		
 		return rosterGroupNAme;
 	}
@@ -520,8 +524,13 @@ public String createRosterGroupAssignmentRemoveSelected() throws Exception {
 	Thread.sleep(500);
 
 	webAction.scrollUp();
-	Thread.sleep(500);
-	webAction.clickUsingJavaScript(rosterGroupSave);
+	
+	//webAction.waitUntilElementIsClickable(rosterGroupSave);
+	
+	//webAction.clickUsingJavaScript(rosterGroupSave);
+	//rosterGroupSave.click();
+	//webAction.waitUntilElementIsClickable(rosterGroupSave);
+	rosterGroupSave.sendKeys(Keys.ENTER);
 	//rosterGroupSave.click();
 	Thread.sleep(500);	
 	

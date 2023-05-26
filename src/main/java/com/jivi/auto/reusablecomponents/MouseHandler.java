@@ -13,11 +13,11 @@ public class MouseHandler extends Common {
 	WebElement mouseObject, mouseChildObject, mouseSubChildObject;
 	Actions mouseAction;
 
-	public void clickUsingActionsMethod(String locator) throws Exception {
+	public void clickUsingActionsMethod(WebElement locator) throws Exception {
 		WebDriver driver = Browser.getInstance().getDriver();
 		mouseAction = new Actions(driver);
-		mouseObject = getObject(locator);
-		mouseAction.click(mouseObject).perform();
+	//	mouseObject = getObject(locator);
+		mouseAction.click().perform();
 	}
 
 	public void hoverAndClick(String parentLocator, String childLocator) throws Exception {

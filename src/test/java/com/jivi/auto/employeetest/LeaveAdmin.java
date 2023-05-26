@@ -41,13 +41,13 @@ public class LeaveAdmin extends BaseTest {
 		menuNavigation.waitforLoadingIcon();
 		menuNavigation.navigateToLeaveAdmin();
 	}
-	@Test ( enabled = false)
+	@Test
 	public void createLeaveExceptionCodes() throws InterruptedException, IOException {
 		leaveadmin.createLeaveAttendanceCodes();
 		Assert.assertTrue(leaveadmin.verifyLeaveAttendanceCodesCreation(), "Create Leave Exception Codes");
 		ExtentTestManager.getTest().log(Status.PASS, "ShiftBand Created Sucessfully");
 	}
-	@Test ( enabled = false)
+	@Test
 	public void updateLeaveExceptionCodes() throws InterruptedException, IOException {
 		leaveadmin.editLeaveAttendanceCodes();
 		Assert.assertTrue(leaveadmin.verifyLeaveAttendanceCodesUpdate(), "Update Leave Exception Codes");

@@ -1,6 +1,7 @@
 package com.jivi.auto.employeepages;
 
 import java.io.FileNotFoundException;
+import java.time.Duration;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,7 +27,7 @@ public class LoginPage extends BaseTest{
 	@FindBy(xpath="//li[text()='Demo']")
 	WebElement demo;
 	
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     MenuNavigation menuNavigation;
 
 	public LoginPage() throws FileNotFoundException {
