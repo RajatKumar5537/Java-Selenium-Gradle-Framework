@@ -6,103 +6,18 @@
   </listeners>
   <test thread-count="5" name="Test1(failed)">
     <classes>
-      <class name="com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="beforeSuiteSetup"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="afterTestSuite"/>
-          <include name="setUpClass"/>
-          <include name="VerifySkillAdd"/>
-        </methods>
-      </class> <!-- com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest -->
-    </classes>
-  </test> <!-- Test1(failed) -->
-  <test thread-count="5" name="Test2(failed)">
-    <classes>
-      <class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
-        <methods>
-          <include name="VerifyTerminateEmployee"/>
-          <include name="beforeMethod"/>
-          <include name="VerifyEmpUpdateSecurity"/>
-          <include name="beforeSuiteSetup"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="VerifyEmpUpdateESS"/>
-          <include name="afterTestSuite"/>
-          <include name="VerifyEmpUpdate"/>
-          <include name="VerifEmpNameSearch"/>
-          <include name="setUpClass"/>
-          <include name="VerifyEmpProCreationFiveEmp"/>
-        </methods>
-      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
-    </classes>
-  </test> <!-- Test2(failed) -->
-  <test thread-count="5" name="Test3(failed)">
-    <classes>
-      <class name="com.jivi.auto.employeetest.RoaserSetup">
-        <methods>
-          <include name="createShiftBandDefinition"/>
-          <include name="rosterCreation"/>
-          <include name="rosterGroupAssignmentAddingAllEmp"/>
-          <include name="beforeMethod"/>
-          <include name="endTest"/>
-          <include name="rosterGroupAssignmentRemoveAllEmp"/>
-          <include name="afterClass"/>
-          <include name="rosterGroupAssignmentRemoveSelectedEmp"/>
-          <include name="afterTestSuite"/>
-          <include name="rosterGroupAssignmentAddingSelectedEmp"/>
-          <include name="beforeSuiteSetup"/>
-          <include name="afterMethod"/>
-          <include name="setUpClass"/>
-        </methods>
-      </class> <!-- com.jivi.auto.employeetest.RoaserSetup -->
-    </classes>
-  </test> <!-- Test3(failed) -->
-  <test thread-count="5" name="Test4(failed)">
-    <classes>
-      <class name="com.jivi.auto.employeetest.WorkloadPlanner">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="beforeSuiteSetup"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="createVesselSchedule"/>
-          <include name="afterTestSuite"/>
-          <include name="setUpClass"/>
-        </methods>
-      </class> <!-- com.jivi.auto.employeetest.WorkloadPlanner -->
-    </classes>
-  </test> <!-- Test4(failed) -->
-  <test thread-count="5" name="Test5(failed)">
-    <classes>
-      <class name="com.jivi.auto.employeetest.TimeAndAttendanceTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="attendaceRecon"/>
-          <include name="beforeSuiteSetup"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="afterTestSuite"/>
-          <include name="setUpClass"/>
-        </methods>
-      </class> <!-- com.jivi.auto.employeetest.TimeAndAttendanceTest -->
-    </classes>
-  </test> <!-- Test5(failed) -->
-  <test thread-count="5" name="Test6(failed)">
-    <classes>
       <class name="com.jivi.auto.employeetest.EmployeeSelfServiceTest">
         <methods>
+          <include name="employeeSelfServiceApplyLeave"/>
           <include name="beforeMethod"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
-          <include name="employeeSelfServiceTest"/>
           <include name="afterClass"/>
+          <include name="employeeSelfServiceRejectLeave"/>
           <include name="afterTestSuite"/>
           <include name="setUpClass"/>
         </methods>
       </class> <!-- com.jivi.auto.employeetest.EmployeeSelfServiceTest -->
     </classes>
-  </test> <!-- Test6(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

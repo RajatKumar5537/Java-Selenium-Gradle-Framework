@@ -6,9 +6,9 @@
       <class name="com.jivi.auto.employeetest.EmployeeSelfServiceTest">
         <methods>
           <include name="beforeMethod"/>
+          <include name="employeeSelfServiceApplyTimeOff"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
-          <include name="employeeSelfServiceTest"/>
           <include name="afterClass"/>
           <include name="afterTestSuite"/>
           <include name="setUpClass"/>

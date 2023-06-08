@@ -108,6 +108,11 @@ public class TimeAndAttendance extends BaseTest {
 	@FindBy(xpath = "//*[@id=\"ManageAttendance-list\"]/tbody/tr/td[14]")
 	List<WebElement> exceptionStatus;
 	
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr["+"i"+"/td[10]")
+	List<WebElement> empListActualHours;
+	
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr["+"i"+"/td[1]")
+	List<WebElement> empList;
 
 	@FindBy(xpath = "(//*[@class='btn btn-xs btn-outline-success icon-btn mx-1 paycodes'])[1]")
 	WebElement empOneCosting;
@@ -157,7 +162,7 @@ public class TimeAndAttendance extends BaseTest {
 		 
 		Thread.sleep(4000);
 	//	webAction.scrollIntoeEement(empOne);
-		webAction.scrollDown200();
+		webAction.scrollDown300();
 		empOne.click();
 		Thread.sleep(1000); 
 		webAction.scrollUp();
@@ -167,6 +172,8 @@ public class TimeAndAttendance extends BaseTest {
 		Thread.sleep(6000); 
 		
 		
+		webAction.scrollDown300();
+		Thread.sleep(1000);
 		empOne.click();
 		Thread.sleep(1000); 
 		webAction.scrollUp();
@@ -175,9 +182,31 @@ public class TimeAndAttendance extends BaseTest {
 		buttonPresentYes.click();
 		Thread.sleep(6000); 
 		
-		webAction.scrollDown200();
+		webAction.scrollDown300();
 		Thread.sleep(500);
-		empEight.click();
+		
+		
+		String val="00:00";
+		
+		for(int i=1;i>=10;i++)
+		{
+			
+		
+		List<WebElement> actualHours=driver.findElements(By.xpath("//*[@id='ManageAttendance-list']/tbody/tr["+"i"+"/td[10]"));
+			for( WebElement listRecon: actualHours) { 
+			Thread.sleep(500);      
+			//we.sendKeys(Keys.ARROW_DOWN);
+			if(val.equals(listRecon.getText()))
+			{
+				System.out.println(val);
+				System.out.println(listRecon);
+				driver.findElement(By.xpath("//*[@id='ManageAttendance-list']/tbody/tr["+"i"+"/td[1]")).click();
+			}
+			
+			}
+		
+		}
+		//empEight.click();
 		//webAction.clickUsingJavaScript(empFour);
 		//empFour.click();
 		Thread.sleep(1000);

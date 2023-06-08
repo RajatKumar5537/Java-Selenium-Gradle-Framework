@@ -234,5 +234,6 @@ public class XmlTestSuiteGenerator extends BaseTest {
 		}
 		return result.toString();
 	}
+	
 
 }

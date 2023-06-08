@@ -45,6 +45,10 @@ public class MenuNavigation extends BaseTest {
 	
 	@FindBy(xpath = "//*[@id='lblSelectedParent']")
 	WebElement systemSetup;
+	
+	@FindBy(xpath = "//span[text()='Employee Self Service']")
+	WebElement employeeSelfService;
+	
 
 	@FindBy(xpath = "//div[text()='Employee Roster']")
 	WebElement employeeRoster;
@@ -113,7 +117,6 @@ public class MenuNavigation extends BaseTest {
 	
 	@FindBy(xpath = "//div[text()='Attendance Reconciliation']")
 	WebElement attendRecon;
-	
 	
 	public MenuNavigation() throws FileNotFoundException {
 		PageFactory.initElements(driver, this);
@@ -300,7 +303,7 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		}
 	}
 	
-	public void navigateToOLMSelfService() throws Exception {
+	public void navigateToOLMSelfServiceEmployee() throws Exception {
 		Thread.sleep(3000);
 		webAction.clickUsingJavaScript(olm);
 		Thread.sleep(2000);
@@ -308,5 +311,32 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		
 		Thread.sleep(5000);
 	}
+	
+	public void navigateToESSAdmin() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(employeeSelfService);
+		Thread.sleep(10000);
+	}
+	
+	
+	public void navigateToESSAdminReject() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+	//	webAction.clickUsingJavaScript(employeeSelfService);
+		Thread.sleep(10000);
+		
+		
+		
+	}
+	
 	
 }

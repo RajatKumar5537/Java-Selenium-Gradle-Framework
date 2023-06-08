@@ -54,7 +54,7 @@ LoginPage login;
 
 	}
 	@Test
-	public void employeeSelfServiceTest() throws Exception {
+	public void employeeSelfServiceEmployeeTest() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
@@ -66,12 +66,132 @@ LoginPage login;
 		jiviewsHomePage.Login(userId, loginpwd);
 		//menuNavigation.waitforLoadingIcon();
 		Thread.sleep(3000);
-		menuNavigation.navigateToOLMSelfService();
+		menuNavigation.navigateToOLMSelfServiceEmployee();
 		employeeSelfService.employeeSelfService();
-		
-		
-
 	}
 	
+	@Test
+	public void employeeSelfServiceAdminTest() throws Exception {
+		
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		EmployeeSelfService employeeSelfService=PageFactory.initElements(driver, EmployeeSelfService.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+		menuNavigation.navigateToESSAdmin();
+		employeeSelfService.adminSelfService();
+	}
+	
+	@Test
+	public void leaveBalanceAfterRejection() throws Exception {
+		
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		EmployeeSelfService employeeSelfService=PageFactory.initElements(driver, EmployeeSelfService.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+		menuNavigation.navigateToOLMSelfServiceEmployee();
+		employeeSelfService.leaveBalanceValidationAfterReject();
+	//	employeeSelfService.leaveBalanceValidationAfterApplyLeave();
+	}
+	
+	@Test
+	public void leaveBalanceAfterApprove() throws Exception {
+		
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		EmployeeSelfService employeeSelfService=PageFactory.initElements(driver, EmployeeSelfService.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+		menuNavigation.navigateToOLMSelfServiceEmployee();
+		employeeSelfService.leaveBalanceValidationAfterApprove();
+	//	employeeSelfService.leaveBalanceValidationAfterApplyLeave();
+	}
+	
+	@Test
+	public void employeeSelfServiceApplyLeave() throws Exception {
+		
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		EmployeeSelfService employeeSelfService=PageFactory.initElements(driver, EmployeeSelfService.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+		menuNavigation.navigateToOLMSelfServiceEmployee();
+		employeeSelfService.employeeSelfServiceApplyAnnualLeave();
+	}
+	
+	@Test
+	public void employeeSelfServiceRejectLeave() throws Exception {
+		
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		EmployeeSelfService employeeSelfService=PageFactory.initElements(driver, EmployeeSelfService.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+		employeeSelfService.employeeSelfServiceRejectLeave();
+		
+	}
+	
+	@Test
+	public void employeeSelfServiceApproveLeave() throws Exception {
+		
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		EmployeeSelfService employeeSelfService=PageFactory.initElements(driver, EmployeeSelfService.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+		employeeSelfService.employeeSelfServiceApproveLeave();
+		
+	}
+	
+	@Test
+	public void employeeSelfServiceApplyTimeOff() throws Exception {
+		
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		EmployeeSelfService employeeSelfService=PageFactory.initElements(driver, EmployeeSelfService.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+		menuNavigation.navigateToOLMSelfServiceEmployee();
+		Thread.sleep(3000);
+		employeeSelfService.employeeSelfServiceApplyTimeOff();
+		Thread.sleep(3000);
+		
+	}
 	
 }
