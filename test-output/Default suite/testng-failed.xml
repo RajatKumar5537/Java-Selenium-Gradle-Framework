@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jivi.auto.employeetest.EmployeeSelfServiceTest">
+      <class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
         <methods>
           <include name="beforeMethod"/>
-          <include name="employeeSelfServiceApplyTimeOff"/>
+          <include name="VerifyEmpUpdateSecurity"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
           <include name="afterTestSuite"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.jivi.auto.employeetest.EmployeeSelfServiceTest -->
+      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

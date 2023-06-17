@@ -64,10 +64,11 @@
           <include name="beforeMethod"/>
           <include name="endTest"/>
           <include name="rosterGroupAssignmentAddingSelectedEmp"/>
-          <include name="scheduleCreationRules"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
+          <include name="rosterGroupAssignmentRemoveAllEmp"/>
           <include name="afterClass"/>
+          <include name="rosterGroupAssignmentRemoveSelectedEmp"/>
           <include name="afterTestSuite"/>
           <include name="setUpClass"/>
         </methods>
@@ -109,7 +110,6 @@
       <class name="com.jivi.auto.employeetest.EmployeeSelfServiceTest">
         <methods>
           <include name="leaveBalanceAfterApprove"/>
-          <include name="employeeSelfServiceApplyLeave"/>
           <include name="beforeMethod"/>
           <include name="employeeSelfServiceApplyTimeOff"/>
           <include name="afterClass"/>
@@ -126,4 +126,19 @@
       </class> <!-- com.jivi.auto.employeetest.EmployeeSelfServiceTest -->
     </classes>
   </test> <!-- Test6(failed) -->
+  <test thread-count="5" name="Test7(failed)">
+    <classes>
+      <class name="com.jivi.auto.employeetest.HSSEPlanner">
+        <methods>
+          <include name="createHSSEPlanning"/>
+          <include name="beforeMethod"/>
+          <include name="beforeSuiteSetup"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="afterTestSuite"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- com.jivi.auto.employeetest.HSSEPlanner -->
+    </classes>
+  </test> <!-- Test7(failed) -->
 </suite> <!-- Failed suite [Suite] -->

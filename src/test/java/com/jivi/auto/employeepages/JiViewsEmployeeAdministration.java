@@ -15,6 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.jivi.auto.business_reusablecomponents.ReusableComponents;
 import com.jivi.auto.pageobjectutils.DropDown;
+import com.jivi.auto.pageobjectutils.MouseHandler;
 import com.jivi.auto.pageobjectutils.WebElementKeys;
 import com.jivi.auto.reusablecomponents.FrameHandler;
 import com.jivi.auto.utilities.BaseTest;
@@ -29,6 +30,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 	FrameHandler mousehandler = new FrameHandler();
 	WebElementKeys webAction = new WebElementKeys();
 	DropDown dropdown=new DropDown();
+	MouseHandler mm=new MouseHandler();
 	ReusableComponents resuable=new ReusableComponents();
 	
 	@FindBy(id="txtUserName")
@@ -218,7 +220,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 	@FindBy(xpath="//*[@id='cmbPayGroup']")
 	WebElement payGroup;
 	
-	@FindBy(xpath="//*[@id='btnSaveEmployee']")
+	@FindBy(id="btnSaveEmployee")
 	WebElement saveEmployees;
 	
 
@@ -1199,9 +1201,9 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				
 				webAction.waitUntilElementIsVisible(searchEmp);
 				webAction.setValueUsingJavaScript(searchEmp, a);
-				//webAction.setText(searchEmp, a);
-				//Thread.sleep(10000);
-				Thread.sleep(500);
+				webAction.setText(searchEmp, a);
+				Thread.sleep(5000);
+				//Thread.sleep(500);
 				webAction.clickUsingJavaScript(empProfileEdit);
 			
 				//webAction.waitUntilElementIsClickable(securitySubMenu);
@@ -1218,20 +1220,21 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				Actions actions2 = new Actions(driver);
 				actions2.moveToElement(addEmployeeOU).click().build().perform();
 		
-				dropdown.selectByIndex(orgUnitName, 0);
+				//dropdown.selectByIndex(orgUnitName, 0);
 				dropdown.selectByIndex(orgUnitName, 1);
 			
    
 		//	webAction.click(saveEmployeeOU);
-				Thread.sleep(5000);
+				Thread.sleep(3000);
 		//	webAction.clickUsingJavaScript(saveEmployeeOU);
 				
 				//saveEmployeeOU.sendKeys(Keys.ENTER);
-			
-				webAction.waitUntilElementIsVisible(saveEmployeeOU);
+				webAction.clickUsingJavaScript(saveEmployeeOU);
+				Thread.sleep(6000);
+			//	webAction.waitUntilElementIsVisible(saveEmployeeOU);
 			
 				
-				 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", saveEmployeeOU);
+				// ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", saveEmployeeOU);
 			
 			//	((JavascriptExecutor) driver).executeScript("var x= document.getElementsByClassName('btn btn-sm btn-outline-primary icon-btn mx-1 save')[0];"+"x.click();");
 				
@@ -1252,14 +1255,15 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 			
 				//Actions actionssave = new Actions(driver);
 				//actionssave.moveToElement(saveEmployees).click().build().perform();
-				 webAction.waitUntilElementIsVisible(saveEmployees);
+			//	 webAction.waitUntilElementIsVisible(saveEmployees);
 					
-				 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", saveEmployees);
+				// ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", saveEmployees);
 				
-					Thread.sleep(2000);
-					 webAction.clickUsingJavaScript(saveEmployees);
-					 Thread.sleep(1000);
-					System.out.println("testing");
+				 //webAction.scrollUp();
+				webAction.clickUsingJavaScript(saveEmployees);
+					 //webAction.clickUsingJavaScript(saveEmployees);
+					 Thread.sleep(4000);
+					
 				// webAction.clickUsingJavaScript(saveEmployees);
 				  String Ex="Update Skill Competency - Success"; 
 				  String Actual=successToast_Message.getText(); 
@@ -1355,8 +1359,11 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.waitUntilElementIsClickable(saveEmployees);			
 				//webAction.click(saveEmployees);
 				webAction.clickUsingJavaScript(saveEmployees);
+				Thread.sleep(5000);
 				
-				
+				  String Actual=successToast_Message.getText(); 
+				  System.out.println(Actual);
+				 Assert.assertTrue(Actual.contains("Employee Profile updated successfully")); 
 				
 				
 				 

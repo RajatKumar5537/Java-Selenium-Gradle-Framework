@@ -80,29 +80,29 @@ public class TimeAndAttendance extends BaseTest {
 	@FindBy(xpath = "//button[text()='Clear']")
 	WebElement dateClear;
 
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[1]/td[1]")
+	@FindBy(xpath = "//*[@id=\"ManageAttendance-list\"]/tbody/tr[1]/td[1]/input")
 	WebElement empOne;
 
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[2]/td[1]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[2]/td[1]/input")
 	WebElement empTwo;
 
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[3]/td[1]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[3]/td[1]/input")
 	WebElement empThree;
 
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[4]/td[1]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[4]/td[1]/input")
 	WebElement empFour;
 
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[5]/td[1]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[5]/td[1]/input")
 	WebElement empFive;
 
 
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[6]/td[1]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[6]/td[1]/input")
 	WebElement empSix;
 
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[7]/td[1]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[7]/td[1]/input")
 	WebElement empSeven;
 	
-	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[10]/td[1]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[8]/td[1]/input")
 	WebElement empEight;
 
 	@FindBy(xpath = "//*[@id=\"ManageAttendance-list\"]/tbody/tr/td[14]")
@@ -154,32 +154,40 @@ public class TimeAndAttendance extends BaseTest {
 		startDateEndDate.sendKeys(dates);
 		//Thread.sleep(1000);
 		//dateApply.click();
-		
+		Thread.sleep(500);
+		startDateEndDate.sendKeys(Keys.TAB);
 		Thread.sleep(500);
 		webAction.clickUsingJavaScript(searchInAttenReocn);
 		//searchInAttenReocn.click();
 		//webAction.clickUsingJavaScript(searchInAttenReocn);
 		 
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 	//	webAction.scrollIntoeEement(empOne);
 		webAction.scrollDown300();
-		empOne.click();
+
+		
+		webAction.clickUsingJavaScript(empSeven);
+		
 		Thread.sleep(1000); 
 		webAction.scrollUp();
 		Thread.sleep(500);
 		webAction.clickUsingJavaScript(buttonAbsent);
-		buttonPresentYes.click();
+		webAction.clickUsingJavaScript(buttonPresentYes);
+		//buttonPresentYes.click();
 		Thread.sleep(6000); 
 		
 		
 		webAction.scrollDown300();
 		Thread.sleep(1000);
-		empOne.click();
+		webAction.clickUsingJavaScript(empSeven);
+		//empOne.click();
 		Thread.sleep(1000); 
 		webAction.scrollUp();
 		Thread.sleep(500);
 		webAction.clickUsingJavaScript(buttonPresent);
-		buttonPresentYes.click();
+		webAction.clickUsingJavaScript(buttonPresentYes);
+		Thread.sleep(1000);
+		//buttonPresentYes.click();
 		Thread.sleep(6000); 
 		
 		webAction.scrollDown300();
@@ -209,23 +217,27 @@ public class TimeAndAttendance extends BaseTest {
 		//empEight.click();
 		//webAction.clickUsingJavaScript(empFour);
 		//empFour.click();
+		webAction.scrollDown300();
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(empSix);
 		Thread.sleep(1000);
 		webAction.scrollUp();
 		Thread.sleep(500);
 		webAction.clickUsingJavaScript(buttonReconsile);
-		Thread.sleep(500);
-		buttonPresentYes.click();
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(buttonPresentYes);
+		//buttonPresentYes.click();
 		Thread.sleep(6000); 
 		
 		webAction.scrollDown200();
 		Thread.sleep(500);
-		empSeven.click();
+		webAction.clickUsingJavaScript(empFive);
 		Thread.sleep(1000);
 		webAction.scrollUp();
 		Thread.sleep(500); 
 		webAction.clickUsingJavaScript(buttonPresent);
 		Thread.sleep(500);
-		buttonPresentYes.click();
+		webAction.clickUsingJavaScript(buttonPresentYes);
 		Thread.sleep(6000);
 		
 		/*

@@ -92,6 +92,9 @@ public class MenuNavigation extends BaseTest {
 	@FindBy(xpath = "//div[text()='Workload Planner']")
 	WebElement workLoadPlanner;
 	
+	@FindBy(xpath = "//div[text()='HSSE Planning']")
+	WebElement HSSEPlanning;
+	
 	
 	@FindBy(xpath = "//div[text()='Shift Band Definition']")
 	WebElement shifitBandDefinition;
@@ -242,6 +245,20 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		webAction.clickUsingJavaScript(planningExecutionMenu);
 		Thread.sleep(500);
 		webAction.clickUsingJavaScript(workLoadPlanner);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
+	public void navigateToHSSEPLanning() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(HSSEPlanning);
 		waitforLoadingIcon();
 		Thread.sleep(10000);
 	}

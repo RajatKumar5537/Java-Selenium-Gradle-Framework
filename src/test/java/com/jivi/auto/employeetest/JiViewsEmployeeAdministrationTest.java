@@ -583,7 +583,7 @@ public class JiViewsEmployeeAdministrationTest extends BaseTest {
 		//String pGroup=dataTable.get("PayGroup");
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
-
+		
 		jiviewsHomePage.empAdd_security(empNum,badgeNum,firstN,lastN,birthDate,address1,post,city);
 		//jiviewsSystemDef.empAdd(empid, desc, sequen);
 		

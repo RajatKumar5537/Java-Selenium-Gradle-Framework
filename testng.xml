@@ -1,2 +1,105 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite"><listeners><listener class-name="com.jivi.auto.reports.ExtentITestListenerClassAdapter"/></listeners><test name="Test1"><classes><class name="com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest"><methods><include name="VerifyLogin"/><include name="VerifyEmpCategory"/><include name="VerifyEmpAdd"/><include name="VerifySkillAdd"/><include name="VerifyRolesAdd"/></methods></class></classes></test><test name="Test2"><classes><class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest"><methods><include name="VerifyEmpAddinEmpProfile"/><include name="VerifyEmpAddinEmpProfileAlreadyExist"/><include name="VerifEmpIDSerach"/><include name="VerifEmpNameSearch"/><include name="VerifyEmpUpdate"/><include name="VerifyEmpUpdateDuplicate"/><include name="VerifyEmpUpdateContactsPositive"/><include name="VerifyEmpUpdateContactsNegative"/><include name="VerifyEmpUpdateExcludedSkillsPositive"/><include name="VerifyEmpUpdateExcludedSkillsNegative"/><include name="VerifyEmpUpdateAddRolesPositive"/><include name="VerifyEmpUpdateAddRolesNegative"/><include name="VerifyEmpUpdateSecurity"/><include name="VerifyEmpUpdateESS"/><include name="VerifyEmpUpdateMisc"/><include name="VerifyLoginwithNewEmployee"/><include name="VerifyEmpProCreationFiveEmp"/><include name="VerifyTerminateEmployee"/></methods></class></classes></test><test name="Test3"><classes><class name="com.jivi.auto.employeetest.RoaserSetup"><methods><include name="createShiftBandDefinition"/><include name="scheduleCreationRules"/><include name="rosterGroupAssignmentAddingSelectedEmp"/><include name="rosterGroupAssignment"/><include name="rosterCreation"/></methods></class></classes></test><test name="Test4"><classes><class name="com.jivi.auto.employeetest.WorkloadPlanner"><methods><include name="createVesselSchedule"/><include name="scheduleCranes"/><include name="planningSignoff"/></methods></class></classes></test><test name="Test5"><classes><class name="com.jivi.auto.employeetest.TimeAndAttendanceTest"><methods><include name="attendaceRecon"/></methods></class></classes></test><test name="Test6"><classes><class name="com.jivi.auto.employeetest.EmployeeSelfServiceTest"><methods><include name="employeeSelfServiceEmployeeTest"/><include name="employeeSelfServiceAdminTest"/><include name="employeeSelfServiceApplyLeave"/><include name="employeeSelfServiceRejectLeave"/><include name="leaveBalanceAfterRejection"/><include name="employeeSelfServiceApproveLeave"/><include name="leaveBalanceAfterApprove"/><include name="employeeSelfServiceApplyTimeOff"/></methods></class></classes></test></suite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.jivi.auto.reports.ExtentITestListenerClassAdapter" />
+	</listeners>
+	<test name="Test1">
+		<classes>
+			<class name="com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest">
+				<methods>
+					<include name="VerifyLogin" />
+					<include name="VerifyEmpCategory" />
+					<include name="VerifyEmpAdd" />
+					<include name="VerifySkillAdd" />
+					<include name="VerifyRolesAdd" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test2">
+		<classes>
+			<class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
+				<methods>
+					<include name="VerifyEmpAddinEmpProfile" />
+					<include name="VerifyEmpAddinEmpProfileAlreadyExist" />
+					<include name="VerifEmpIDSerach" />
+					<include name="VerifEmpNameSearch" />
+					<include name="VerifyEmpUpdate" />
+					<include name="VerifyEmpUpdateDuplicate" />
+					<include name="VerifyEmpUpdateContactsPositive" />
+					<include name="VerifyEmpUpdateContactsNegative" />
+					<include name="VerifyEmpUpdateExcludedSkillsPositive" />
+					<include name="VerifyEmpUpdateExcludedSkillsNegative" />
+					<include name="VerifyEmpUpdateAddRolesPositive" />
+					<include name="VerifyEmpUpdateAddRolesNegative" />
+					<include name="VerifyEmpUpdateSecurity" />
+					<include name="VerifyEmpUpdateESS" />
+					<include name="VerifyEmpUpdateMisc" />
+					<include name="VerifyLoginwithNewEmployee" />
+					<include name="VerifyEmpProCreationFiveEmp" />
+					<include name="VerifyTerminateEmployee" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test3">
+		<classes>
+			<class name="com.jivi.auto.employeetest.RoaserSetup">
+				<methods>
+					<include name="createShiftBandDefinition" />
+					<include name="rosterGroupAssignmentAddingSelectedEmp" />
+					<include name="rosterGroupAssignmentRemoveSelectedEmp" />
+					<include name="rosterGroupAssignmentRemoveAllEmp" />
+					<include name="rosterGroupAssignment" />
+					<include name="rosterCreation" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test4">
+		<classes>
+			<class name="com.jivi.auto.employeetest.WorkloadPlanner">
+				<methods>
+					<include name="createVesselSchedule" />
+					<include name="scheduleCranes" />
+					<include name="planningSignoff" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test5">
+		<classes>
+			<class name="com.jivi.auto.employeetest.TimeAndAttendanceTest">
+				<methods>
+					<include name="attendaceRecon" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test6">
+		<classes>
+			<class name="com.jivi.auto.employeetest.EmployeeSelfServiceTest">
+				<methods>
+					<include name="employeeSelfServiceEmployeeTest" />
+					<include name="employeeSelfServiceAdminTest" />
+					<include name="employeeSelfServiceApplyAnnualLeave" />
+					<include name="employeeSelfServiceRejectLeave" />
+					<include name="leaveBalanceAfterRejection" />
+					<include name="employeeSelfServiceApproveLeave" />
+					<include name="leaveBalanceAfterApprove" />
+					<include name="employeeSelfServiceApplyTimeOff" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Test7">
+		<classes>
+			<class name="com.jivi.auto.employeetest.HSSEPlanner">
+				<methods>
+					<include name="createHSSEPlanning" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

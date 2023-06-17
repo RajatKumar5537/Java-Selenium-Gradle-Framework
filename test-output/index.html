@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">6 tests</span>
+                    <span class="test-stats">7 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">37 methods, 6 failed,  31 skipped,  </span>
+                    <span class="method-stats">38 methods, 7 failed,  31 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -113,6 +113,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.TimeAndAttendanceTest" class="method navigator-link" hash-for-method="attendaceRecon">attendaceRecon</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.HSSEPlanner" class="method navigator-link" hash-for-method="createHSSEPlanning">createHSSEPlanning</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -251,11 +256,6 @@
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.EmployeeSelfServiceTest" class="method navigator-link" hash-for-method="employeeSelfServiceApplyLeave">employeeSelfServiceApplyLeave</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.EmployeeSelfServiceTest" class="method navigator-link" hash-for-method="employeeSelfServiceApplyTimeOff">employeeSelfServiceApplyTimeOff</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -291,7 +291,12 @@
                       <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="scheduleCreationRules">scheduleCreationRules</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterGroupAssignmentRemoveAllEmp">rosterGroupAssignmentRemoveAllEmp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.jivi.auto.employeetest.RoaserSetup" class="method navigator-link" hash-for-method="rosterGroupAssignmentRemoveSelectedEmp">rosterGroupAssignmentRemoveSelectedEmp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
@@ -317,15 +322,15 @@
                   <a name="attendaceRecon">
                   </a> <!-- attendaceRecon -->
                   <span class="method-name">attendaceRecon</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, get {url=https://www.jiviews.com/DEMO/Home}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -357,15 +362,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="createVesselSchedule">
                   </a> <!-- createVesselSchedule -->
                   <span class="method-name">createVesselSchedule</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, get {url=https://www.jiviews.com/DEMO/Home}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -397,15 +402,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyLogin">
                   </a> <!-- VerifyLogin -->
                   <span class="method-name">VerifyLogin</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, findElement {using=id, value=txtPassword}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, maximizeCurrentWindow {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -413,27 +418,13 @@ Session ID: 368f2036afadf1a93922c11cea841a24
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy18.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-	at com.jivi.auto.pageobjectutils.POMCommon.highlightElement(POMCommon.java:197)
-	at com.jivi.auto.pageobjectutils.POMCommon.getObject(POMCommon.java:34)
-	at com.jivi.auto.pageobjectutils.WebElementKeys.setText(WebElementKeys.java:18)
-	at com.jivi.auto.employeepages.JiViewsEmployeeAdministration.Login(JiViewsEmployeeAdministration.java:418)
-	at com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest.VerifyLogin(JiViewsSystemDefinitionsTest.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:984)
+	at com.jivi.auto.utilities.BaseTest.goTo(BaseTest.java:253)
+	at com.jivi.auto.utilities.BaseTest.launchBrowser(BaseTest.java:237)
+	at com.jivi.auto.utilities.BaseTest.setupTest(BaseTest.java:157)
+	at com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest.VerifyLogin(JiViewsSystemDefinitionsTest.java:78)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
 ... Removed 29 stack frames
@@ -453,15 +444,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpAddinEmpProfile">
                   </a> <!-- VerifyEmpAddinEmpProfile -->
                   <span class="method-name">VerifyEmpAddinEmpProfile</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, get {url=https://www.jiviews.com/DEMO/Home}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -493,15 +484,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="employeeSelfServiceEmployeeTest">
                   </a> <!-- employeeSelfServiceEmployeeTest -->
                   <span class="method-name">employeeSelfServiceEmployeeTest</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, get {url=https://www.jiviews.com/DEMO/Home}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -533,15 +524,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="createShiftBandDefinition">
                   </a> <!-- createShiftBandDefinition -->
                   <span class="method-name">createShiftBandDefinition</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, get {url=https://www.jiviews.com/DEMO/Home}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -562,6 +553,46 @@ Session ID: 368f2036afadf1a93922c11cea841a24
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.jivi.auto.employeetest.HSSEPlanner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createHSSEPlanning">
+                  </a> <!-- createHSSEPlanning -->
+                  <span class="method-name">createHSSEPlanning</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2d7602e9c0242796df612a7fcd4b139e, get {url=https://www.jiviews.com/DEMO/Home}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:327)
+	at com.jivi.auto.utilities.BaseTest.goTo(BaseTest.java:250)
+	at com.jivi.auto.utilities.BaseTest.launchBrowser(BaseTest.java:237)
+	at com.jivi.auto.utilities.BaseTest.setupTest(BaseTest.java:157)
+	at com.jivi.auto.employeetest.HSSEPlanner.createHSSEPlanning(HSSEPlanner.java:54)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -573,15 +604,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpAdd">
                   </a> <!-- VerifyEmpAdd -->
                   <span class="method-name">VerifyEmpAdd</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -608,15 +639,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpCategory">
                   </a> <!-- VerifyEmpCategory -->
                   <span class="method-name">VerifyEmpCategory</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -643,15 +674,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyRolesAdd">
                   </a> <!-- VerifyRolesAdd -->
                   <span class="method-name">VerifyRolesAdd</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -678,15 +709,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifySkillAdd">
                   </a> <!-- VerifySkillAdd -->
                   <span class="method-name">VerifySkillAdd</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -721,15 +752,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifEmpIDSerach">
                   </a> <!-- VerifEmpIDSerach -->
                   <span class="method-name">VerifEmpIDSerach</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -756,15 +787,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifEmpNameSearch">
                   </a> <!-- VerifEmpNameSearch -->
                   <span class="method-name">VerifEmpNameSearch</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -791,15 +822,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpAddinEmpProfileAlreadyExist">
                   </a> <!-- VerifyEmpAddinEmpProfileAlreadyExist -->
                   <span class="method-name">VerifyEmpAddinEmpProfileAlreadyExist</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -826,15 +857,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpProCreationFiveEmp">
                   </a> <!-- VerifyEmpProCreationFiveEmp -->
                   <span class="method-name">VerifyEmpProCreationFiveEmp</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -861,15 +892,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdate">
                   </a> <!-- VerifyEmpUpdate -->
                   <span class="method-name">VerifyEmpUpdate</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -896,15 +927,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateAddRolesNegative">
                   </a> <!-- VerifyEmpUpdateAddRolesNegative -->
                   <span class="method-name">VerifyEmpUpdateAddRolesNegative</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -931,15 +962,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateAddRolesPositive">
                   </a> <!-- VerifyEmpUpdateAddRolesPositive -->
                   <span class="method-name">VerifyEmpUpdateAddRolesPositive</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -966,15 +997,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateContactsNegative">
                   </a> <!-- VerifyEmpUpdateContactsNegative -->
                   <span class="method-name">VerifyEmpUpdateContactsNegative</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1001,15 +1032,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateContactsPositive">
                   </a> <!-- VerifyEmpUpdateContactsPositive -->
                   <span class="method-name">VerifyEmpUpdateContactsPositive</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1036,15 +1067,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateDuplicate">
                   </a> <!-- VerifyEmpUpdateDuplicate -->
                   <span class="method-name">VerifyEmpUpdateDuplicate</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1071,15 +1102,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateESS">
                   </a> <!-- VerifyEmpUpdateESS -->
                   <span class="method-name">VerifyEmpUpdateESS</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1106,15 +1137,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateExcludedSkillsNegative">
                   </a> <!-- VerifyEmpUpdateExcludedSkillsNegative -->
                   <span class="method-name">VerifyEmpUpdateExcludedSkillsNegative</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1141,15 +1172,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateExcludedSkillsPositive">
                   </a> <!-- VerifyEmpUpdateExcludedSkillsPositive -->
                   <span class="method-name">VerifyEmpUpdateExcludedSkillsPositive</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1176,15 +1207,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateMisc">
                   </a> <!-- VerifyEmpUpdateMisc -->
                   <span class="method-name">VerifyEmpUpdateMisc</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1211,15 +1242,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyEmpUpdateSecurity">
                   </a> <!-- VerifyEmpUpdateSecurity -->
                   <span class="method-name">VerifyEmpUpdateSecurity</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1246,15 +1277,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyLoginwithNewEmployee">
                   </a> <!-- VerifyLoginwithNewEmployee -->
                   <span class="method-name">VerifyLoginwithNewEmployee</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1281,15 +1312,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="VerifyTerminateEmployee">
                   </a> <!-- VerifyTerminateEmployee -->
                   <span class="method-name">VerifyTerminateEmployee</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1324,50 +1355,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="employeeSelfServiceAdminTest">
                   </a> <!-- employeeSelfServiceAdminTest -->
                   <span class="method-name">employeeSelfServiceAdminTest</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:348)
-	at com.jivi.auto.utilities.ReportUtils.takeScreenShotBASE64(ReportUtils.java:145)
-	at com.jivi.auto.utilities.ReportUtils.takeScreenShot(ReportUtils.java:115)
-	at com.jivi.auto.utilities.ReportUtils.takeScreenShotOnFailure(ReportUtils.java:100)
-	at com.jivi.auto.utilities.ReportUtils.addInfoOnValidations(ReportUtils.java:72)
-	at com.jivi.auto.utilities.BaseTest.afterMethod(BaseTest.java:180)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
-... Removed 34 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="employeeSelfServiceApplyLeave">
-                  </a> <!-- employeeSelfServiceApplyLeave -->
-                  <span class="method-name">employeeSelfServiceApplyLeave</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
-Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1394,15 +1390,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="employeeSelfServiceApplyTimeOff">
                   </a> <!-- employeeSelfServiceApplyTimeOff -->
                   <span class="method-name">employeeSelfServiceApplyTimeOff</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1429,15 +1425,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="employeeSelfServiceApproveLeave">
                   </a> <!-- employeeSelfServiceApproveLeave -->
                   <span class="method-name">employeeSelfServiceApproveLeave</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1464,15 +1460,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="employeeSelfServiceRejectLeave">
                   </a> <!-- employeeSelfServiceRejectLeave -->
                   <span class="method-name">employeeSelfServiceRejectLeave</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1499,15 +1495,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="leaveBalanceAfterApprove">
                   </a> <!-- leaveBalanceAfterApprove -->
                   <span class="method-name">leaveBalanceAfterApprove</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1534,15 +1530,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="leaveBalanceAfterRejection">
                   </a> <!-- leaveBalanceAfterRejection -->
                   <span class="method-name">leaveBalanceAfterRejection</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1577,15 +1573,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="rosterCreation">
                   </a> <!-- rosterCreation -->
                   <span class="method-name">rosterCreation</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1612,15 +1608,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
                   <a name="rosterGroupAssignmentAddingSelectedEmp">
                   </a> <!-- rosterGroupAssignmentAddingSelectedEmp -->
                   <span class="method-name">rosterGroupAssignmentAddingSelectedEmp</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1644,18 +1640,53 @@ Session ID: 368f2036afadf1a93922c11cea841a24
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="scheduleCreationRules">
-                  </a> <!-- scheduleCreationRules -->
-                  <span class="method-name">scheduleCreationRules</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
-  (failed to check if window was closed: disconnected: not connected to DevTools)
-  (Session info: chrome=114.0.5735.110)
+                  <a name="rosterGroupAssignmentRemoveAllEmp">
+                  </a> <!-- rosterGroupAssignmentRemoveAllEmp -->
+                  <span class="method-name">rosterGroupAssignmentRemoveAllEmp</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
 Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.42.175&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [368f2036afadf1a93922c11cea841a24, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.110, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64825}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64825/devtoo..., se:cdpVersion: 114.0.5735.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 368f2036afadf1a93922c11cea841a24
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:613)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:617)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:348)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShotBASE64(ReportUtils.java:145)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShot(ReportUtils.java:115)
+	at com.jivi.auto.utilities.ReportUtils.takeScreenShotOnFailure(ReportUtils.java:100)
+	at com.jivi.auto.utilities.ReportUtils.addInfoOnValidations(ReportUtils.java:72)
+	at com.jivi.auto.utilities.BaseTest.afterMethod(BaseTest.java:180)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.jivi.auto.driver.JiviewsMainClass.main(JiviewsMainClass.java:27)
+... Removed 34 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="rosterGroupAssignmentRemoveSelectedEmp">
+                  </a> <!-- rosterGroupAssignmentRemoveSelectedEmp -->
+                  <span class="method-name">rosterGroupAssignmentRemoveSelectedEmp</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=114.0.5735.134)
+Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
+System info: host: &apos;ASHOK&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.5&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2d7602e9c0242796df612a7fcd4b139e, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.134, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\ashok\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56967}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56967/devtoo..., se:cdpVersion: 114.0.5735.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2d7602e9c0242796df612a7fcd4b139e
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -1736,8 +1767,9 @@ Session ID: 368f2036afadf1a93922c11cea841a24
       &lt;class name=&quot;com.jivi.auto.employeetest.RoaserSetup&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;createShiftBandDefinition&quot;/&gt;
-          &lt;include name=&quot;scheduleCreationRules&quot;/&gt;
           &lt;include name=&quot;rosterGroupAssignmentAddingSelectedEmp&quot;/&gt;
+          &lt;include name=&quot;rosterGroupAssignmentRemoveSelectedEmp&quot;/&gt;
+          &lt;include name=&quot;rosterGroupAssignmentRemoveAllEmp&quot;/&gt;
           &lt;include name=&quot;rosterGroupAssignment&quot;/&gt;
           &lt;include name=&quot;rosterCreation&quot;/&gt;
         &lt;/methods&gt;
@@ -1770,7 +1802,7 @@ Session ID: 368f2036afadf1a93922c11cea841a24
         &lt;methods&gt;
           &lt;include name=&quot;employeeSelfServiceEmployeeTest&quot;/&gt;
           &lt;include name=&quot;employeeSelfServiceAdminTest&quot;/&gt;
-          &lt;include name=&quot;employeeSelfServiceApplyLeave&quot;/&gt;
+          &lt;include name=&quot;employeeSelfServiceApplyAnnualLeave&quot;/&gt;
           &lt;include name=&quot;employeeSelfServiceRejectLeave&quot;/&gt;
           &lt;include name=&quot;leaveBalanceAfterRejection&quot;/&gt;
           &lt;include name=&quot;employeeSelfServiceApproveLeave&quot;/&gt;
@@ -1780,6 +1812,15 @@ Session ID: 368f2036afadf1a93922c11cea841a24
       &lt;/class&gt; &lt;!-- com.jivi.auto.employeetest.EmployeeSelfServiceTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test6 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test7&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.jivi.auto.employeetest.HSSEPlanner&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;createHSSEPlanning&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.jivi.auto.employeetest.HSSEPlanner --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test7 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -1808,6 +1849,9 @@ Session ID: 368f2036afadf1a93922c11cea841a24
               <li>
                 <span class="test-name">Test6 (1 class)</span>
               </li>
+              <li>
+                <span class="test-name">Test7 (1 class)</span>
+              </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
@@ -1832,160 +1876,164 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(37);
+data.addRows(38);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyLogin')
 data.setCell(0, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
-data.setCell(0, 3, 336979);
+data.setCell(0, 3, 1366);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'createShiftBandDefinition')
-data.setCell(1, 2, 'com.jivi.auto.employeetest.RoaserSetup')
-data.setCell(1, 3, 17);
+data.setCell(1, 1, 'VerifyEmpAddinEmpProfile')
+data.setCell(1, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
+data.setCell(1, 3, 7);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'VerifyEmpAddinEmpProfile')
-data.setCell(2, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
-data.setCell(2, 3, 16);
+data.setCell(2, 1, 'employeeSelfServiceEmployeeTest')
+data.setCell(2, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
+data.setCell(2, 3, 6);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'createVesselSchedule')
-data.setCell(3, 2, 'com.jivi.auto.employeetest.WorkloadPlanner')
-data.setCell(3, 3, 16);
+data.setCell(3, 1, 'createShiftBandDefinition')
+data.setCell(3, 2, 'com.jivi.auto.employeetest.RoaserSetup')
+data.setCell(3, 3, 5);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'employeeSelfServiceEmployeeTest')
-data.setCell(4, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
-data.setCell(4, 3, 6);
+data.setCell(4, 1, 'createVesselSchedule')
+data.setCell(4, 2, 'com.jivi.auto.employeetest.WorkloadPlanner')
+data.setCell(4, 3, 5);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'VerifyEmpAdd')
-data.setCell(5, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
-data.setCell(5, 3, 0);
+data.setCell(5, 1, 'attendaceRecon')
+data.setCell(5, 2, 'com.jivi.auto.employeetest.TimeAndAttendanceTest')
+data.setCell(5, 3, 5);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'VerifyEmpCategory')
-data.setCell(6, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
-data.setCell(6, 3, 0);
+data.setCell(6, 1, 'createHSSEPlanning')
+data.setCell(6, 2, 'com.jivi.auto.employeetest.HSSEPlanner')
+data.setCell(6, 3, 5);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'VerifyRolesAdd')
 data.setCell(7, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
 data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'VerifySkillAdd')
+data.setCell(8, 1, 'VerifyEmpCategory')
 data.setCell(8, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
 data.setCell(8, 3, 0);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'VerifyEmpUpdate')
-data.setCell(9, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
+data.setCell(9, 1, 'VerifySkillAdd')
+data.setCell(9, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
 data.setCell(9, 3, 0);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'VerifyEmpUpdateAddRolesPositive')
-data.setCell(10, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
+data.setCell(10, 1, 'VerifyEmpAdd')
+data.setCell(10, 2, 'com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest')
 data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'VerifyEmpUpdateContactsPositive')
+data.setCell(11, 1, 'VerifEmpNameSearch')
 data.setCell(11, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(11, 3, 0);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'VerifyEmpAddinEmpProfileAlreadyExist')
+data.setCell(12, 1, 'VerifyEmpUpdateSecurity')
 data.setCell(12, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(12, 3, 0);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'VerifyLoginwithNewEmployee')
+data.setCell(13, 1, 'VerifyEmpUpdateMisc')
 data.setCell(13, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(13, 3, 0);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'VerifEmpNameSearch')
+data.setCell(14, 1, 'VerifyTerminateEmployee')
 data.setCell(14, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(14, 3, 0);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'VerifyEmpUpdateESS')
+data.setCell(15, 1, 'VerifyEmpUpdateExcludedSkillsPositive')
 data.setCell(15, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(15, 3, 0);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'VerifyEmpUpdateMisc')
+data.setCell(16, 1, 'VerifyLoginwithNewEmployee')
 data.setCell(16, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(16, 3, 0);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'VerifyEmpProCreationFiveEmp')
+data.setCell(17, 1, 'VerifyEmpUpdate')
 data.setCell(17, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(17, 3, 0);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'VerifEmpIDSerach')
+data.setCell(18, 1, 'VerifyEmpProCreationFiveEmp')
 data.setCell(18, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(18, 3, 0);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'VerifyEmpUpdateContactsNegative')
+data.setCell(19, 1, 'VerifyEmpUpdateExcludedSkillsNegative')
 data.setCell(19, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(19, 3, 0);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'VerifyEmpUpdateSecurity')
+data.setCell(20, 1, 'VerifyEmpUpdateContactsNegative')
 data.setCell(20, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(20, 3, 0);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'VerifyEmpUpdateDuplicate')
+data.setCell(21, 1, 'VerifEmpIDSerach')
 data.setCell(21, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(21, 3, 0);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'VerifyEmpUpdateExcludedSkillsPositive')
+data.setCell(22, 1, 'VerifyEmpUpdateDuplicate')
 data.setCell(22, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(22, 3, 0);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'VerifyEmpUpdateAddRolesNegative')
+data.setCell(23, 1, 'VerifyEmpUpdateAddRolesPositive')
 data.setCell(23, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(23, 3, 0);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'VerifyEmpUpdateExcludedSkillsNegative')
+data.setCell(24, 1, 'VerifyEmpUpdateESS')
 data.setCell(24, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(24, 3, 0);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'VerifyTerminateEmployee')
+data.setCell(25, 1, 'VerifyEmpUpdateContactsPositive')
 data.setCell(25, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(25, 3, 0);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'rosterCreation')
-data.setCell(26, 2, 'com.jivi.auto.employeetest.RoaserSetup')
+data.setCell(26, 1, 'VerifyEmpAddinEmpProfileAlreadyExist')
+data.setCell(26, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(26, 3, 0);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'rosterGroupAssignmentAddingSelectedEmp')
-data.setCell(27, 2, 'com.jivi.auto.employeetest.RoaserSetup')
+data.setCell(27, 1, 'VerifyEmpUpdateAddRolesNegative')
+data.setCell(27, 2, 'com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest')
 data.setCell(27, 3, 0);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'scheduleCreationRules')
+data.setCell(28, 1, 'rosterCreation')
 data.setCell(28, 2, 'com.jivi.auto.employeetest.RoaserSetup')
 data.setCell(28, 3, 0);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'attendaceRecon')
-data.setCell(29, 2, 'com.jivi.auto.employeetest.TimeAndAttendanceTest')
+data.setCell(29, 1, 'rosterGroupAssignmentRemoveSelectedEmp')
+data.setCell(29, 2, 'com.jivi.auto.employeetest.RoaserSetup')
 data.setCell(29, 3, 0);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'employeeSelfServiceRejectLeave')
-data.setCell(30, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
+data.setCell(30, 1, 'rosterGroupAssignmentAddingSelectedEmp')
+data.setCell(30, 2, 'com.jivi.auto.employeetest.RoaserSetup')
 data.setCell(30, 3, 0);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'employeeSelfServiceApplyTimeOff')
-data.setCell(31, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
+data.setCell(31, 1, 'rosterGroupAssignmentRemoveAllEmp')
+data.setCell(31, 2, 'com.jivi.auto.employeetest.RoaserSetup')
 data.setCell(31, 3, 0);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'employeeSelfServiceApproveLeave')
+data.setCell(32, 1, 'employeeSelfServiceAdminTest')
 data.setCell(32, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
 data.setCell(32, 3, 0);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'leaveBalanceAfterApprove')
+data.setCell(33, 1, 'employeeSelfServiceApplyTimeOff')
 data.setCell(33, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
 data.setCell(33, 3, 0);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'employeeSelfServiceAdminTest')
+data.setCell(34, 1, 'leaveBalanceAfterApprove')
 data.setCell(34, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
 data.setCell(34, 3, 0);
 data.setCell(35, 0, 35)
-data.setCell(35, 1, 'employeeSelfServiceApplyLeave')
+data.setCell(35, 1, 'leaveBalanceAfterRejection')
 data.setCell(35, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
 data.setCell(35, 3, 0);
 data.setCell(36, 0, 36)
-data.setCell(36, 1, 'leaveBalanceAfterRejection')
+data.setCell(36, 1, 'employeeSelfServiceApproveLeave')
 data.setCell(36, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
 data.setCell(36, 3, 0);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'employeeSelfServiceRejectLeave')
+data.setCell(37, 2, 'com.jivi.auto.employeetest.EmployeeSelfServiceTest')
+data.setCell(37, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -2068,15 +2116,20 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
+              <span class="ignored-class-name">com.jivi.auto.employeetest.EmployeeSelfServiceTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">employeeSelfServiceApplyLeave</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">com.jivi.auto.employeetest.RoaserSetup</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">deleteShiftBandDefinition</span>
                 <br/>
                 <span class="ignored-method-name">rosterGroupAssignmentAddingAllEmp</span>
                 <br/>
-                <span class="ignored-method-name">rosterGroupAssignmentRemoveAllEmp</span>
-                <br/>
-                <span class="ignored-method-name">rosterGroupAssignmentRemoveSelectedEmp</span>
+                <span class="ignored-method-name">scheduleCreationRules</span>
                 <br/>
                 <span class="ignored-method-name">reActivatedeletedShiftBandDefinition</span>
                 <br/>
@@ -2092,7 +2145,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.jivi.auto.employeetest.EmployeeSelfServiceTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.jivi.auto.employeetest.HSSEPlanner</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuiteSetup</span>
                 <span class="method-start">0 ms</span>
@@ -2106,538 +2159,565 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest.VerifyLogin() throws java.lang.E...)</span>
-                <span class="method-start">501 ms</span>
+                <span class="method-start">491 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyLogin</span>
-                <span class="method-start">3344 ms</span>
+                <span class="method-start">3880 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">afterMethod([TestResult name=VerifyLogin status=FAILURE method=JiViewsSystemDefinitionsTest.VerifyLogin()[pri:0,...)</span>
-                <span class="method-start">340341 ms</span>
+                <span class="method-start">5254 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340365 ms</span>
+                <span class="method-start">5295 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpCategory</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5296 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5296 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5297 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpAdd</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5297 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5297 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5297 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifySkillAdd</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5297 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5297 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5298 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyRolesAdd</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5298 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5298 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">340374 ms</span>
+                <span class="method-start">5299 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">340699 ms</span>
+                <span class="method-start">5422 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest.VerifyEmpAddinEmpProfile() ...)</span>
-                <span class="method-start">340699 ms</span>
+                <span class="method-start">5423 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyEmpAddinEmpProfile</span>
-                <span class="method-start">340699 ms</span>
+                <span class="method-start">5423 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">afterMethod([TestResult name=VerifyEmpAddinEmpProfile status=FAILURE method=JiViewsEmployeeAdministrationTest.Ve...)</span>
-                <span class="method-start">340715 ms</span>
+                <span class="method-start">5431 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340725 ms</span>
+                <span class="method-start">5442 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpAddinEmpProfileAlreadyExist</span>
-                <span class="method-start">340725 ms</span>
+                <span class="method-start">5442 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340725 ms</span>
+                <span class="method-start">5442 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340725 ms</span>
+                <span class="method-start">5442 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifEmpIDSerach</span>
-                <span class="method-start">340725 ms</span>
+                <span class="method-start">5442 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340725 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifEmpNameSearch</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdate</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateDuplicate</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5443 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateContactsPositive</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateContactsNegative</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateExcludedSkillsPositive</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateExcludedSkillsNegative</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5444 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateAddRolesPositive</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateAddRolesNegative</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateSecurity</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateESS</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5445 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpUpdateMisc</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyLoginwithNewEmployee</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340730 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyEmpProCreationFiveEmp</span>
-                <span class="method-start">340742 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340742 ms</span>
+                <span class="method-start">5446 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">340742 ms</span>
+                <span class="method-start">5447 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyTerminateEmployee</span>
-                <span class="method-start">340742 ms</span>
+                <span class="method-start">5447 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">340742 ms</span>
+                <span class="method-start">5447 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">340742 ms</span>
+                <span class="method-start">5447 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.RoaserSetup</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">341026 ms</span>
+                <span class="method-start">5581 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.RoaserSetup.createShiftBandDefinition() throws java.lang.Exce...)</span>
-                <span class="method-start">341026 ms</span>
+                <span class="method-start">5582 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">createShiftBandDefinition</span>
-                <span class="method-start">341026 ms</span>
+                <span class="method-start">5582 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">afterMethod([TestResult name=createShiftBandDefinition status=FAILURE method=RoaserSetup.createShiftBandDefiniti...)</span>
-                <span class="method-start">341043 ms</span>
+                <span class="method-start">5589 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">341067 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">scheduleCreationRules</span>
-                <span class="method-start">341067 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">341067 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">341067 ms</span>
+                <span class="method-start">5594 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">rosterGroupAssignmentAddingSelectedEmp</span>
-                <span class="method-start">341067 ms</span>
+                <span class="method-start">5594 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">341067 ms</span>
+                <span class="method-start">5594 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">341067 ms</span>
+                <span class="method-start">5594 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">rosterCreation</span>
-                <span class="method-start">341067 ms</span>
+                <span class="method-name">rosterGroupAssignmentRemoveSelectedEmp</span>
+                <span class="method-start">5594 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">341067 ms</span>
+                <span class="method-start">5594 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">5595 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">rosterGroupAssignmentRemoveAllEmp</span>
+                <span class="method-start">5595 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">5595 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">5595 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">rosterCreation</span>
+                <span class="method-start">5595 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">5595 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">341067 ms</span>
+                <span class="method-start">5595 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-test after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">341067 ms</span>
+                <span class="method-start">5595 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.WorkloadPlanner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">341160 ms</span>
+                <span class="method-start">5662 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.WorkloadPlanner.createVesselSchedule() throws java.lang.Excep...)</span>
-                <span class="method-start">341160 ms</span>
+                <span class="method-start">5662 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">createVesselSchedule</span>
-                <span class="method-start">341160 ms</span>
+                <span class="method-start">5663 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">afterMethod([TestResult name=createVesselSchedule status=FAILURE method=WorkloadPlanner.createVesselSchedule()[p...)</span>
-                <span class="method-start">341176 ms</span>
+                <span class="method-start">5669 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">341176 ms</span>
+                <span class="method-start">5675 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.TimeAndAttendanceTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">341254 ms</span>
+                <span class="method-start">5721 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.TimeAndAttendanceTest.attendaceRecon() throws java.lang.Excep...)</span>
-                <span class="method-start">341254 ms</span>
+                <span class="method-start">5722 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">attendaceRecon</span>
-                <span class="method-start">341254 ms</span>
+                <span class="method-start">5722 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">afterMethod([TestResult name=attendaceRecon status=FAILURE method=TimeAndAttendanceTest.attendaceRecon()[pri:0, ...)</span>
-                <span class="method-start">341254 ms</span>
+                <span class="method-start">5727 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">341270 ms</span>
+                <span class="method-start">5735 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.jivi.auto.employeetest.EmployeeSelfServiceTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUpClass</span>
-                <span class="method-start">341333 ms</span>
+                <span class="method-start">5766 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.EmployeeSelfServiceTest.employeeSelfServiceEmployeeTest() thr...)</span>
-                <span class="method-start">341333 ms</span>
+                <span class="method-start">5766 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">employeeSelfServiceEmployeeTest</span>
-                <span class="method-start">341343 ms</span>
+                <span class="method-start">5766 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">afterMethod([TestResult name=employeeSelfServiceEmployeeTest status=FAILURE method=EmployeeSelfServiceTest.emplo...)</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5772 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5778 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">employeeSelfServiceAdminTest</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5778 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5778 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">341349 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">employeeSelfServiceApplyLeave</span>
-                <span class="method-start">341349 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">341349 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5778 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">employeeSelfServiceRejectLeave</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5778 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5778 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5779 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">leaveBalanceAfterRejection</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5779 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5779 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5779 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">employeeSelfServiceApproveLeave</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5779 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">341349 ms</span>
+                <span class="method-start">5779 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">341364 ms</span>
+                <span class="method-start">5779 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">leaveBalanceAfterApprove</span>
-                <span class="method-start">341364 ms</span>
+                <span class="method-start">5780 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">341364 ms</span>
+                <span class="method-start">5780 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">341364 ms</span>
+                <span class="method-start">5780 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">employeeSelfServiceApplyTimeOff</span>
-                <span class="method-start">341364 ms</span>
+                <span class="method-start">5780 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">341364 ms</span>
+                <span class="method-start">5780 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">341364 ms</span>
+                <span class="method-start">5780 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.jivi.auto.employeetest.HSSEPlanner</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUpClass</span>
+                <span class="method-start">5804 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void com.jivi.auto.employeetest.HSSEPlanner.createHSSEPlanning() throws java.lang.Exception)</span>
+                <span class="method-start">5805 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">createHSSEPlanning</span>
+                <span class="method-start">5805 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">afterMethod([TestResult name=createHSSEPlanning status=FAILURE method=HSSEPlanner.createHSSEPlanning()[pri:0, in...)</span>
+                <span class="method-start">5810 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">5815 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterTestSuite</span>
-                <span class="method-start">341396 ms</span>
+                <span class="method-start">5826 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
