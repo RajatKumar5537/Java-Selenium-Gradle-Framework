@@ -4,77 +4,22 @@
   <listeners>
     <listener class-name="com.jivi.auto.reports.ExtentITestListenerClassAdapter"/>
   </listeners>
-  <test thread-count="5" name="Test1(failed)">
-    <classes>
-      <class name="com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="beforeSuiteSetup"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="afterTestSuite"/>
-          <include name="VerifyEmpCategory"/>
-          <include name="VerifyEmpAdd"/>
-          <include name="VerifyRolesAdd"/>
-          <include name="setUpClass"/>
-          <include name="VerifyLogin"/>
-          <include name="VerifySkillAdd"/>
-        </methods>
-      </class> <!-- com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest -->
-    </classes>
-  </test> <!-- Test1(failed) -->
   <test thread-count="5" name="Test2(failed)">
     <classes>
       <class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
         <methods>
-          <include name="VerifyEmpAddinEmpProfileAlreadyExist"/>
-          <include name="VerifyTerminateEmployee"/>
-          <include name="VerifyEmpUpdateContactsNegative"/>
-          <include name="VerifyEmpUpdateDuplicate"/>
           <include name="beforeMethod"/>
-          <include name="afterClass"/>
-          <include name="VerifyEmpUpdateAddRolesNegative"/>
-          <include name="VerifEmpIDSerach"/>
-          <include name="VerifyEmpUpdateMisc"/>
-          <include name="VerifyEmpUpdateContactsPositive"/>
-          <include name="afterTestSuite"/>
-          <include name="VerifyEmpUpdateExcludedSkillsNegative"/>
-          <include name="VerifyEmpProCreationFiveEmp"/>
-          <include name="VerifyEmpAddinEmpProfile"/>
-          <include name="VerifyEmpUpdateAddRolesPositive"/>
-          <include name="VerifyLoginwithNewEmployee"/>
-          <include name="VerifyEmpUpdateSecurity"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="VerifyEmpUpdateAddRolesNegative"/>
           <include name="VerifyEmpUpdateESS"/>
-          <include name="VerifyEmpUpdate"/>
-          <include name="VerifyEmpUpdateExcludedSkillsPositive"/>
-          <include name="VerifEmpNameSearch"/>
+          <include name="afterTestSuite"/>
           <include name="setUpClass"/>
         </methods>
       </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
     </classes>
   </test> <!-- Test2(failed) -->
-  <test thread-count="5" name="Test3(failed)">
-    <classes>
-      <class name="com.jivi.auto.employeetest.RoaserSetup">
-        <methods>
-          <include name="createShiftBandDefinition"/>
-          <include name="rosterCreation"/>
-          <include name="beforeMethod"/>
-          <include name="endTest"/>
-          <include name="rosterGroupAssignmentAddingSelectedEmp"/>
-          <include name="beforeSuiteSetup"/>
-          <include name="afterMethod"/>
-          <include name="rosterGroupAssignmentRemoveAllEmp"/>
-          <include name="afterClass"/>
-          <include name="rosterGroupAssignmentRemoveSelectedEmp"/>
-          <include name="afterTestSuite"/>
-          <include name="setUpClass"/>
-        </methods>
-      </class> <!-- com.jivi.auto.employeetest.RoaserSetup -->
-    </classes>
-  </test> <!-- Test3(failed) -->
   <test thread-count="5" name="Test4(failed)">
     <classes>
       <class name="com.jivi.auto.employeetest.WorkloadPlanner">
