@@ -53,7 +53,7 @@ LoginPage login;
 	
 
 	}
-	@Test
+	@Test (priority = 1)
 	public void employeeSelfServiceEmployeeTest() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
@@ -70,7 +70,7 @@ LoginPage login;
 		employeeSelfService.employeeSelfService();
 	}
 	
-	@Test
+	@Test (priority = 2)
 	public void employeeSelfServiceAdminTest() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
@@ -87,7 +87,7 @@ LoginPage login;
 		employeeSelfService.adminSelfService();
 	}
 	
-	@Test
+	@Test (priority = 5)
 	public void leaveBalanceAfterRejection() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
@@ -105,7 +105,7 @@ LoginPage login;
 	//	employeeSelfService.leaveBalanceValidationAfterApplyLeave();
 	}
 	
-	@Test
+	@Test (priority = 8)
 	public void leaveBalanceAfterApprove() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
@@ -123,7 +123,7 @@ LoginPage login;
 	//	employeeSelfService.leaveBalanceValidationAfterApplyLeave();
 	}
 	
-	@Test
+	@Test (priority = 3)
 	public void employeeSelfServiceApplyLeave() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
@@ -140,7 +140,25 @@ LoginPage login;
 		employeeSelfService.employeeSelfServiceApplyAnnualLeave();
 	}
 	
-	@Test
+	
+	@Test (priority = 6)
+	public void employeeSelfServiceApplyLeaveSecondTime() throws Exception {
+		
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		EmployeeSelfService employeeSelfService=PageFactory.initElements(driver, EmployeeSelfService.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+		menuNavigation.navigateToOLMSelfServiceEmployee();
+		employeeSelfService.employeeSelfServiceApplyAnnualLeave();
+	}
+	
+	@Test (priority = 4)
 	public void employeeSelfServiceRejectLeave() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
@@ -157,7 +175,7 @@ LoginPage login;
 		
 	}
 	
-	@Test
+	@Test (priority = 7)
 	public void employeeSelfServiceApproveLeave() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
@@ -174,7 +192,7 @@ LoginPage login;
 		
 	}
 	
-	@Test
+	@Test (priority = 9)
 	public void employeeSelfServiceApplyTimeOff() throws Exception {
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);

@@ -21,6 +21,8 @@ import com.jivi.auto.utilities.BaseTest;
 //import com.auto.utilities.excelUtilities;
 //import com.auto.utilities.reuableComponents;
 
+import junit.framework.Assert;
+
 import com.jivi.auto.business_reusablecomponents.ReusableComponents;
 import com.jivi.auto.pageobjectutils.DropDown;
 import com.jivi.auto.pageobjectutils.MouseHandler;
@@ -144,8 +146,19 @@ public class HSSEPlanning extends BaseTest {
 	@FindBy(id = "btnPerformActivityGenerationTask")
 	WebElement planningSignOffSaveButton;
 	
+	
+	@FindBy(xpath = "//div[@class='toast-message']")
+	WebElement negativeToastMessage;
+	
 	@FindBy(xpath = "//table[@id='add-hsse-skills-table']/tbody")
 	WebElement TogetRows ;
+	
+	@FindBy(xpath = "//button[contains(@id,'btnHSSESkillDel')]")
+	WebElement delSkill ;
+	
+	@FindBy(xpath = "//button[text()='Yes']")
+	WebElement delSkillYes ;
+	
 
 	@FindBy(xpath = "//button[text()='Yes']")
 	WebElement btnYes;
@@ -198,7 +211,7 @@ public class HSSEPlanning extends BaseTest {
 
 		// webAction.clickUsingJavaScript(removeSelection);
 		Thread.sleep(500);
-		String shiftBandNews = "Auto Band code 86178";
+		String shiftBandNews = "Auto Band code 85139";
 
 		Thread.sleep(500);
 
@@ -213,27 +226,28 @@ public class HSSEPlanning extends BaseTest {
 			// Thread.sleep(500);
 		}
 
+		Thread.sleep(2000);
 		webAction.clickUsingJavaScript(btnSearchHSSEPlanning);
 		
 		Thread.sleep(5000);
 
 		webAction.waitUntilElementIsClickable(addHSSEPlanning);
-
 		webAction.clickUsingJavaScript(addHSSEPlanning);
+		Thread.sleep(2000);
 		
 		List<WebElement>TotalRowsList = TogetRows.findElements(By.tagName("tr"));
 		rowcount=TotalRowsList.size();
 		System.out.println("########################################################");
 		System.out.println("Total number of Skills in the Resource Set: "+ rowcount);
 		System.out.println("########################################################");
-		/*
-		 * if(rowcount>0) { webAction.clickUsingJavaScript(skillDel);
-		 * 
-		 * 
-		 * }
-		 */
 		
-		
+		 if(rowcount>0)
+		 { 
+			 webAction.clickUsingJavaScript(delSkill);
+		  }
+		 
+		 webAction.clickUsingJavaScript(delSkillYes);
+		 Thread.sleep(1000);
 		webAction.clickUsingJavaScript(saveHSSESkillPlanning);
 		Thread.sleep(3000);
 		webAction.clickUsingJavaScript(addHSSESkill);
@@ -248,6 +262,18 @@ public class HSSEPlanning extends BaseTest {
 		Thread.sleep(3000);
 		webAction.clickUsingJavaScript(planningSignOff);
 		Thread.sleep(1000);
+		
+		String ratio="Default Ratio";
+		List<WebElement> lstManningRatioSe=lstManningRatio.findElements(By.xpath("//select[@id='cmbActivityGenRule']/option"));
+		for( WebElement we: lstManningRatioSe) { 
+		Thread.sleep(500);      
+		//we.sendKeys(Keys.ARROW_DOWN);
+		if(ratio.equals(we.getText()))
+		we.click();
+		//Thread.sleep(500);
+		}
+		Thread.sleep(1000);
+		
 		dropdown.selectByIndex(allocationRule, 0);
 		
 		webAction.clickUsingJavaScript(planningSignOffSaveButton);
@@ -261,6 +287,98 @@ public class HSSEPlanning extends BaseTest {
 		// handler.clickUsingActionsMethod(berth);
 		// handler.moveMousePointerToElement(berth, lnkCreate);
 		// common.scrollIntoeEement(lnkCreate);
+		/*
+		 * String message=negativeToastMessage.getText(); System.out.println(message);
+		 * Assert.assertTrue(message,message.contains("already Deployed"));
+		 */
+		
+
+	}
+	
+	public void createHSSEPlanAlreadyDeployedShift() throws Exception {
+		Date date = new Date();
+		SimpleDateFormat dateformat = new SimpleDateFormat("dd-mm-yyyy");
+		String formateddate = dateformat.format(date);
+
+		
+		Thread.sleep(500);
+		//This Shift Band id already signed Off
+		String shiftBandNews = "Auto Band code 82220";
+
+		Thread.sleep(500);
+
+		List<WebElement> listShiftBand = lstShiftBandSelection
+				.findElements(By.xpath("//select[@id='cmbShiftBand']/option"));
+		for (WebElement we : listShiftBand) {
+			Thread.sleep(500);
+			// we.sendKeys(Keys.ARROW_DOWN);
+			// if(shiftBandNew.equals(we.getText()))
+			if (shiftBandNews.equals(we.getText()))
+				we.click();
+			// Thread.sleep(500);
+		}
+
+		Thread.sleep(2000);
+		webAction.clickUsingJavaScript(btnSearchHSSEPlanning);
+		
+		Thread.sleep(5000);
+
+		webAction.waitUntilElementIsClickable(addHSSEPlanning);
+		webAction.clickUsingJavaScript(addHSSEPlanning);
+		Thread.sleep(2000);
+		
+		List<WebElement>TotalRowsList = TogetRows.findElements(By.tagName("tr"));
+		rowcount=TotalRowsList.size();
+		System.out.println("########################################################");
+		System.out.println("Total number of Skills in the Resource Set: "+ rowcount);
+		System.out.println("########################################################");
+		
+		 if(rowcount>0)
+		 { 
+			 webAction.clickUsingJavaScript(delSkill);
+		  }
+		 
+		 webAction.clickUsingJavaScript(delSkillYes);
+		 Thread.sleep(1000);
+		webAction.clickUsingJavaScript(saveHSSESkillPlanning);
+		Thread.sleep(3000);
+		webAction.clickUsingJavaScript(addHSSESkill);
+		Thread.sleep(1000);
+		dropdown.selectByIndex(locationName, 0);
+		dropdown.selectByIndex(skillCode, 0);
+		requirement.clear();
+		requirement.sendKeys("2");
+
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(saveHSSESkillPlanning);
+		Thread.sleep(3000);
+		/*
+		 * webAction.clickUsingJavaScript(planningSignOff); Thread.sleep(1000);
+		 * 
+		 * String ratio="Default Ratio"; List<WebElement>
+		 * lstManningRatioSe=lstManningRatio.findElements(By.xpath(
+		 * "//select[@id='cmbActivityGenRule']/option")); for( WebElement we:
+		 * lstManningRatioSe) { Thread.sleep(500); //we.sendKeys(Keys.ARROW_DOWN);
+		 * if(ratio.equals(we.getText())) we.click(); //Thread.sleep(500); }
+		 * Thread.sleep(1000);
+		 * 
+		 * dropdown.selectByIndex(allocationRule, 0);
+		 * 
+		 * webAction.clickUsingJavaScript(planningSignOffSaveButton);
+		 * Thread.sleep(1000);
+		 */		
+		/*
+		 * JavascriptExecutor js = (JavascriptExecutor) driver;
+		 * js.executeScript("alert('"+"Validation without Adding Resoure skill"+"');");
+		 */
+
+		// handler.clickUsingActionsMethod(berth);
+		// handler.moveMousePointerToElement(berth, lnkCreate);
+		// common.scrollIntoeEement(lnkCreate);
+		String message=negativeToastMessage.getText();
+		System.out.println(message);
+		Assert.assertTrue(message,message.contains("The shift has been deployed by"));
+		
 
 	}
 

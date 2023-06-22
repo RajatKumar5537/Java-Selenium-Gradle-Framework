@@ -68,5 +68,24 @@ LoginPage login;
 		//Assert.assertTrue(workLoad.verifyVesselCreation(), "Create Vessel");
 	}
 	
+	@Test
+	public void createHSSEPlanningAlreadyDeployedShift() throws Exception {
+		System.out.println("Create HSSEPlanning");
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		HSSEPlanning hsse=PageFactory.initElements(driver, HSSEPlanning.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+	//	menuNavigation.navigateToSite("Operations");
+		menuNavigation.navigateToHSSEPLanning();
+		hsse.createHSSEPlanAlreadyDeployedShift();
+		//workLoad.verifyQCFinalBookingReport();
+		//Assert.assertTrue(workLoad.verifyVesselCreation(), "Create Vessel");
+	}
 	
 }

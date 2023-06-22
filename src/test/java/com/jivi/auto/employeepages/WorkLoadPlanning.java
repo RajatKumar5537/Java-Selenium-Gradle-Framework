@@ -183,7 +183,7 @@ public class WorkLoadPlanning extends BaseTest {
 		for( WebElement we: listShiftBand) { 
 		Thread.sleep(500);      
 		//we.sendKeys(Keys.ARROW_DOWN);
-		if(shiftBandNew.equals(we.getText()))
+		if(shiftBandNewone.equals(we.getText()))
 		we.click();
 		//Thread.sleep(500);
 		}
@@ -255,13 +255,14 @@ public class WorkLoadPlanning extends BaseTest {
 		menuNavigation.waitforLoadingIcon();
 	}
 
-	public void scheduleCranes() throws InterruptedException {
+	public void scheduleCranes() throws Exception {
 		Thread.sleep(3000);
 		btnYes.click();
 		Thread.sleep(3000);
 		menuNavigation.waitforLoadingIcon();
 		Thread.sleep(2000);
-		btnSaveCraneSchedule.click();
+		webAction.clickUsingJavaScript(btnSaveCraneSchedule);
+		
 		menuNavigation.waitforLoadingIcon();
 		Thread.sleep(200);
 	}
