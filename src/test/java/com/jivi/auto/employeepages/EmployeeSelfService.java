@@ -328,12 +328,12 @@ public class EmployeeSelfService extends BaseTest {
 		Thread.sleep(1000);
 		leaveFrom.clear();
 		Thread.sleep(3000);
-		webAction.setText(leaveFrom, "08-06-2023");
+		webAction.setText(leaveFrom, "12-06-2023");
 		Thread.sleep(1000);
 		leaveFrom.sendKeys(Keys.TAB);
 		leaveTo.clear();
 		Thread.sleep(3000);
-		webAction.setText(leaveTo, "08-06-2023");
+		webAction.setText(leaveTo, "12-06-2023");
 		Thread.sleep(1000);
 		leaveTo.sendKeys(Keys.TAB);
 		webAction.scrollDown();
@@ -412,7 +412,7 @@ public void employeeSelfServiceApplyTimeOff() throws Exception {
 	Thread.sleep(500);
 	dateTimeOffDate.clear();
 	Thread.sleep(500);
-	dateTimeOffDate.sendKeys("07-06-2023");
+	dateTimeOffDate.sendKeys("08-06-2023");
 	dateTimeOffDate.sendKeys(Keys.TAB);
 	Thread.sleep(5000);
 	dropdown.selectByIndex(timeOffPeriod, 0);
