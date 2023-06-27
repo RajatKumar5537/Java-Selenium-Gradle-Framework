@@ -66,7 +66,7 @@ LoginPage login;
 		//menuNavigation.waitforLoadingIcon();
 		Thread.sleep(3000);
 		menuNavigation.navigateToTimeAndAttendance();
-		timeattendance.attendanceReconciliation();
+		timeattendance.attendanceReconciliationNew();
 		
 
 	}

@@ -267,4 +267,65 @@ public class TimeAndAttendance extends BaseTest {
 		 * webAction.getAttributeValue(ele, "td"); } }
 		 */
 	}
+	
+	
+	public void attendanceReconciliationNew() throws Exception {
+
+		LocalDate today = LocalDate.now();
+		LocalDate yesterday = today.minusDays(1);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		String formattedDate = yesterday.format(formatter);
+		System.out.println("Yesterday's date: " + formattedDate);
+
+		LocalDate future = LocalDate.now();
+		LocalDate ff = future.plusDays(12);
+		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		String FutureDate = ff.format(format);
+		System.out.println("Yesterday's date: " + FutureDate);
+
+		String dates = formattedDate + "-" + FutureDate;
+		System.out.println("Date Fromat : " + dates);
+
+		
+
+		Thread.sleep(1000);
+		startDateEndDate.clear();
+		Thread.sleep(1000);
+		startDateEndDate.sendKeys(dates);
+		//Thread.sleep(1000);
+		//dateApply.click();
+		Thread.sleep(500);
+		startDateEndDate.sendKeys(Keys.TAB);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(searchInAttenReocn);
+		//searchInAttenReocn.click();
+		//webAction.clickUsingJavaScript(searchInAttenReocn);
+		 
+		Thread.sleep(2000);
+	//	webAction.scrollIntoeEement(empOne);
+		webAction.scrollDown300();
+
+		
+		
+		String val="00:00";
+		
+		for(int i=0;i>=10;i++)
+		{
+			
+		
+		List<WebElement> empId=driver.findElements(By.xpath("//*[@id='ManageAttendance-list']/tbody/tr["+"i"+"]/td[2]"));
+			for( WebElement emp: empId) { 
+			Thread.sleep(500);   
+			System.out.println(emp.getText());
+			Thread.sleep(100);  
+			//we.sendKeys(Keys.ARROW_DOWN);
+		
+			
+			}
+			
+		
+		}
+		Thread.sleep(5000);
+		
+	}
 }

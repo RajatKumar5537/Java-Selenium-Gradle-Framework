@@ -56,6 +56,7 @@ LoginPage login;
 	@Test (priority = 1)
 	public void employeeSelfServiceEmployeeTest() throws Exception {
 		
+		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
