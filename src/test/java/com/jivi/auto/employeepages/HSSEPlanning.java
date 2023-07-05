@@ -116,13 +116,16 @@ public class HSSEPlanning extends BaseTest {
 	
 	int rowcount;
 	
+	
+	
+	
 	//@FindBy(xpath = "//table[@id='add-hsse-skills-table']/tbody/tr["+rowcount+"]/td[4]")
 	//WebElement skillDel;
 	
 	//WebElement skillDel =driver.findElement(By.xpath("//table[@id='add-hsse-skills-table']/tbody/tr["+rowcount+"]/td[4]"));
 	
 	
-	@FindBy(id = "btnAddHsseSkill")
+	@FindBy(xpath = "//button[@id='btnAddHSSEPlanning']")
 	WebElement addHSSESkill;
 
 	@FindBy(xpath = "//select[contains(@id,'cmbLocationName')]")
@@ -152,6 +155,15 @@ public class HSSEPlanning extends BaseTest {
 	
 	@FindBy(xpath = "//table[@id='add-hsse-skills-table']/tbody")
 	WebElement TogetRows ;
+	
+	@FindBy(xpath = "//table[@id='add-hsse-skills-table']/tbody/tr/td")
+	WebElement tablerowtext ;
+	
+	@FindBy(xpath = "//table[@id='final-Booking-Report-list']/tbody")
+	WebElement finalBookingReportTable;
+	
+	@FindBy(xpath = "//table[@id='final-Booking-Report-list']/tbody/tr/td")
+	WebElement finalBookingReportTableText;
 	
 	@FindBy(xpath = "//button[contains(@id,'btnHSSESkillDel')]")
 	WebElement delSkill ;
@@ -203,6 +215,66 @@ public class HSSEPlanning extends BaseTest {
 
 	@FindBy(xpath = "(//*[@class='centered_rowheader_inner'])[56]")
 	WebElement craneDriverRequired;
+	
+	@FindBy(xpath = "//button[@data-original-title='Deployment']")
+	WebElement hSSEDeployment;
+	
+	@FindBy(xpath = "(//*[text()='Show Standby Employees'])[2]")
+	WebElement showStandbyEmployee;
+	
+	@FindBy(xpath = "//*[text()='Non Primary Skill Deployed Employee']")
+	WebElement nonPrimarySkillDeployedEmployee;
+	
+	@FindBy(xpath = "//*[text()='Unallocated Work']")
+	WebElement unallocatedWork;
+	
+	@FindBy(xpath = "//*[text()='OnCall List']")
+	WebElement OnCallList;
+	
+	
+	@FindBy(xpath = "//button[@data-original-title='Deployment']")
+	WebElement deploymentButton;
+	
+	@FindBy(xpath = "//a[@id='btnDeploy']")
+	WebElement buttonDeploy;
+	
+	@FindBy(xpath = "//button[@id='btnBeginDeploy']")
+	WebElement deploymentButtonSave;
+	
+	@FindBy(xpath = "//a[@id='btnDeploy']")
+	WebElement dateRangeDeployButton;
+	
+	@FindBy(xpath = "//a[@id='btnUnAllocate']")
+	WebElement deAllocate;
+
+	@FindBy(xpath = "//a[@id='btnBeginDeploy']")
+	WebElement deAllocateSave;
+	
+	@FindBy(xpath = "(//button[@data-original-title='Cancel'])[1]")
+	WebElement deAllocateCancel;
+	
+	
+	@FindBy(xpath = "//a[@id='btnUnAllocateDateRange']")
+	WebElement deAllocateDateRange;
+	
+	@FindBy(xpath = "//a[@id='btnRevokePlanningSignOff']")
+	WebElement buttonRevokePlanningSignOff;
+	
+		
+	@FindBy(xpath = "//button[@id='btnPerformActivityGenerationTask']")
+	WebElement buttonRevokePlanningSignOffSave;
+	
+	@FindBy(xpath = "(//button[@data-original-title='Cancel'])[1]")
+	WebElement buttonRevokePlanningSignOffCancel;
+	
+	@FindBy(xpath = "//a[@id='btnBroadcastDeployment']")
+	WebElement buttonBroadcastDeployment;
+	
+	@FindBy(xpath = "(//*[@id='broadcast-deployment-modal']//button[1])[2]")
+	WebElement buttonBroadcastDeploymentCancel;
+	
+	@FindBy(id = "btnSearch")
+	WebElement btnSearchHsseFinalbookingReport;
 
 	public void createHSSEPlan() throws Exception {
 		Date date = new Date();
@@ -211,6 +283,93 @@ public class HSSEPlanning extends BaseTest {
 
 		// webAction.clickUsingJavaScript(removeSelection);
 		Thread.sleep(500);
+		String shiftBandNews = "Auto Band code 85139";
+
+		Thread.sleep(500);
+
+		List<WebElement> listShiftBand = lstShiftBandSelection
+				.findElements(By.xpath("//select[@id='cmbShiftBand']/option"));
+		for (WebElement we : listShiftBand) {
+			Thread.sleep(500);
+			// we.sendKeys(Keys.ARROW_DOWN);
+			// if(shiftBandNew.equals(we.getText()))
+			if (shiftBandNews.equals(we.getText()))
+				we.click();
+			// Thread.sleep(500);
+		}
+
+		Thread.sleep(2000);
+		webAction.clickUsingJavaScript(btnSearchHSSEPlanning);
+		
+		Thread.sleep(5000);
+
+		webAction.waitUntilElementIsClickable(addHSSEPlanning);
+		webAction.clickUsingJavaScript(addHSSEPlanning);
+		Thread.sleep(2000);
+		
+		List<WebElement>TotalRowsList = TogetRows.findElements(By.tagName("tr"));
+		rowcount=TotalRowsList.size();
+		if(tablerowtext.getText().equalsIgnoreCase("No data available in table"))
+		{
+			System.out.println("########################################################");
+			System.out.println("No data available in Resource Set");
+			System.out.println("########################################################");
+		}
+		else
+		{
+		System.out.println("########################################################");
+		System.out.println("Total number of Skills in the Resource Set: "+ (rowcount));
+		System.out.println("########################################################");
+		 webAction.clickUsingJavaScript(delSkill);
+		 webAction.clickUsingJavaScript(delSkillYes);
+		}
+				 
+		
+		 Thread.sleep(1000);
+		webAction.clickUsingJavaScript(saveHSSESkillPlanning);
+		Thread.sleep(3000);
+		webAction.clickUsingJavaScript(addHSSESkill);
+		Thread.sleep(1000);
+		dropdown.selectByIndex(locationName, 0);
+		dropdown.selectByIndex(skillCode, 0);
+		requirement.clear();
+		requirement.sendKeys("2");
+
+		Thread.sleep(1000);
+		webAction.clickUsingJavaScript(saveHSSESkillPlanning);
+		Thread.sleep(3000);
+		webAction.clickUsingJavaScript(planningSignOff);
+		Thread.sleep(1000);
+		
+		String ratio="Default Ratio";
+		List<WebElement> lstManningRatioSe=lstManningRatio.findElements(By.xpath("//select[@id='cmbActivityGenRule']/option"));
+		for( WebElement we: lstManningRatioSe) { 
+		Thread.sleep(500);      
+		//we.sendKeys(Keys.ARROW_DOWN);
+		if(ratio.equals(we.getText()))
+		we.click();
+		//Thread.sleep(500);
+		}
+		Thread.sleep(1000);
+		
+		dropdown.selectByIndex(allocationRule, 0);
+		
+		webAction.clickUsingJavaScript(planningSignOffSaveButton);
+		Thread.sleep(1000);
+		
+	
+		
+
+	}
+	
+	public void createHSSEPlanAlreadyDeployedShift() throws Exception {
+		Date date = new Date();
+		SimpleDateFormat dateformat = new SimpleDateFormat("dd-mm-yyyy");
+		String formateddate = dateformat.format(date);
+
+		
+		Thread.sleep(500);
+		//This Shift Band id already signed Off
 		String shiftBandNews = "Auto Band code 85139";
 
 		Thread.sleep(500);
@@ -260,42 +419,21 @@ public class HSSEPlanning extends BaseTest {
 		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(saveHSSESkillPlanning);
 		Thread.sleep(3000);
-		webAction.clickUsingJavaScript(planningSignOff);
-		Thread.sleep(1000);
 		
-		String ratio="Default Ratio";
-		List<WebElement> lstManningRatioSe=lstManningRatio.findElements(By.xpath("//select[@id='cmbActivityGenRule']/option"));
-		for( WebElement we: lstManningRatioSe) { 
-		Thread.sleep(500);      
-		//we.sendKeys(Keys.ARROW_DOWN);
-		if(ratio.equals(we.getText()))
-		we.click();
-		//Thread.sleep(500);
-		}
-		Thread.sleep(1000);
-		
-		dropdown.selectByIndex(allocationRule, 0);
-		
-		webAction.clickUsingJavaScript(planningSignOffSaveButton);
-		Thread.sleep(1000);
-		
-		/*
-		 * JavascriptExecutor js = (JavascriptExecutor) driver;
-		 * js.executeScript("alert('"+"Validation without Adding Resoure skill"+"');");
-		 */
-
-		// handler.clickUsingActionsMethod(berth);
-		// handler.moveMousePointerToElement(berth, lnkCreate);
-		// common.scrollIntoeEement(lnkCreate);
-		/*
-		 * String message=negativeToastMessage.getText(); System.out.println(message);
-		 * Assert.assertTrue(message,message.contains("already Deployed"));
-		 */
+		String message=negativeToastMessage.getText();
+		System.out.println(message);
+		Assert.assertTrue(message,message.contains("The shift has been deployed by"));
 		
 
 	}
+
 	
-	public void createHSSEPlanAlreadyDeployedShift() throws Exception {
+	public void viewDeployment() throws Exception {
+		int rowcountsbe;
+		int rowcountocl;
+		int rowcountuaw;
+		int rowcountnpse;
+		
 		Date date = new Date();
 		SimpleDateFormat dateformat = new SimpleDateFormat("dd-mm-yyyy");
 		String formateddate = dateformat.format(date);
@@ -303,7 +441,7 @@ public class HSSEPlanning extends BaseTest {
 		
 		Thread.sleep(500);
 		//This Shift Band id already signed Off
-		String shiftBandNews = "Auto Band code 82220";
+		String shiftBandNews = "Auto Band code 85319";
 
 		Thread.sleep(500);
 
@@ -318,70 +456,241 @@ public class HSSEPlanning extends BaseTest {
 			// Thread.sleep(500);
 		}
 
+		webAction.clickUsingJavaScript(btnSearchHsseFinalbookingReport);
 		Thread.sleep(2000);
-		webAction.clickUsingJavaScript(btnSearchHSSEPlanning);
+		webAction.clickUsingJavaScript(showStandbyEmployee);
+		webAction.scrollDown300();
+		//webAction.clickUsingJavaScript(showStandbyEmployee);
+		webAction.clickUsingJavaScript(btnSearchHsseFinalbookingReport);
+		Thread.sleep(4000);
 		
-		Thread.sleep(5000);
-
-		webAction.waitUntilElementIsClickable(addHSSEPlanning);
-		webAction.clickUsingJavaScript(addHSSEPlanning);
+		List<WebElement> TotalRowsListsbe = finalBookingReportTable.findElements(By.tagName("tr"));
+		rowcountsbe=TotalRowsListsbe.size();
+		if(finalBookingReportTableText.getText().equalsIgnoreCase("No data available in table"))
+		{	System.out.println("\n");
+			System.out.println("########################################################");
+			System.out.println("No data available in Stand By Employees");
+			System.out.println("########################################################");
+			System.out.println("\n");
+		}
+		else
+		{
+		System.out.println("########################################################");
+		System.out.println("Total number of Skills in the Stand By Employees: "+ (rowcountsbe));
+		System.out.println("########################################################");
+		System.out.println("\n");
+		}
+				 
+		
+		
+		/*
+		 * if(rowcount>1) { webAction.clickUsingJavaScript(delSkill);
+		 * webAction.clickUsingJavaScript(delSkillYes); }
+		 */			  
+				  
+		handler.clickUsingActionsMethod(showStandbyEmployee);
+		webAction.clickUsingJavaScript(nonPrimarySkillDeployedEmployee);
+		webAction.scrollDown300();
+		webAction.clickUsingJavaScript(btnSearchHsseFinalbookingReport);
 		Thread.sleep(2000);
 		
-		List<WebElement>TotalRowsList = TogetRows.findElements(By.tagName("tr"));
-		rowcount=TotalRowsList.size();
+		List<WebElement> TotalRowsListnpse = finalBookingReportTable.findElements(By.tagName("tr"));
+		rowcountnpse=TotalRowsListnpse.size();
+		if(finalBookingReportTableText.getText().equalsIgnoreCase("No data available in table"))
+		{
+			System.out.println("########################################################");
+			System.out.println("No data available in Non Primary Skill Deployed Employee");
+			System.out.println("########################################################");
+			System.out.println("\n");
+		}
+		else
+		{
 		System.out.println("########################################################");
-		System.out.println("Total number of Skills in the Resource Set: "+ rowcount);
+		System.out.println("Total number of Skills in the Non Primary Skill Deployed Employee: "+ (rowcountnpse));
 		System.out.println("########################################################");
+		System.out.println("\n");
+		}
+		webAction.clickUsingJavaScript(nonPrimarySkillDeployedEmployee);
+		webAction.clickUsingJavaScript(unallocatedWork);
+		webAction.scrollDown300();
+		webAction.clickUsingJavaScript(btnSearchHsseFinalbookingReport);
+		Thread.sleep(2000);
 		
-		 if(rowcount>0)
-		 { 
-			 webAction.clickUsingJavaScript(delSkill);
-		  }
-		 
-		 webAction.clickUsingJavaScript(delSkillYes);
-		 Thread.sleep(1000);
-		webAction.clickUsingJavaScript(saveHSSESkillPlanning);
-		Thread.sleep(3000);
-		webAction.clickUsingJavaScript(addHSSESkill);
-		Thread.sleep(1000);
-		dropdown.selectByIndex(locationName, 0);
-		dropdown.selectByIndex(skillCode, 0);
-		requirement.clear();
-		requirement.sendKeys("2");
-
-		Thread.sleep(1000);
-		webAction.clickUsingJavaScript(saveHSSESkillPlanning);
-		Thread.sleep(3000);
-		/*
-		 * webAction.clickUsingJavaScript(planningSignOff); Thread.sleep(1000);
-		 * 
-		 * String ratio="Default Ratio"; List<WebElement>
-		 * lstManningRatioSe=lstManningRatio.findElements(By.xpath(
-		 * "//select[@id='cmbActivityGenRule']/option")); for( WebElement we:
-		 * lstManningRatioSe) { Thread.sleep(500); //we.sendKeys(Keys.ARROW_DOWN);
-		 * if(ratio.equals(we.getText())) we.click(); //Thread.sleep(500); }
-		 * Thread.sleep(1000);
-		 * 
-		 * dropdown.selectByIndex(allocationRule, 0);
-		 * 
-		 * webAction.clickUsingJavaScript(planningSignOffSaveButton);
-		 * Thread.sleep(1000);
-		 */		
-		/*
-		 * JavascriptExecutor js = (JavascriptExecutor) driver;
-		 * js.executeScript("alert('"+"Validation without Adding Resoure skill"+"');");
-		 */
-
-		// handler.clickUsingActionsMethod(berth);
-		// handler.moveMousePointerToElement(berth, lnkCreate);
-		// common.scrollIntoeEement(lnkCreate);
-		String message=negativeToastMessage.getText();
-		System.out.println(message);
-		Assert.assertTrue(message,message.contains("The shift has been deployed by"));
+		List<WebElement>TotalRowsListuaw = finalBookingReportTable.findElements(By.tagName("tr"));
+		rowcountuaw=TotalRowsListuaw.size();
+		if(finalBookingReportTableText.getText().equalsIgnoreCase("No data available in table"))
+		{
+			System.out.println("########################################################");
+			System.out.println("No data available in Unallocated Work Employee");
+			System.out.println("########################################################");
+			System.out.println("\n");
+		}
+		else
+		{
+		System.out.println("########################################################");
+		System.out.println("Total number of Skills in the Unallocated Work Employee: "+ (rowcountuaw));
+		System.out.println("########################################################");
+		System.out.println("\n");
+		}
+		webAction.clickUsingJavaScript(unallocatedWork);
+		webAction.clickUsingJavaScript(OnCallList);
+		webAction.scrollDown300();
+		webAction.clickUsingJavaScript(btnSearchHsseFinalbookingReport);
+		Thread.sleep(2000);
+		List<WebElement> TotalRowsListocl = finalBookingReportTable.findElements(By.tagName("tr"));
+		rowcountocl=TotalRowsListocl.size();
 		
+		if(finalBookingReportTableText.getText().equalsIgnoreCase("No data available in table"))
+		{
+			System.out.println("########################################################");
+			System.out.println("No data available in On Call List Employees");
+			System.out.println("########################################################");
+			System.out.println("\n");
+		}
+		else
+		{
+		System.out.println("########################################################");
+		System.out.println("Total number of Skills in the On Call List Employees: "+ (rowcountocl));
+		System.out.println("########################################################");
+		System.out.println("\n");
+		}
+		
+	
+		Thread.sleep(2000);
+	}
+	
+	public void revokeSignOff() throws Exception {
+		Date date = new Date();
+		SimpleDateFormat dateformat = new SimpleDateFormat("dd-mm-yyyy");
+		String formateddate = dateformat.format(date);
+
+		
+		Thread.sleep(500);
+		//This Shift Band id already signed Off
+		String shiftBandNews = "Auto Band code 85139";
+
+		Thread.sleep(500);
+
+		List<WebElement> listShiftBand = lstShiftBandSelection
+				.findElements(By.xpath("//select[@id='cmbShiftBand']/option"));
+		for (WebElement we : listShiftBand) {
+			Thread.sleep(500);
+			// we.sendKeys(Keys.ARROW_DOWN);
+			// if(shiftBandNew.equals(we.getText()))
+			if (shiftBandNews.equals(we.getText()))
+				we.click();
+			// Thread.sleep(500);
+		}
+		webAction.clickUsingJavaScript(deploymentButton);
+		Thread.sleep(500);
+
+		webAction.clickUsingJavaScript(buttonRevokePlanningSignOff);
+		webAction.clickUsingJavaScript(buttonRevokePlanningSignOffSave);
+		Thread.sleep(500);
 
 	}
+	
+	
+	public void deployment() throws Exception {
+		Date date = new Date();
+		SimpleDateFormat dateformat = new SimpleDateFormat("dd-mm-yyyy");
+		String formateddate = dateformat.format(date);
 
+		
+		Thread.sleep(500);
+		//This Shift Band id already signed Off
+		String shiftBandNews = "Auto Band code 85139";
+
+		Thread.sleep(500);
+
+		List<WebElement> listShiftBand = lstShiftBandSelection
+				.findElements(By.xpath("//select[@id='cmbShiftBand']/option"));
+		for (WebElement we : listShiftBand) {
+			Thread.sleep(500);
+			// we.sendKeys(Keys.ARROW_DOWN);
+			// if(shiftBandNew.equals(we.getText()))
+			if (shiftBandNews.equals(we.getText()))
+				we.click();
+			// Thread.sleep(500);
+		}
+		webAction.clickUsingJavaScript(deploymentButton);
+		Thread.sleep(500);
+
+		webAction.clickUsingJavaScript(buttonDeploy);
+		//Testing purpose
+		webAction.clickUsingJavaScript(buttonRevokePlanningSignOffCancel);
+		Thread.sleep(500);
+
+	}
+	
+	
+	public void deAllocate() throws Exception {
+		Date date = new Date();
+		SimpleDateFormat dateformat = new SimpleDateFormat("dd-mm-yyyy");
+		String formateddate = dateformat.format(date);
+
+		
+		Thread.sleep(500);
+		//This Shift Band id already signed Off
+		String shiftBandNews = "Auto Band code 85139";
+
+		Thread.sleep(500);
+
+		List<WebElement> listShiftBand = lstShiftBandSelection
+				.findElements(By.xpath("//select[@id='cmbShiftBand']/option"));
+		for (WebElement we : listShiftBand) {
+			Thread.sleep(500);
+			// we.sendKeys(Keys.ARROW_DOWN);
+			// if(shiftBandNew.equals(we.getText()))
+			if (shiftBandNews.equals(we.getText()))
+				we.click();
+			// Thread.sleep(500);
+		}
+		webAction.clickUsingJavaScript(deploymentButton);
+		Thread.sleep(500);
+
+		webAction.clickUsingJavaScript(deAllocate);
+		Thread.sleep(500);
+		//Cancelling for Testing Purpose
+		webAction.clickUsingJavaScript(deAllocateCancel);
+		Thread.sleep(3000);
+
+	}
+	
+	
+	public void broadCast() throws Exception {
+		Date date = new Date();
+		SimpleDateFormat dateformat = new SimpleDateFormat("dd-mm-yyyy");
+		String formateddate = dateformat.format(date);
+
+		
+		Thread.sleep(500);
+		//This Shift Band id already signed Off
+		String shiftBandNews = "Auto Band code 85139";
+
+		Thread.sleep(500);
+
+		List<WebElement> listShiftBand = lstShiftBandSelection
+				.findElements(By.xpath("//select[@id='cmbShiftBand']/option"));
+		for (WebElement we : listShiftBand) {
+			Thread.sleep(500);
+			// we.sendKeys(Keys.ARROW_DOWN);
+			// if(shiftBandNew.equals(we.getText()))
+			if (shiftBandNews.equals(we.getText()))
+				we.click();
+			// Thread.sleep(500);
+		}
+		webAction.clickUsingJavaScript(deploymentButton);
+		Thread.sleep(500);
+
+		webAction.clickUsingJavaScript(buttonBroadcastDeployment);
+		Thread.sleep(500);
+		//Cancelling for Testing Purpose
+		webAction.clickUsingJavaScript(buttonBroadcastDeploymentCancel);
+		Thread.sleep(3000);
+
+	}
+	
 	public void scheduleCranes() throws InterruptedException {
 		Thread.sleep(3000);
 		btnYes.click();

@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import com.jivi.auto.employeepages.MenuNavigation;
 import com.jivi.auto.employeepages.ResourceSetPage;
 import com.jivi.auto.employeepages.Roaster;
+import com.jivi.auto.employeepages.TimeAndAttendance;
 import com.jivi.auto.employeepages.WorkLoadPlanning;
 import com.jivi.auto.pageobjectutils.FrameWindowHandler;
 import com.jivi.auto.pageobjectutils.POMCommon;
@@ -50,6 +51,7 @@ LoginPage login;
 	}
 	@Test
 	public void createHSSEPlanning() throws Exception {
+		System.out.println("\n");
 		System.out.println("Create HSSEPlanning");
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
@@ -58,6 +60,10 @@ LoginPage login;
 		
 		String userId=dataTable.get("UserId");
 		String loginpwd=dataTable.get("pwd");
+		
+		
+		
+		
 		jiviewsHomePage.Login(userId, loginpwd);
 		//menuNavigation.waitforLoadingIcon();
 		Thread.sleep(3000);
@@ -70,6 +76,7 @@ LoginPage login;
 	
 	@Test
 	public void createHSSEPlanningAlreadyDeployedShift() throws Exception {
+		System.out.println("\n");
 		System.out.println("Create HSSEPlanning");
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
@@ -81,11 +88,94 @@ LoginPage login;
 		jiviewsHomePage.Login(userId, loginpwd);
 		//menuNavigation.waitforLoadingIcon();
 		Thread.sleep(3000);
-	//	menuNavigation.navigateToSite("Operations");
+	
 		menuNavigation.navigateToHSSEPLanning();
 		hsse.createHSSEPlanAlreadyDeployedShift();
+	}
+	
+	@Test
+	public void VerifyHSSEFinalBookingReport() throws Exception {
+		System.out.println("\n");
+		System.out.println("Verify HSSE Final Booking Report");
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		HSSEPlanning hsse=PageFactory.initElements(driver, HSSEPlanning.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+	
+		Thread.sleep(3000);
+	
+		menuNavigation.navigateToHSSEFinalBookingReport();
+		hsse.viewDeployment();
+	}
+	
+	
+	@Test
+	public void VerifyRevokeSignOff() throws Exception {
+		System.out.println("\n");
+		System.out.println("Verify HSSE Revoke SignOff");
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		HSSEPlanning hsse=PageFactory.initElements(driver, HSSEPlanning.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+	//	menuNavigation.navigateToSite("Operations");
+		menuNavigation.navigateToHSSEFinalBookingReport();
+		hsse.revokeSignOff();
 		//workLoad.verifyQCFinalBookingReport();
 		//Assert.assertTrue(workLoad.verifyVesselCreation(), "Create Vessel");
 	}
+	
+	
+	@Test
+	public void VerifyDeployment() throws Exception {
+		System.out.println("\n");
+		System.out.println("Verify HSSE Deployment");
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		HSSEPlanning hsse=PageFactory.initElements(driver, HSSEPlanning.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+	//	menuNavigation.navigateToSite("Operations");
+		menuNavigation.navigateToHSSEFinalBookingReport();
+		hsse.deployment();
+		//workLoad.verifyQCFinalBookingReport();
+		//Assert.assertTrue(workLoad.verifyVesselCreation(), "Create Vessel");
+	}
+	
+	
+	@Test
+	public void VerifyBroadcast() throws Exception {
+		System.out.println("Verify HSSE BroadCast");
+		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
+		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
+		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		HSSEPlanning hsse=PageFactory.initElements(driver, HSSEPlanning.class);
+		
+		String userId=dataTable.get("UserId");
+		String loginpwd=dataTable.get("pwd");
+		jiviewsHomePage.Login(userId, loginpwd);
+		//menuNavigation.waitforLoadingIcon();
+		Thread.sleep(3000);
+	//	menuNavigation.navigateToSite("Operations");
+		menuNavigation.navigateToHSSEFinalBookingReport();
+		hsse.broadCast();
+		//workLoad.verifyQCFinalBookingReport();
+		//Assert.assertTrue(workLoad.verifyVesselCreation(), "Create Vessel");
+	}
+	
 	
 }
