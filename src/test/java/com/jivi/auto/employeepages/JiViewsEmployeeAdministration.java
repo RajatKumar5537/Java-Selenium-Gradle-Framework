@@ -1299,6 +1299,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				Thread.sleep(3000);
 				
 				webAction.clickUsingJavaScript(ESSSubMenu);
+		
 				webAction.clickUsingJavaScript(AddLeaveProfile);
 				Thread.sleep(500);
 				
