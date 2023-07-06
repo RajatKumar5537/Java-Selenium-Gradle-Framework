@@ -64,16 +64,16 @@ public class EmployeeSelfService extends BaseTest {
 	@FindBy(xpath = "//*[@id='emp-entitlement-profile-list']/tbody/tr/td[3]")
 	WebElement leaveEntitlement;
 	
-	@FindBy(xpath = "//*[@id=\"emp-entitlement-profile-list\"]/tbody/tr/td[7]")
+	@FindBy(xpath = "//*[@id='emp-entitlement-profile-list']/tbody/tr/td[6]")
 	WebElement leaveTaken;
 	
-	@FindBy(xpath = "//*[@id='emp-entitlement-profile-list']/tbody/tr/td[8]")
+	@FindBy(xpath = "//*[@id='emp-entitlement-profile-list']/tbody/tr/td[7]")
 	WebElement leaveBalance;
 	
-	@FindBy(xpath = "//*[@id='emp-entitlement-profile-list']/tbody/tr/td[9]")
+	@FindBy(xpath = "//*[@id='emp-entitlement-profile-list']/tbody/tr/td[8]")
 	WebElement pendingLeave;
 	
-	@FindBy(xpath = "//*[@id='emp-entitlement-profile-list']/tbody/tr/td[10]")
+	@FindBy(xpath = "//*[@id='emp-entitlement-profile-list']/tbody/tr/td[9]")
 	WebElement myRamcoBalance;
 	
 	@FindBy(id = "353")
@@ -130,7 +130,7 @@ public class EmployeeSelfService extends BaseTest {
 	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr[8]/td[1]")
 	WebElement empEight;
 
-	@FindBy(xpath = "//*[@id=\"ManageAttendance-list\"]/tbody/tr/td[14]")
+	@FindBy(xpath = "//*[@id='ManageAttendance-list']/tbody/tr/td[14]")
 	List<WebElement> exceptionStatus;
 	
 

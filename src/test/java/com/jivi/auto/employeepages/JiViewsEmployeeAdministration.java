@@ -340,6 +340,9 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 			@FindBy(xpath="//select[@id='cmbEmpLeaveProfileName']")
 			WebElement empLeaveProfileName;
 			
+			@FindBy(xpath="//select[@id='cmbEmpLeaveProfileName']")
+			List <WebElement> empLeaveProfileNameList;
+			
 			@FindBy(id="btnSaveLeaveProfile")
 			WebElement saveLeaveProfile;
 			
@@ -1298,7 +1301,19 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.clickUsingJavaScript(ESSSubMenu);
 				webAction.clickUsingJavaScript(AddLeaveProfile);
 				Thread.sleep(500);
-				dropdown.selectByIndex(empLeaveProfileName, 0);
+				
+				String profname="Annual Leave Profile";
+
+				List<WebElement> leave=empLeaveProfileName.findElements(By.xpath("//select[@id='cmbEmpLeaveProfileName']/option"));
+				for( WebElement we: leave) { 
+				Thread.sleep(500);      
+				//we.sendKeys(Keys.ARROW_DOWN);
+				if(profname.equals(we.getText()))
+				we.click();
+				//Thread.sleep(500);
+				}
+				
+			//	dropdown.selectByIndex(empLeaveProfileName, 0);
 				//dropdown.selectByvisibleText(empLeaveProfileName, "Leave Profile One");
 				Thread.sleep(200);
 				webAction.click(saveLeaveProfile);
