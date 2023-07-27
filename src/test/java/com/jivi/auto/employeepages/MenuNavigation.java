@@ -95,11 +95,20 @@ public class MenuNavigation extends BaseTest {
 	@FindBy(xpath = "//div[text()='HSSE Planning']")
 	WebElement HSSEPlanning;
 	
+	@FindBy(xpath = "//div[text()='RTG Planning']")
+	WebElement RTGPlanning;
+	
+	@FindBy(xpath = "//div[text()='Prime Mover Planning']")
+	WebElement PMlanning;
+	
 	@FindBy(xpath = "//div[text()='Workforce Execution']")
 	WebElement workForceExecution;
 	
 	@FindBy(xpath = "//div[text()='HSSE Final Booking Report']")
 	WebElement hSSEFinalBookingReport;
+	
+	@FindBy(xpath = "//div[text()='RTG Final Booking Report']")
+	WebElement rTGFinalBookingReport;
 	
 	
 	@FindBy(xpath = "//div[text()='Shift Band Definition']")
@@ -269,6 +278,34 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		Thread.sleep(10000);
 	}
 	
+	public void navigateToRTGPLanning() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(RTGPlanning);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
+	public void navigateToPMPLanning() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(PMlanning);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
 	public void navigateToHSSEFinalBookingReport() throws Exception {
 		webAction.clickUsingJavaScript(olm);
 		webAction.clickUsingJavaScript(olmLink);
@@ -281,6 +318,22 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		webAction.clickUsingJavaScript(workForceExecution);
 		Thread.sleep(500);
 		webAction.clickUsingJavaScript(hSSEFinalBookingReport);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
+	public void navigateToRTGFinalBookingReport() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(workForceExecution);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(rTGFinalBookingReport);
 		waitforLoadingIcon();
 		Thread.sleep(10000);
 	}

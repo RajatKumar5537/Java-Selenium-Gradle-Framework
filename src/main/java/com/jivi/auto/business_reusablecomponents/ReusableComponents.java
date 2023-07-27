@@ -14,6 +14,7 @@ import java.util.Set;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -413,6 +414,19 @@ public class ReusableComponents extends BaseTest {
 		Actions oAct = new Actions(driver);
 		oAct.moveToElement(ele).contextClick(ele).build().perform();
 	}
+	
+	public boolean isElementPresent(WebElement element) {
+        try {
+
+            element.isDisplayed();
+            return true;
+        } catch (NoSuchElementException e) {
+            System.out.println("Exception........" + e.getMessage());
+            return false;
+
+        }
+
+    }
 	
 
 }
