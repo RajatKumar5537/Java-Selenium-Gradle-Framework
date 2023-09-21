@@ -2,21 +2,31 @@ package com.jivi.auto.reusablecomponents;
 
 
 
+import org.openqa.selenium.Proxy;
+
+//import com.microsoft.edge.seleniumtools.EdgeDriver;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Proxy.ProxyType;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.safari.SafariDriver;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browser {
 	public Browser() {
@@ -34,6 +44,7 @@ public class Browser {
 
 	public static Browser getInstance() {
 		return instance;
+
 	}
 
 	// thread local driver object for web-driver
@@ -43,8 +54,8 @@ public class Browser {
 		public RemoteWebDriver initialValue() {
 
 			if (GlobalVariables.isGridMode) {
-				switch (browserName) {
-				case "chrome":
+				switch (browserName.toUpperCase()) {
+				case "CHROME":
 					try {
 						threadDriver.set(new RemoteWebDriver(new URL(gridHost + "/wd/hub"),
 								CapabilityFactory.getCapabilities(BrowserType.chrome)));
@@ -52,7 +63,7 @@ public class Browser {
 						e.printStackTrace();
 					}
 					break;
-				case "firefox":
+				case "FIREFOX":
 					try {
 						threadDriver.set(new RemoteWebDriver(new URL(gridHost + "/wd/hub"),
 								CapabilityFactory.getCapabilities(BrowserType.firefox)));
@@ -60,7 +71,7 @@ public class Browser {
 						e.printStackTrace();
 					}
 					break;
-				case "Edge":
+				case "EDGE":
 					try {
 						threadDriver.set(new RemoteWebDriver(new URL(gridHost + "/wd/hub"),
 								CapabilityFactory.getCapabilities(BrowserType.Edge)));
@@ -68,7 +79,7 @@ public class Browser {
 						e.printStackTrace();
 					}
 					break;
-				case "ie":
+				case "IE":
 					try {
 						threadDriver.set(new RemoteWebDriver(new URL(gridHost + "/wd/hub"),
 								CapabilityFactory.getCapabilities(BrowserType.ie)));
@@ -76,7 +87,7 @@ public class Browser {
 						e.printStackTrace();
 					}
 					break;
-				case "HeadlessChrome":
+				case "HEADLESSCHROME":
 					try {
 						threadDriver.set(new RemoteWebDriver(new URL(gridHost + "/wd/hub"),
 								CapabilityFactory.getCapabilities(BrowserType.HeadlessChrome)));
@@ -84,7 +95,7 @@ public class Browser {
 						e.printStackTrace();
 					}
 					break;
-				case "HeadlessFirefox":
+				case "HEADLESSFIREFOX":
 					try {
 						threadDriver.set(new RemoteWebDriver(new URL(gridHost + "/wd/hub"),
 								CapabilityFactory.getCapabilities(BrowserType.HeadlessFirefox)));
@@ -92,7 +103,7 @@ public class Browser {
 						e.printStackTrace();
 					}
 					break;
-				case "HeadlessEdge":
+				case "HEADLESSEDGE":
 					try {
 						threadDriver.set(new RemoteWebDriver(new URL(gridHost + "/wd/hub"),
 								CapabilityFactory.getCapabilities(BrowserType.HeadlessEdge)));
@@ -103,9 +114,22 @@ public class Browser {
 
 				}
 				return threadDriver.get();
-			} else if (System.getProperty("os.name").contains("ubuntu")) {
-				switch (browserName) {
-				case "HeadlessChrome":
+			} else if (System.getProperty("os.name").contains("Linux")) {
+				if (System.getenv("Browser") != null) {
+					browserName = System.getenv("Browser");
+					System.out.println("jenkins...." + browserName);
+				} else if (System.getProperty("Browser") != null && !System.getProperty("Browser").isEmpty()) {
+					browserName = System.getProperty("Browser");
+
+					System.out.println("Tekton....." + browserName);
+
+				}
+
+				else {
+					browserName = GlobalVariables.configData.get("Browser");
+				}
+				switch (browserName.toUpperCase()) {
+				case "HEADLESSCHROME":
 					System.out.println("LinuxTesting");
 					ChromepathLinux();
 					threadDriver.set(new ChromeDriver(OptionsManager.getHeadlessChromeOptions()));
@@ -116,40 +140,120 @@ public class Browser {
 			}
 
 			else {
-				if (GlobalVariables.configData.get("WebDriverManager").equalsIgnoreCase("Yes")) {
-					switch (browserName) {
-					case "chrome":
-						WebDriverManager.chromedriver().setup();
-						threadDriver.set(new ChromeDriver(OptionsManager.getChromeOptions()));
+				if (GlobalVariables.configData.get("SeleniumManager").equalsIgnoreCase("Yes")) {
+
+					switch (browserName.toUpperCase()) {
+					case "CHROME":
+						// WebDriverManager.chromedriver().setup();
+						try {
+							threadDriver.set(new ChromeDriver(OptionsManager.getChromeOptions()));
+						} catch (Exception e) {
+							ChromeOptions options = OptionsManager.getHeadlessChromeOptions();
+							String[] proxyServer = GlobalVariables.configData.get("proxyServer").trim().split(":");
+							Proxy proxy = new Proxy();
+							proxy.setProxyType(ProxyType.MANUAL);
+							proxy.setHttpProxy(proxyServer[0] + ":" + proxyServer[1]);
+							proxy.setSslProxy(proxyServer[0] + ":" + proxyServer[1]);
+							options.setProxy(proxy);
+							threadDriver.set(new ChromeDriver(options));
+						}
+
 						break;
 
-					case "firefox":
-						WebDriverManager.firefoxdriver().setup();
-						threadDriver.set(new FirefoxDriver(OptionsManager.getFirefoxOptions()));
+					case "FIREFOX":
+						// WebDriverManager.firefoxdriver().setup();
+
+						try {
+							threadDriver.set(new FirefoxDriver(OptionsManager.getFirefoxOptions()));
+						} catch (Exception e) {
+							FirefoxOptions options = OptionsManager.getFirefoxOptions();
+							String[] proxyServer = GlobalVariables.configData.get("proxyServer").trim().split(":");
+							Proxy proxy = new Proxy();
+							proxy.setProxyType(ProxyType.MANUAL);
+							proxy.setHttpProxy(proxyServer[0] + ":" + proxyServer[1]);
+							proxy.setSslProxy(proxyServer[0] + ":" + proxyServer[1]);
+							options.setProxy(proxy);
+							threadDriver.set(new FirefoxDriver(options));
+
+						}
+
 						break;
-					case "Edge":
-						WebDriverManager.edgedriver().setup();
-						threadDriver.set(new EdgeDriver(OptionsManager.getEdgeOptions()));
+					case "EDGE":
+						// WebDriverManager.edgedriver().setup();
+						try {
+							threadDriver.set(new EdgeDriver(OptionsManager.getEdgeOptions()));
+						} catch (Exception e) {
+
+							EdgeOptions options = OptionsManager.getEdgeOptions();
+							String[] proxyServer = GlobalVariables.configData.get("proxyServer").trim().split(":");
+							Proxy proxy = new Proxy();
+							proxy.setProxyType(ProxyType.MANUAL);
+							proxy.setHttpProxy(proxyServer[0] + ":" + proxyServer[1]);
+							proxy.setSslProxy(proxyServer[0] + ":" + proxyServer[1]);
+							options.setProxy(proxy);
+							threadDriver.set(new EdgeDriver(options));
+
+						}
 						break;
-					case "ie":
-						WebDriverManager.iedriver().setup();
+					case "IE":
+						// WebDriverManager.iedriver().setup();
 						threadDriver.set(new InternetExplorerDriver(OptionsManager.getIEOptions()));
 						break;
-					case "HeadlessChrome":
-						WebDriverManager.chromedriver().setup();
-						threadDriver.set(new ChromeDriver(OptionsManager.getHeadlessChromeOptions()));
+					case "HEADLESSCHROME":
+						// WebDriverManager.chromedriver().setup();
+						try {
+							threadDriver.set(new ChromeDriver(OptionsManager.getHeadlessChromeOptions()));
+						} catch (Exception e) {
+
+							ChromeOptions options = OptionsManager.getHeadlessChromeOptions();
+							String[] proxyServer = GlobalVariables.configData.get("proxyServer").trim().split(":");
+							Proxy proxy = new Proxy();
+							proxy.setProxyType(ProxyType.MANUAL);
+							proxy.setHttpProxy(proxyServer[0] + ":" + proxyServer[1]);
+							proxy.setSslProxy(proxyServer[0] + ":" + proxyServer[1]);
+							options.setProxy(proxy);
+							threadDriver.set(new ChromeDriver(options));
+						}
+
 						break;
 
-					case "HeadlessFirefox":
-						WebDriverManager.firefoxdriver().setup();
-						threadDriver.set(new FirefoxDriver(OptionsManager.getHeadlessFirefoxOptions()));
+					case "HEADLESSFIREFOX":
+						// WebDriverManager.firefoxdriver().setup();
+
+						try {
+							threadDriver.set(new FirefoxDriver(OptionsManager.getHeadlessFirefoxOptions()));
+						} catch (Exception e) {
+							FirefoxOptions options = OptionsManager.getHeadlessFirefoxOptions();
+							String[] proxyServer = GlobalVariables.configData.get("proxyServer").trim().split(":");
+							Proxy proxy = new Proxy();
+							proxy.setProxyType(ProxyType.MANUAL);
+							proxy.setHttpProxy(proxyServer[0] + ":" + proxyServer[1]);
+							proxy.setSslProxy(proxyServer[0] + ":" + proxyServer[1]);
+							options.setProxy(proxy);
+							threadDriver.set(new FirefoxDriver(options));
+						}
+
 						break;
-					case "HeadlessEdge":
-						WebDriverManager.edgedriver().setup();
-						threadDriver.set(new EdgeDriver(OptionsManager.getHeadlessEdgeOptions()));
+					case "HEADLESSEDGE":
+						// WebDriverManager.edgedriver().setup();
+
+						try {
+							threadDriver.set(new EdgeDriver(OptionsManager.getHeadlessEdgeOptions()));
+						} catch (Exception e) {
+							EdgeOptions options = OptionsManager.getHeadlessEdgeOptions();
+							String[] proxyServer = GlobalVariables.configData.get("proxyServer").trim().split(":");
+							Proxy proxy = new Proxy();
+							proxy.setProxyType(ProxyType.MANUAL);
+							proxy.setHttpProxy(proxyServer[0] + ":" + proxyServer[1]);
+							proxy.setSslProxy(proxyServer[0] + ":" + proxyServer[1]);
+							options.setProxy(proxy);
+							threadDriver.set(new EdgeDriver(options));
+
+						}
+
 						break;
-					case "Safari":
-						WebDriverManager.safaridriver().setup();
+					case "SAFARI":
+						// WebDriverManager.safaridriver().setup();
 						threadDriver.set(new SafariDriver(OptionsManager.getSafariOptions()));
 						break;
 
@@ -158,43 +262,38 @@ public class Browser {
 					return threadDriver.get();
 				} else {
 
-					switch (browserName) {
-					case "chrome":
-						System.setProperty("webdriver.chrome.driver",
-								GlobalVariables.configData.get("ChromeDriverPath"));
+					switch (browserName.toUpperCase()) {
+					case "CHROME":
+						System.setProperty("webdriver.chrome.driver", "Utilities/chromedriver.exe");
 						threadDriver.set(new ChromeDriver(OptionsManager.getChromeOptions()));
 						break;
 
-					case "firefox":
-						System.setProperty("webdriver.gecko.driver", GlobalVariables.configData.get("GeckoDriverPath"));
+					case "FIREFOX":
+						System.setProperty("webdriver.gecko.driver", "Utilities/geckodriver.exe");
 						threadDriver.set(new FirefoxDriver(OptionsManager.getFirefoxOptions()));
 						break;
-					case "Edge":
-						System.setProperty("webdriver.edge.driver", GlobalVariables.configData.get("EdgeDriverPath"));
+					case "EDGE":
+						System.setProperty("webdriver.edge.driver", "Utilities/msedgedriver.exe");
 						threadDriver.set(new EdgeDriver(OptionsManager.getEdgeOptions()));
 						break;
-					case "ie":
-						System.setProperty("webdriver.ie.driver", GlobalVariables.configData.get("IEDriverPath"));
-						threadDriver.set(new InternetExplorerDriver(OptionsManager.getIEOptions()));
-						break;
-					case "HeadlessChrome":
+
+					case "HEADLESSCHROME":
 						// WebDriverManager.chromedriver().setup();
-						System.setProperty("webdriver.chrome.driver",
-								GlobalVariables.configData.get("ChromeDriverPath"));
+						System.setProperty("webdriver.chrome.driver", "Utilities/chromedriver.exe");
 						threadDriver.set(new ChromeDriver(OptionsManager.getHeadlessChromeOptions()));
 						break;
-					case "HeadlessFirefox":
+					case "HEADLESSFIREFOX":
 
 						// WebDriverManager.firefoxdriver().setup();
-						System.setProperty("webdriver.gecko.driver", GlobalVariables.configData.get("GeckoDriverPath"));
+						System.setProperty("webdriver.gecko.driver", "Utilities/geckodriver.exe");
 
 						threadDriver.set(new FirefoxDriver(OptionsManager.getHeadlessFirefoxOptions()));
 						break;
-					case "HeadlessEdge":
-						System.setProperty("webdriver.edge.driver", GlobalVariables.configData.get("EdgeDriverPath"));
+					case "HEADLESSEDGE":
+						System.setProperty("webdriver.edge.driver", "Utilities/msedgedriver.exe");
 						threadDriver.set(new EdgeDriver(OptionsManager.getHeadlessEdgeOptions()));
 						break;
-					case "Safari":
+					case "SAFARI":
 						threadDriver.set(new SafariDriver(OptionsManager.getSafariOptions()));
 						break;
 
@@ -224,82 +323,40 @@ public class Browser {
 		threadDriver.remove();
 	}
 
+	/*
+	 * public static void ChromepathLinux() { String[] cmd = { "/bin/sh", "-c",
+	 * "cat /etc/*-release" }; try { Process p = Runtime.getRuntime().exec(cmd);
+	 * BufferedReader bri = new BufferedReader(new
+	 * InputStreamReader(p.getInputStream()));
+	 * 
+	 * String oSName = ""; while ((oSName = bri.readLine()) != null) { if
+	 * (oSName.contains("Debian GNU/Linux")) { String chromePath =
+	 * System.getenv("CHROME_HOME"); System.setProperty("webdriver.chrome.driver",
+	 * chromePath + "/chromedriver"); break; }
+	 * 
+	 * else if (oSName.contains("Red Hat Enterprise Linux")) {
+	 * System.setProperty("webdriver.chrome.driver", "./Utilities/chromedriver");
+	 * break; } else { System.out.
+	 * println("Please Make sure you OS Name as Debian GNU/Linux Or Red Hat Enterprise Linux"
+	 * ); }
+	 * 
+	 * } } catch (IOException e) {
+	 * 
+	 * e.printStackTrace(); }
+	 * 
+	 * }
+	 */
+
 	public static void ChromepathLinux() {
-		String[] cmd = { "/bin/sh", "-c", "cat /etc/*-release" };
 		try {
-			Process p = Runtime.getRuntime().exec(cmd);
-			BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
-
-			String oSName = "";
-			while ((oSName = bri.readLine()) != null) {
-				if (oSName.contains("Debian GNU/Linux")) {
-					String chromePath = System.getenv("CHROME_HOME");
-					System.setProperty("webdriver.chrome.driver", chromePath + "/chromedriver");
-					break;
-				}
-
-				else if (oSName.contains("Red Hat Enterprise Linux")) {
-					System.setProperty("webdriver.chrome.driver", "./Utilities/chromedriver");
-					break;
-				} else {
-					System.out.println("Please Make sure you OS Name as Debian GNU/Linux Or Red Hat Enterprise Linux");
-				}
+			if (System.getenv("CHROME_HOME") != null) {
+				String chromePath = System.getenv("CHROME_HOME");
+				System.setProperty("webdriver.chrome.driver", chromePath + "/chromedriver");
+			} else {
+				System.setProperty("webdriver.chrome.driver", "./Utilities/chromedriver");
 
 			}
-		} catch (IOException e) {
-
-			e.printStackTrace();
-		}
-
-	}
-
-	public static void ChromepathLinux1() {
-		String[] cmd = { "/bin/sh", "-c", "cat /etc/*-release" };
-		try {
-			Process p = Runtime.getRuntime().exec(cmd);
-			BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
-			String oSName = "";
-			while ((oSName = bri.readLine()) != null) {
-
-				if (oSName.contains("Debian GNU/Linux")) {
-					switch (browserName) {
-					case "HeadlessChrome":
-						String chromePath = System.getenv("CHROME_HOME");
-						System.setProperty("webdriver.chrome.driver", chromePath + "/chromedriver");
-						break;
-					case "HeadlessFirefox":
-						String firefoxPath = System.getenv("FIREFOX_HOME");
-						System.setProperty("webdriver.gecko.driver", firefoxPath + "/geckodriver");
-						break;
-					case "HeadlessEdge":
-						String edgePath = System.getenv("EDGE_HOME");
-						System.setProperty("webdriver.edge.driver", edgePath + "/msedgedriver");
-
-						break;
-					}
-
-				}
-
-				else if (oSName.contains("Red Hat Enterprise Linux")) {
-
-					switch (browserName) {
-					case "HeadlessChrome":
-
-						System.setProperty("webdriver.chrome.driver", "./Utilities/chromedriver");
-						break;
-					case "HeadlessFirefox":
-						System.setProperty("webdriver.chrome.driver", "./Utilities/geckodriver");
-						break;
-
-					case "HeadlessEdge":
-						System.setProperty("webdriver.chrome.driver", "./Utilities/msedgedriver");
-						break;
-					}
-
-				}
-
-			}
-		} catch (IOException e) {
+		} catch (Exception e) {
 
 			e.printStackTrace();
 		}

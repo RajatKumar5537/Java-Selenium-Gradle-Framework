@@ -39,8 +39,11 @@ public class POMCommon extends GlobalVariables {
 
 		WebDriver driver = Browser.getInstance().getDriver();
 
-		wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(GlobalVariables.configData.get("ExplicitWait").substring(0,
-				GlobalVariables.configData.get("ExplicitWait").lastIndexOf(".")))));
+		//wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(GlobalVariables.configData.get("ExplicitWait").substring(0,
+			//	GlobalVariables.configData.get("ExplicitWait").lastIndexOf(".")))));
+		//hard coded
+		
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 
 		wait.until(ExpectedConditions.visibilityOf(locator));
 
@@ -49,9 +52,15 @@ public class POMCommon extends GlobalVariables {
 	public void waitUntilElementIsClickable(WebElement locator) {
 
 		WebDriver driver = Browser.getInstance().getDriver();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(GlobalVariables.configData.get("ExplicitWait").substring(0,
-				GlobalVariables.configData.get("ExplicitWait").lastIndexOf(".")))));
-
+		wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+		
+		/*
+		 * wait = new WebDriverWait(driver,
+		 * Duration.ofSeconds(Integer.parseInt(GlobalVariables.configData.get(
+		 * "ExplicitWait").substring(0,
+		 * GlobalVariables.configData.get("ExplicitWait").lastIndexOf(".")))));
+		 */
+		
 		wait.until(ExpectedConditions.elementToBeClickable(locator));
 
 	}
@@ -83,8 +92,14 @@ public class POMCommon extends GlobalVariables {
 	public void alertAccept() {
 		WebDriver driver = Browser.getInstance().getDriver();
 		try {
-			wait = new WebDriverWait(driver, Duration.ofSeconds(Integer.parseInt(GlobalVariables.configData.get("ExplicitWait").substring(0,
-					GlobalVariables.configData.get("ExplicitWait").lastIndexOf(".")))));
+			wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+			
+			/*
+			 * wait = new WebDriverWait(driver,
+			 * Duration.ofSeconds(Integer.parseInt(GlobalVariables.configData.get(
+			 * "ExplicitWait").substring(0,
+			 * GlobalVariables.configData.get("ExplicitWait").lastIndexOf(".")))));
+			 */
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
 			alert.accept();

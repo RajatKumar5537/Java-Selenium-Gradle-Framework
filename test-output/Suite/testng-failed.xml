@@ -6,17 +6,30 @@
   </listeners>
   <test thread-count="5" name="Test1(failed)">
     <classes>
-      <class name="com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest">
+      <class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
         <methods>
+          <include name="VerifyEmpUpdateContactsNegative"/>
+          <include name="VerifyEmpUpdateDuplicate"/>
           <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="VerifyEmpUpdateAddRolesNegative"/>
+          <include name="VerifyEmpUpdateMisc"/>
+          <include name="VerifyEmpUpdateContactsPositive"/>
+          <include name="afterTestSuite"/>
+          <include name="VerifyEmpUpdateExcludedSkillsNegative"/>
+          <include name="VerifyEmpProCreationFiveEmp"/>
+          <include name="VerifyEmpUpdateAddRolesPositive"/>
+          <include name="VerifyLoginwithNewEmployee"/>
+          <include name="VerifyEmpUpdateSecurity"/>
           <include name="beforeSuiteSetup"/>
           <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="afterTestSuite"/>
-          <include name="VerifyRolesAdd"/>
+          <include name="VerifyEmpUpdateESS"/>
+          <include name="VerifyEmpUpdate"/>
+          <include name="VerifyEmpUpdateExcludedSkillsPositive"/>
+          <include name="VerifEmpNameSearch"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.jivi.auto.employeetest.JiViewsSystemDefinitionsTest -->
+      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

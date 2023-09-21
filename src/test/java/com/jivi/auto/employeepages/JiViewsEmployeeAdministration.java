@@ -434,8 +434,11 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 		webAction.click(olm);
 		webAction.click(demo);
 		webAction.click(systemSetup);
+		Thread.sleep(500);
 		webAction.click(systemDefLink);
+		Thread.sleep(500);
 		webAction.click(skillLefNav);
+		Thread.sleep(500);
 		webAction.click(buttonoAddSkill);
 		webAction.setText(skillCode_CreaeteSkill, skill);
 		webAction.setText(skillCodeDescription, desc);
@@ -464,6 +467,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 		webAction.click(systemDefLink);
 		webAction.click(empCategory);
 		webAction.click(empCategoryAdd);
+		Thread.sleep(1000);
 		webAction.setText(empCode, empid);
 		webAction.setText(empDesc, desc);
 		webAction.setText(empSeq, seq);
@@ -485,6 +489,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 		webAction.click(systemDefLink);
 		webAction.click(rolesLefNav);
 		webAction.click(buttonAddNew);
+		Thread.sleep(500);
 		webAction.setText(roleName, role);
 		webAction.setText(roleDescription, desc);
 		//dropdown.selectByValue(skillCode, skill);
@@ -612,7 +617,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 		//webAction.wa
 		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(systemSetup);
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		webAction.clickUsingJavaScript(employeeAdmin);
 		Thread.sleep(1000);
 		webAction.clickUsingJavaScript(empProfile);
@@ -821,6 +826,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.setText(lastName, d);
 				webAction.clearText(birthDate);
 				webAction.setText(birthDate, e);
+				Thread.sleep(1000);
 				webAction.click(birthDate);
 				birthDate.sendKeys(Keys.ENTER);
 				webAction.setText(addressLine1, f);
@@ -912,20 +918,20 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 	
 	public boolean empAddContacts_Positive(String a,String b,String c,String d,String e,String f,String g,String h) throws Exception {
 		//webAction.click(demo);
-				webAction.click(olm);
+				webAction.clickUsingJavaScript(olm);
 				Thread.sleep(1000);
-				webAction.click(olmLink);
+				webAction.clickUsingJavaScript(olmLink);
 
 				
-				webAction.click(systemSetup);
-				webAction.click(employeeAdmin);
-				webAction.click(empProfile);
+				webAction.clickUsingJavaScript(systemSetup);
+				webAction.clickUsingJavaScript(employeeAdmin);
+				webAction.clickUsingJavaScript(empProfile);
 				
 				Thread.sleep(5000);
 				webAction.setText(searchEmp, a);
 				//Thread.sleep(10000);
 				
-				webAction.click(empProfileEdit);
+				webAction.clickUsingJavaScript(empProfileEdit);
 				Thread.sleep(3000);
 				
 				//webAction.click(contactsSubMenu);
@@ -934,11 +940,11 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				//webAction.click(saveEmployees);
 				webAction.clickUsingJavaScript(contactsSubMenu);
 				
-				webAction.click(contactsAdd);
+				webAction.clickUsingJavaScript(contactsAdd);
 				
 				webAction.setText(contactName, e);
 				
-				webAction.click(saveContactButton);
+				webAction.clickUsingJavaScript(saveContactButton);
 				
 			//	Thread.sleep(10000);
 				//webAction.waitUntilElementIsClickable(saveEmployees);			
@@ -958,20 +964,20 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 	
 	public boolean empAddContacts_Negative(String a,String b,String c,String d,String e,String f,String g,String h) throws Exception {
 		//webAction.click(demo);
-				webAction.click(olm);
+				webAction.clickUsingJavaScript(olm);
 				Thread.sleep(1000);
-				webAction.click(olmLink);
+				webAction.clickUsingJavaScript(olmLink);
 
 				
-				webAction.click(systemSetup);
-				webAction.click(employeeAdmin);
-				webAction.click(empProfile);
+				webAction.clickUsingJavaScript(systemSetup);
+				webAction.clickUsingJavaScript(employeeAdmin);
+				webAction.clickUsingJavaScript(empProfile);
 				
 				Thread.sleep(5000);
 				webAction.setText(searchEmp, a);
 				//Thread.sleep(10000);
 				
-				webAction.click(empProfileEdit);
+				webAction.clickUsingJavaScript(empProfileEdit);
 				Thread.sleep(3000);
 				
 				webAction.waitUntilElementIsClickable(contactsSubMenu);			
@@ -1158,9 +1164,9 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.waitUntilElementIsClickable(rolesSubMenu);
 				webAction.clickUsingJavaScript(rolesSubMenu);
 				dropdown.selectByIndex(primaryRole, 1);
-				
-				webAction.click(removeAllEmpProfile);
-				webAction.click(moveAllEmpProfile);
+				Thread.sleep(1000);
+				webAction.clickUsingJavaScript(removeAllEmpProfile);
+				webAction.clickUsingJavaScript(moveAllEmpProfile);
 				webAction.clickUsingJavaScript(removeAllEmpProfile);
 			//	webAction.click(removeAllEmpProfile);
 				webAction.scrollDown();
@@ -1265,9 +1271,10 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				 //webAction.scrollUp();
 				webAction.clickUsingJavaScript(saveEmployees);
 					 //webAction.clickUsingJavaScript(saveEmployees);
-					 Thread.sleep(4000);
+					 Thread.sleep(1000);
 					
 				// webAction.clickUsingJavaScript(saveEmployees);
+					 //Thread.sleep(5000);
 				  String Ex="Update Skill Competency - Success"; 
 				  String Actual=successToast_Message.getText(); 
 				  System.out.println(Actual);
@@ -1375,7 +1382,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.waitUntilElementIsClickable(saveEmployees);			
 				//webAction.click(saveEmployees);
 				webAction.clickUsingJavaScript(saveEmployees);
-				Thread.sleep(5000);
+				Thread.sleep(500);
 				
 				  String Actual=successToast_Message.getText(); 
 				  System.out.println(Actual);

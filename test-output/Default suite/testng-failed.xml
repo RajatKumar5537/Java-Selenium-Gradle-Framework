@@ -3,17 +3,37 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.jivi.auto.employeetest.PMPlanner">
+      <class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest">
         <methods>
-          <include name="VerifyCreatePMPlanning"/>
+          <include name="VerifyTerminateEmployee"/>
+          <include name="VerifyEmpUpdateContactsNegative"/>
+          <include name="VerifyEmpUpdateDuplicate"/>
           <include name="beforeMethod"/>
-          <include name="beforeSuiteSetup"/>
+          <include name="VerifyEmpUpdateAddRolesNegative"/>
+          <include name="VerifyEmpUpdateAddRolesPositive"/>
+          <include name="VerifyLoginwithNewEmployee"/>
+          <include name="VerifyEmpUpdateSecurity"/>
           <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="afterTestSuite"/>
+          <include name="VerifyEmpCategory"/>
+          <include name="VerifyEmpUpdateESS"/>
+          <include name="VerifyEmpUpdate"/>
+          <include name="VerifyEmpUpdateExcludedSkillsPositive"/>
+          <include name="VerifyRolesAdd"/>
           <include name="setUpClass"/>
+          <include name="VerifyEmpAdd"/>
+          <include name="afterClass"/>
+          <include name="VerifyEmpUpdateMisc"/>
+          <include name="VerifyEmpUpdateContactsPositive"/>
+          <include name="afterTestSuite"/>
+          <include name="VerifyEmpUpdateExcludedSkillsNegative"/>
+          <include name="VerifyLogin"/>
+          <include name="VerifyEmpProCreationFiveEmp"/>
+          <include name="VerifyLoginwTermindatedEmp"/>
+          <include name="VerifySkillAdd"/>
+          <include name="beforeSuiteSetup"/>
+          <include name="VerifyTesting"/>
         </methods>
-      </class> <!-- com.jivi.auto.employeetest.PMPlanner -->
+      </class> <!-- com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

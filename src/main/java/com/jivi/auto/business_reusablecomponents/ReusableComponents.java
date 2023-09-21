@@ -40,8 +40,7 @@ import com.jivi.auto.webelements.TextBox;
  */
 public class ReusableComponents extends BaseTest {
 	
-	//static WebDriver driver = Browser.getInstance().getDriver();
-	
+
 	static String url;
 	static Button button = new Button();
 	static CheckBox checkBox = new CheckBox();
@@ -51,121 +50,115 @@ public class ReusableComponents extends BaseTest {
 //	static Browser browser = new Browser();
 	static String actualString;
 	static int iInvalidImageCount;
-	static excelSheetReaderUtil excelSheetReaderUtil = new excelSheetReaderUtil( System.getProperty("user.dir")
-			+ "\\src\\test\\resources\\testData\\TestData.xlsx");
+	static excelSheetReaderUtil excelSheetReaderUtil = new excelSheetReaderUtil(
+			System.getProperty("user.dir") + "\\src\\test\\resources\\testData\\TestData.xlsx");
 
 	static Common objCommon = new Common();
-	//static JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
+	// static JavascriptExecutor jsExecutor = (JavascriptExecutor)driver;
 	static String strMethodName = "";
 	static Wait wait = new Wait();
-	
-		
 
-	//Function that helps during remote execution to know the exact node detail 
-	public static void getMachineDetails(){
+	// Function that helps during remote execution to know the exact node detail
+	public static void getMachineDetails() {
 		try {
 			InetAddress ipAddr = InetAddress.getLocalHost();
 			System.out.println(ipAddr.getHostAddress());
 			System.out.println(ipAddr.getHostName());
 
-			//reportUtils.passTest("Executed from machine: "+ipAddr.getHostAddress());
-			//reportUtils.passTest("Executed from machine: "+ipAddr.getHostName());
+			// reportUtils.passTest("Executed from machine: "+ipAddr.getHostAddress());
+			// reportUtils.passTest("Executed from machine: "+ipAddr.getHostName());
 
 		} catch (UnknownHostException ex) {
 			ex.printStackTrace();
 			System.out.println("Error- Number details");
-		}		
+		}
 	}
 
-	public static void applicationLogin(String module,  String testScript, String userName, String password) {
+	public static void applicationLogin(String module, String testScript, String userName, String password) {
 
 		strMethodName = "applicationLogin - 1";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
-		try{
+		try {
 
 			userName = GlobalVariables.configData.get("User").toString().trim();
-			password = GlobalVariables.configData.get("Password").toString().trim();			
-
-
+			password = GlobalVariables.configData.get("Password").toString().trim();
 
 			textBox.setText("secureLogin_id", userName);
 			textBox.setSecureText("secureLoginPassword_id", password);
 			button.click("secureLoginLogin_xpath");
 
-
 			objCommon.click("ContinueButton_id");
 
 			ReusableComponents.waitTill_PageLoads(30000);
+		//	MainDriverScript.bLoginStatus = false;
 			JiviewsMainClass.bLoginStatus = false;
 
-		}catch(Exception e){
+		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Known Exception from > ReusableComponents - applicationLogin");
-			//reportUtils.failTest(strMethodName, "Exception from Login page, please check");
+			// reportUtils.failTest(strMethodName, "Exception from Login page, please
+			// check");
 		}
 	}
 
-	public static void applicationLogin(String module,  String testScript, String columnName) {
+	public static void applicationLogin(String module, String testScript, String columnName) {
 
 		strMethodName = "applicationLogin - 2";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
-		try{
-			textBox.setText("secureLogin_id", getDataValue(module,testScript , columnName));
-		}catch(Exception e){
+		try {
+			textBox.setText("secureLogin_id", getDataValue(module, testScript, columnName));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	//Generic function - Switch to sub-window
-	public static boolean switchToSubWindow(){
+	// Generic function - Switch to sub-window
+	public static boolean switchToSubWindow() {
 		WebDriver driver = Browser.getInstance().getDriver();
 		strMethodName = "switchToSubWindow";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
 		boolean bSwitchHappened = false;
 
-		try{
+		try {
 
 			String subWindowHandler = null;
 
 			Set<String> handles = driver.getWindowHandles(); // get all window handles
-			if(handles.size() > 1){
+			if (handles.size() > 1) {
 				Iterator<String> iterator = handles.iterator();
-				while (iterator.hasNext()){
+				while (iterator.hasNext()) {
 					subWindowHandler = iterator.next();
 					bSwitchHappened = true;
 				}
 				driver.switchTo().window(subWindowHandler); // switch to pop up window
 			}
-		}
-		catch(Exception e){
+		} catch (Exception e) {
 			System.out.println("Exception - HomePageHelpers - switchToSubWindow");
-			e.printStackTrace();			
+			e.printStackTrace();
 		}
 
 		return bSwitchHappened;
 	}
 
-	public static void waitTill_PageLoads(long lngTimeOutSeconds){
+	public static void waitTill_PageLoads(long lngTimeOutSeconds) {
 		WebDriver driver = Browser.getInstance().getDriver();
 		strMethodName = "waitTill_PageLoads";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
-		try
-		{
+		try {
 			long lngTime = 0;
 			JavascriptExecutor oJsEngine = (JavascriptExecutor) driver;
 			String sStatus = "";
 			Thread.sleep(1000);
 
-			while(!sStatus.equalsIgnoreCase("complete") && lngTime <= lngTimeOutSeconds)
-			{
+			while (!sStatus.equalsIgnoreCase("complete") && lngTime <= lngTimeOutSeconds) {
 				System.out.println("From try block of waitTill_PageLoads, Inside while......");
 				sStatus = oJsEngine.executeScript("return document.readyState").toString();
 				Thread.sleep(1000);
@@ -175,49 +168,43 @@ public class ReusableComponents extends BaseTest {
 			WebDriverWait oWait;
 
 			oWait = new WebDriverWait(driver, Duration.ofSeconds(lngTimeOutSeconds));
-			oWait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));//wait till body tag is visible
-		}catch(Exception e)
-		{
+			oWait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));// wait till body tag is
+																							// visible
+		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("From catch block of waitTill_PageLoads......");
 		}
 	}
 
-	//--------------------------------------------------------------------------------------
+	// --------------------------------------------------------------------------------------
 
-	public static void validateInvalidImages(){
+	public static void validateInvalidImages() {
 		strMethodName = "validateInvalidImages";
 		WebDriver driver = Browser.getInstance().getDriver();
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
-		try{
+		try {
 			iInvalidImageCount = 0;
 			List<WebElement> eImageList = driver.findElements(By.tagName("img"));
-			System.out.println("Total no. of Images"+eImageList.size());
-			int j = (int)(eImageList.size());
-			for(int l = 0; l<j;l++)
-			{
+			System.out.println("Total no. of Images" + eImageList.size());
+			int j = (int) (eImageList.size());
+			for (int l = 0; l < j; l++) {
 				System.out.println(l);
 				System.out.println(eImageList.get(l).getAttribute("src"));
 			}
 
-			if(iInvalidImageCount > 0)
-			{
+			if (iInvalidImageCount > 0) {
 				System.out.println("Broken Images");
-			}
-			else
-			{
+			} else {
 				System.out.println("Valid Images");
 			}
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	//--------------------------------------------------------------------------------------
+	// --------------------------------------------------------------------------------------
 
 //	public static void verifyimageActive(WebElement eImageElement){
 //
@@ -242,11 +229,11 @@ public class ReusableComponents extends BaseTest {
 //		}
 //	}
 
-	public static int getDataRow(String module,  String testScript){
+	public static int getDataRow(String module, String testScript) {
 
 		strMethodName = "getDataRow";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
 		int dataRowCount = 0;
 		String testModuleName = module.substring(module.lastIndexOf("."));
@@ -257,10 +244,10 @@ public class ReusableComponents extends BaseTest {
 		int rowCount = excelSheetReaderUtil.getRowCount(testModuleName);
 		int columnCount = excelSheetReaderUtil.getColumnCount(testModuleName);
 
-		for (int i = 2;i<=rowCount;i++){
-			for(int j=0;j<=columnCount;j++){
+		for (int i = 2; i <= rowCount; i++) {
+			for (int j = 0; j <= columnCount; j++) {
 				String ActualString = excelSheetReaderUtil.getCellData(i, j);
-				if(ActualString.equalsIgnoreCase(testScript)){
+				if (ActualString.equalsIgnoreCase(testScript)) {
 					dataRowCount = i;
 					break;
 				}
@@ -271,135 +258,121 @@ public class ReusableComponents extends BaseTest {
 		return dataRowCount;
 	}
 
-	public static String getDataValue(String module,  String testScript , String column){
+	public static String getDataValue(String module, String testScript, String column) {
 
 		strMethodName = "getDataValue";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
-		int dataRow= getDataRow(module,testScript);	
+		int dataRow = getDataRow(module, testScript);
 		String dataValue = null;
 		String testModuleName = module.substring(module.lastIndexOf("."));
 		testModuleName = testModuleName.substring(1);
 		excelSheetReaderUtil.getRowCount(testModuleName);
 		int columnCount = excelSheetReaderUtil.getColumnCount(testModuleName);
 
-		for(int i=1 ;i<=columnCount; i++){
+		for (int i = 1; i <= columnCount; i++) {
 			actualString = excelSheetReaderUtil.getCellData(1, i);
-			if(actualString.equalsIgnoreCase(column)){
-				dataValue =  excelSheetReaderUtil.getCellData(dataRow,i);
+			if (actualString.equalsIgnoreCase(column)) {
+				dataValue = excelSheetReaderUtil.getCellData(dataRow, i);
 			}
 
 		}
 		return dataValue;
 	}
 
-	public static void navigateToURL(String tempURL){
+	public static void navigateToURL(String tempURL) {
 		WebDriver driver = Browser.getInstance().getDriver();
 		strMethodName = "navigateToURL";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
-		//reportUtils.log(tempURL, tempURL);
+		// reportUtils.log(tempURL, tempURL);
 		driver.navigate().to(tempURL);
 		waitTill_PageLoads(30000);
 	}
 
-	public static boolean generic_fnIsDisplayedOrNot(By argBy){ //Generic Function
+	public static boolean generic_fnIsDisplayedOrNot(By argBy) { // Generic Function
 		WebDriver driver = Browser.getInstance().getDriver();
 		strMethodName = "generic_fnIsDisplayedOrNot";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
 		boolean isDisplayed = false;
 
-		try{
-			if(driver.findElement(argBy).isDisplayed())				
+		try {
+			if (driver.findElement(argBy).isDisplayed())
 				isDisplayed = true;
-		}
-		catch(Exception e){
+		} catch (Exception e) {
 			isDisplayed = false;
-			System.out.println("From catch block of generic_fnIsDisplayedOrNot - for xPath::"+argBy);
+			System.out.println("From catch block of generic_fnIsDisplayedOrNot - for xPath::" + argBy);
 		}
 
 		return isDisplayed;
 	}
 
-	public static boolean generic_ReportStatus(boolean argStatus, String argFunctionName, String argSuccessMsg, String argFailureMsg){
+	public static boolean generic_ReportStatus(boolean argStatus, String argFunctionName, String argSuccessMsg,
+			String argFailureMsg) {
 
 		strMethodName = "generic_ReportStatus";
-		//reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
-		System.out.println("Log: Inside method - "+ strMethodName);		
+		// reportUtils.log("Log: Inside method - "+ strMethodName, strMethodName);
+		System.out.println("Log: Inside method - " + strMethodName);
 
-		if(argStatus == true){
-			//reportUtils.passTest(argSuccessMsg);
+		if (argStatus == true) {
+			// reportUtils.passTest(argSuccessMsg);
 			return true;
-		}
-		else{
-			//reportUtils.failTest(argFunctionName, argFailureMsg);
+		} else {
+			// reportUtils.failTest(argFunctionName, argFailureMsg);
 			return false;
 		}
 	}
 
-
-	public int ElementsCount(By by, WebDriver driver)
-	{
+	public int ElementsCount(By by, WebDriver driver) {
 		int count = 0;
 
 		count = driver.findElements(by).size();
 
-		return count ;
+		return count;
 	}
 
-	public List<WebElement> FindElements(By by,WebDriver driver)
-	{
+	public List<WebElement> FindElements(By by, WebDriver driver) {
 		return driver.findElements(by);
 	}
 
-
-	public void HighlightElement(WebDriver d,WebElement ele)
-	{
-		for(int i=0;i<2;i++)
-		{
+	public void HighlightElement(WebDriver d, WebElement ele) {
+		for (int i = 0; i < 2; i++) {
 			JavascriptExecutor js = (JavascriptExecutor) d;
-			js.executeScript("arguments[0].setAttribute('style',arguments[1]);",ele,"color:yellow; border: 2px solid yellow;");
-			js.executeScript("arguments[0].setAttribute('style',arguments[1]);",ele,"");
+			js.executeScript("arguments[0].setAttribute('style',arguments[1]);", ele,
+					"color:yellow; border: 3px solid yellow;");
+			js.executeScript("arguments[0].setAttribute('style',arguments[1]);", ele, "");
 		}
 	}
 
-	public void ScrollToTheElement(WebDriver d,WebElement ele)
-	{
-		((JavascriptExecutor)d).executeScript("arguments[0].ScrollIntoView(true);",ele);
+	public void ScrollToTheElement(WebDriver d, WebElement ele) {
+		((JavascriptExecutor) d).executeScript("arguments[0].ScrollIntoView(true);", ele);
 	}
 
-
-
-	public void WaitUntilBowserReady(WebDriver d) throws InterruptedException
-	{
+	public void WaitUntilBowserReady(WebDriver d) throws InterruptedException {
 		int count = 0;
 		JavascriptExecutor js = (JavascriptExecutor) d;
-		do
-		{
+		do {
 			count++;
 			Thread.sleep(5000);
-		}while(!(js.executeScript("return document.readyState").equals("complete")) || count == 10);
+		} while (!(js.executeScript("return document.readyState").equals("complete")) || count == 10);
 
-	}
-	
-	public void performWebElementTab(WebElement ele) {
-		Actions oAct = new Actions(driver);
-		oAct.sendKeys(ele, Keys.TAB).build().perform();
-	}
-	
-	public void clickUsingJS(WebElement element) {
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element);
+	}	
+	public boolean isElementPresent(WebElement element) {
+        try {
 
-	}
-	
-	public void performMoveToElement(WebElement ele) {
-		Actions oAct = new Actions(driver);
-		oAct.moveToElement(ele).build().perform();
-	}
+            element.isDisplayed();
+            return true;
+        } catch (NoSuchElementException e) {
+            System.out.println("Exception........" + e.getMessage());
+            return false;
+
+        }
+
+    }
 	
 	public void waitforClickable(WebElement element) {
 		WebDriver driver = Browser.getInstance().getDriver();
@@ -415,18 +388,14 @@ public class ReusableComponents extends BaseTest {
 		oAct.moveToElement(ele).contextClick(ele).build().perform();
 	}
 	
-	public boolean isElementPresent(WebElement element) {
-        try {
-
-            element.isDisplayed();
-            return true;
-        } catch (NoSuchElementException e) {
-            System.out.println("Exception........" + e.getMessage());
-            return false;
-
-        }
-
-    }
+	public void performWebElementTab(WebElement ele) {
+		Actions oAct = new Actions(driver);
+		oAct.sendKeys(ele, Keys.TAB).build().perform();
+	}
 	
+	public void performMoveToElement(WebElement ele) {
+		Actions oAct = new Actions(driver);
+		oAct.moveToElement(ele).build().perform();
+	}
 
 }

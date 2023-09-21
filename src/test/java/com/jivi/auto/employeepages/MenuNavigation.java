@@ -101,7 +101,14 @@ public class MenuNavigation extends BaseTest {
 	@FindBy(xpath = "//div[text()='Prime Mover Planning']")
 	WebElement PMlanning;
 	
-	@FindBy(xpath = "//div[text()='Workforce Execution']")
+	@FindBy(xpath = "//div[text()='Stackers Planning']")
+	WebElement Stackerslanning;
+	
+	@FindBy(xpath = "//div[text()='Lashing Deployment']")
+	WebElement lashingPlanning;
+	
+	
+	@FindBy(xpath = "//*[@id='217']/a/div")
 	WebElement workForceExecution;
 	
 	@FindBy(xpath = "//div[text()='HSSE Final Booking Report']")
@@ -109,6 +116,12 @@ public class MenuNavigation extends BaseTest {
 	
 	@FindBy(xpath = "//div[text()='RTG Final Booking Report']")
 	WebElement rTGFinalBookingReport;
+	
+	@FindBy(xpath = "//div[text()='Stackers Final Booking Report']")
+	WebElement StackersFinalBookingReport;
+	
+	@FindBy(xpath = "//div[text()='EFD Planning']")
+	WebElement EFDPlanning;
 	
 	
 	@FindBy(xpath = "//div[text()='Shift Band Definition']")
@@ -306,6 +319,35 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		Thread.sleep(10000);
 	}
 	
+	public void navigateToStackersPLanning() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(Stackerslanning);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
+	public void navigateToLashingPLanning() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(lashingPlanning);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
+	
 	public void navigateToHSSEFinalBookingReport() throws Exception {
 		webAction.clickUsingJavaScript(olm);
 		webAction.clickUsingJavaScript(olmLink);
@@ -321,6 +363,23 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		waitforLoadingIcon();
 		Thread.sleep(10000);
 	}
+	
+	public void navigateToPMFinalBookingReport() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(workForceExecution);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(rTGFinalBookingReport);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
 	
 	public void navigateToRTGFinalBookingReport() throws Exception {
 		webAction.clickUsingJavaScript(olm);
@@ -338,6 +397,36 @@ public void navigateToRoasterGroupAssignment() throws Exception {
 		Thread.sleep(10000);
 	}
 	
+	public void navigateToStackersFinalBookingReport() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(workForceExecution);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(StackersFinalBookingReport);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
+	
+	public void navigateToEFDPlanning() throws Exception {
+		webAction.clickUsingJavaScript(olm);
+		webAction.clickUsingJavaScript(olmLink);
+		
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(systemSetup);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(planningExecutionMenu);
+		Thread.sleep(500);
+	
+		webAction.clickUsingJavaScript(EFDPlanning);
+		waitforLoadingIcon();
+		Thread.sleep(10000);
+	}
 	
 	public void navigateToTimeAndAttendance() throws Exception {
 		webAction.clickUsingJavaScript(olm);

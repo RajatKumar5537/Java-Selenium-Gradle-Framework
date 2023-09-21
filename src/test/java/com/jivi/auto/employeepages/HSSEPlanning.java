@@ -23,7 +23,7 @@ import com.jivi.auto.utilities.BaseTest;
 //import com.auto.utilities.excelUtilities;
 //import com.auto.utilities.reuableComponents;
 
-import io.opentelemetry.exporter.logging.SystemOutLogExporter;
+//import io.opentelemetry.exporter.logging.SystemOutLogExporter;
 import junit.framework.Assert;
 
 import com.jivi.auto.business_reusablecomponents.ReusableComponents;
@@ -32,7 +32,7 @@ import com.jivi.auto.pageobjectutils.MouseHandler;
 import com.jivi.auto.pageobjectutils.POMCommon;
 import com.jivi.auto.pageobjectutils.WebElementKeys;
 import com.jivi.auto.reusablecomponents.Browser;
-import com.github.dockerjava.api.model.Driver;
+//import com.github.dockerjava.api.model.Driver;
 import com.github.javafaker.Faker;
 
 public class HSSEPlanning extends BaseTest {
@@ -252,7 +252,24 @@ public class HSSEPlanning extends BaseTest {
 
 	@FindBy(xpath = "//*[text()='Unallocated Work']")
 	WebElement unallocatedWork;
+	
+	@FindBy(xpath = "//*[@id='final-Booking-Report-list']/tbody/tr[1]/td[1]")
+	WebElement unallocatedWorkEmployeeOne;
+	
+	@FindBy(xpath = "//button[@id='btnSuggestedEmployees']")
+	WebElement buttontnSuggestedEmployees;
 
+
+	@FindBy(xpath = "//*[@id='recommended-resources-list']/tbody/tr[2]/td[1]")
+	WebElement suggestedEmployeeOne;
+	
+	@FindBy(xpath = "//*[text()='Off Day']")
+	WebElement suggestedEmployeeOffData;
+	
+	
+	@FindBy(xpath = "//*[@id=\"recommended-resources-list\"]/tbody/tr[1]/td[5]/button")
+	WebElement suggestedEmployeeOneCheckbox;
+	
 	@FindBy(xpath = "//*[text()='OnCall List']")
 	WebElement OnCallList;
 
@@ -304,7 +321,7 @@ public class HSSEPlanning extends BaseTest {
 	@FindBy(xpath = "//button[@id='btnStartBroadcastDeployment']")
 	WebElement buttonBroadcastDeploymentSave;
 
-	@FindBy(id = "btnSearch")
+	@FindBy(xpath = "//button[@id='btnSearch']")
 	WebElement btnSearchHsseFinalbookingReport;
 
 	@FindBy(xpath = "//*[@id='final-Booking-Report-list']/tbody/tr[1]/td[3]")
@@ -513,7 +530,8 @@ public class HSSEPlanning extends BaseTest {
 		Thread.sleep(2000);
 		dtPlanning.clear();
 		Thread.sleep(2000);
-		dtPlanning.sendKeys(date);
+		//dtPlanning.sendKeys(date);
+		dtPlanning.sendKeys("04-08-2023");
 		dtPlanning.sendKeys(Keys.TAB);
 		
 		Thread.sleep(2000);
@@ -620,7 +638,7 @@ public class HSSEPlanning extends BaseTest {
 
 		Thread.sleep(500);
 		dtPlanning.clear();
-		dtPlanning.sendKeys(date);
+		dtPlanning.sendKeys("04-08-2023");
 		Thread.sleep(1000);
 
 		List<WebElement> listShiftBand = lstShiftBandSelection
@@ -655,7 +673,7 @@ public class HSSEPlanning extends BaseTest {
 		Thread.sleep(500);
 		Thread.sleep(500);
 		dtPlanningHSSEFinalBookingReport.clear();
-		dtPlanningHSSEFinalBookingReport.sendKeys(date);
+		dtPlanningHSSEFinalBookingReport.sendKeys("04-08-2023");
 		Thread.sleep(1000);
 
 		// This Shift Band id already signed Off
@@ -724,10 +742,35 @@ public class HSSEPlanning extends BaseTest {
 			System.out.println("\n");
 		}
 		webAction.clickUsingJavaScript(nonPrimarySkillDeployedEmployee);
+		Thread.sleep(500);
 		webAction.clickUsingJavaScript(unallocatedWork);
+		Thread.sleep(500);
 		webAction.scrollDown300();
 		webAction.clickUsingJavaScript(btnSearchHsseFinalbookingReport);
 		Thread.sleep(2000);
+		webAction.clickUsingJavaScript(unallocatedWorkEmployeeOne);
+		Thread.sleep(500);
+		//webAction.clickUsingJavaScript(unallocatedWorkEmployeeOne);
+		dropdown.selectByIndex(assignTaksLocation, 0);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(buttontnSuggestedEmployees);
+		Thread.sleep(500);
+	//	webAction.clickUsingJavaScript(suggestedEmployeeOne);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(suggestedEmployeeOffData);
+		Thread.sleep(3000);
+		webAction.clickUsingJavaScript(suggestedEmployeeOneCheckbox);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(buttonActivitySave);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(deploymentButton);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(buttonDeploy);
+		Thread.sleep(500);
+		webAction.clickUsingJavaScript(deploymentButtonSave);
+		Thread.sleep(3000);
+		
+		
 
 		List<WebElement> TotalRowsListuaw = finalBookingReportTable.findElements(By.tagName("tr"));
 		rowcountuaw = TotalRowsListuaw.size();
@@ -742,6 +785,8 @@ public class HSSEPlanning extends BaseTest {
 			System.out.println("########################################################");
 			System.out.println("\n");
 		}
+		
+		
 		webAction.clickUsingJavaScript(unallocatedWork);
 		webAction.clickUsingJavaScript(OnCallList);
 		webAction.scrollDown300();
@@ -778,7 +823,7 @@ public class HSSEPlanning extends BaseTest {
 		Thread.sleep(500);
 		Thread.sleep(500);
 		dtPlanningHSSEFinalBookingReport.clear();
-		dtPlanningHSSEFinalBookingReport.sendKeys(date);
+		dtPlanningHSSEFinalBookingReport.sendKeys("04-08-2023");
 		Thread.sleep(1000);
 
 		// This Shift Band id already signed Off
@@ -834,7 +879,7 @@ public class HSSEPlanning extends BaseTest {
 		Thread.sleep(500);
 		Thread.sleep(500);
 		dtPlanningHSSEFinalBookingReport.clear();
-		dtPlanningHSSEFinalBookingReport.sendKeys(date);
+		dtPlanningHSSEFinalBookingReport.sendKeys("04-08-2023");
 		Thread.sleep(1000);
 
 		// This Shift Band id already signed Off
@@ -919,7 +964,7 @@ public class HSSEPlanning extends BaseTest {
 	//	dtPlanningHSSEFinalBookingReport.sendKeys(date);
 		Thread.sleep(1000);
 
-		webAction.setText(bookingDate, "27-06-2023");
+		webAction.setText(bookingDate, "04-08-2023");
 		Thread.sleep(500);
 		bookingDate.sendKeys(Keys.TAB);
 		lstShiftBandClear.click();
@@ -1056,7 +1101,7 @@ public class HSSEPlanning extends BaseTest {
 
 		Thread.sleep(500);
 		dtPlanningHSSEFinalBookingReport.clear();
-		dtPlanningHSSEFinalBookingReport.sendKeys("11-07-2023");
+		dtPlanningHSSEFinalBookingReport.sendKeys("04-08-2023");
 		Thread.sleep(1000);
 
 		Thread.sleep(500);
@@ -1159,7 +1204,7 @@ public class HSSEPlanning extends BaseTest {
 
 		Thread.sleep(500);
 		dtPlanningHSSEFinalBookingReport.clear();
-		dtPlanningHSSEFinalBookingReport.sendKeys(date);
+		dtPlanningHSSEFinalBookingReport.sendKeys("04-08-2023");
 		Thread.sleep(1000);
 
 		Thread.sleep(500);

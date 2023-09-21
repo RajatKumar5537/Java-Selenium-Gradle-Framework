@@ -3,14 +3,17 @@ package com.jivi.auto.reusablecomponents;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Transformer;
@@ -26,15 +29,25 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import com.jivi.auto.utilities.ExcelToJSONConverter;
+import com.jivi.auto.utilities.LoadProperties;
 import com.jivi.auto.utilities.excelSheetReaderUtil;
 
 public class Initialize extends GlobalVariables
 
+/**
+ * 
+ * @author Automation Team
+ */
 {
 	public String configkey, configvalue;
 	public XSSFWorkbook wb;
@@ -52,9 +65,34 @@ public class Initialize extends GlobalVariables
 	 * Pre-conditions (if any) : The name of the proerties file in 'config' package
 	 * should be specified in lowercase
 	 */
-	public void initializeObjects() {
-		getConfigData();
+
+	/*
+	 * public String secureLogin() {
+	 * 
+	 * try {
+	 * 
+	 * if (System.getProperty("watchword") != null) { strWatchword =
+	 * System.getProperty("watchword"); } else { strWatchword =
+	 * System.getenv("watchword");
+	 * 
+	 * }
+	 * 
+	 * } catch (Exception e) { // TODO: handle exception
+	 * System.out.println("Please set the environment variable"); }
+	 * 
+	 * // String securepwd;
+	 * 
+	 * return strWatchword;
+	 * 
+	 * }
+	 */
+
+	public void initializeObjects() throws FileNotFoundException, IOException, ParseException {
+
+		getConfigJsonData();
+		// getConfigData();
 		convertoJSON();
+	//	secureLogin();
 
 		if (configData.get("ObjectRepositoryFileType").toString().equalsIgnoreCase("Propertiesfile")) {
 			loadFiles();
@@ -338,6 +376,18 @@ public class Initialize extends GlobalVariables
 		} catch (Exception HashmapException) {
 		}
 
+	}
+
+	public static void getConfigJsonData() throws FileNotFoundException, IOException, ParseException {
+		JSONParser jsonParser = new JSONParser();
+		JSONObject jsonObj = (JSONObject) jsonParser.parse(
+				new FileReader(GlobalVariables.workingDir + "/src/test/resources/configuration/ConfigData.json"));
+		for (Object key : jsonObj.keySet()) {
+			String keyStr = (String) key;
+			Object keyvalue = jsonObj.get(keyStr);
+			GlobalVariables.configData.put((String) keyStr, (String) keyvalue);
+
+		}
 	}
 
 	public List<String> getAllPropertiesFiles() {

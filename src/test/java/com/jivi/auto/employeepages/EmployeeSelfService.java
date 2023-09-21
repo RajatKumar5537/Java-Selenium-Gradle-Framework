@@ -262,8 +262,8 @@ public class EmployeeSelfService extends BaseTest {
 		System.out.println("Leave Taken: "+leaveTaken.getText());
 		System.out.println("Leave Applied: "+leaveApplied);
 		System.out.println("Leave Balance: "+leaveBalance.getText());
-		System.out.println("Pending Leave: "+pendingLeave.getText());
-		System.out.println("My Ramco Balance: "+myRamcoBalance.getText());
+		//System.out.println("Pending Leave: "+pendingLeave.getText());
+		//System.out.println("My Ramco Balance: "+myRamcoBalance.getText());
 		System.out.println("================================");
 		Thread.sleep(5000);
 	}
@@ -277,8 +277,8 @@ public class EmployeeSelfService extends BaseTest {
 		System.out.println("Leave Taken: "+leaveTaken.getText());
 		System.out.println("Leave Applied: "+leaveApplied);
 		System.out.println("Leave Balance: "+leaveBalance.getText());
-		System.out.println("Pending Leave: "+pendingLeave.getText());
-		System.out.println("My Ramco Balance: "+myRamcoBalance.getText());
+	//	System.out.println("Pending Leave: "+pendingLeave.getText());
+	//	System.out.println("My Ramco Balance: "+myRamcoBalance.getText());
 		System.out.println("================================");
 		Thread.sleep(5000);
 	}
@@ -292,8 +292,8 @@ public class EmployeeSelfService extends BaseTest {
 		System.out.println("Leave Taken: "+leaveTaken.getText());
 		System.out.println("Leave Applied: "+leaveApplied);
 		System.out.println("Leave Balance: "+leaveBalance.getText());
-		System.out.println("Pending Leave: "+pendingLeave.getText());
-		System.out.println("My Ramco Balance: "+myRamcoBalance.getText());
+		//System.out.println("Pending Leave: "+pendingLeave.getText());
+		//System.out.println("My Ramco Balance: "+myRamcoBalance.getText());
 		System.out.println("================================");
 		Thread.sleep(5000);
 	}
@@ -304,12 +304,12 @@ public class EmployeeSelfService extends BaseTest {
 		System.out.println("================================");
 		System.out.println("Leave Table:: After Apply Leave");
 		System.out.println("Leave Code: "+leaveCode.getText());
-		System.out.println("Leave Entitlement: "+leaveEntitlement.getText());
+	//	System.out.println("Leave Entitlement: "+leaveEntitlement.getText());
 		System.out.println("Leave Taken: "+leaveTaken.getText());
 		System.out.println("Leave Applied: "+leaveApplied);
 		System.out.println("Leave Balance: "+leaveBalance.getText());
-		System.out.println("Pending Leave: "+pendingLeave.getText());
-		System.out.println("My Ramco Balance: "+myRamcoBalance.getText());
+	//	System.out.println("Pending Leave: "+pendingLeave.getText());
+	//	System.out.println("My Ramco Balance: "+myRamcoBalance.getText());
 		System.out.println("================================");
 		Thread.sleep(5000);
 	}
@@ -330,12 +330,12 @@ public class EmployeeSelfService extends BaseTest {
 		Thread.sleep(1000);
 		leaveFrom.clear();
 		Thread.sleep(3000);
-		webAction.setText(leaveFrom, "15-06-2023");
+		webAction.setText(leaveFrom, "02-08-2023");
 		Thread.sleep(1000);
 		leaveFrom.sendKeys(Keys.TAB);
 		leaveTo.clear();
 		Thread.sleep(3000);
-		webAction.setText(leaveTo, "15-06-2023");
+		webAction.setText(leaveTo, "02-08-2023");
 		Thread.sleep(1000);
 		leaveTo.sendKeys(Keys.TAB);
 		webAction.scrollDown();
@@ -366,7 +366,7 @@ public void employeeSelfServiceRejectLeave() throws Exception {
 	Thread.sleep(500);
 	webAction.clickUsingJavaScript(approveLeave);
 	Thread.sleep(500);
-	webAction.setText(searchEmpInPendingApprove, "10176007");
+	webAction.setText(searchEmpInPendingApprove, "0000561");
 	Thread.sleep(500);
 	//webAction.clickUsingJavaScript(clickEmployeeInSearchResults);
 	act.clickUsingActionsMethod(clickEmployeeInSearchResults);
@@ -377,7 +377,7 @@ public void employeeSelfServiceRejectLeave() throws Exception {
 	Thread.sleep(500);
 	webAction.clickUsingJavaScript(approveRejectRemarksSaveButton);
 	Thread.sleep(800);
-	webAction.waitUntilElementIsClickable(approvebutton);
+//	webAction.waitUntilElementIsClickable(approvebutton);
 	webAction.clickUsingJavaScript(approvebutton);
 	Thread.sleep(5000);
 	
@@ -393,7 +393,7 @@ public void employeeSelfServiceApproveLeave() throws Exception {
 	Thread.sleep(500);
 	webAction.clickUsingJavaScript(approveLeave);
 	Thread.sleep(500);
-	webAction.setText(searchEmpInPendingApprove, "10176007");
+	webAction.setText(searchEmpInPendingApprove, "0000561");
 	Thread.sleep(500);
 	webAction.clickUsingJavaScript(clickEmployeeInSearchResults);
 	Thread.sleep(500);
@@ -414,7 +414,7 @@ public void employeeSelfServiceApplyTimeOff() throws Exception {
 	Thread.sleep(500);
 	dateTimeOffDate.clear();
 	Thread.sleep(500);
-	dateTimeOffDate.sendKeys("16-06-2023");
+	dateTimeOffDate.sendKeys("02-08-2023");
 	dateTimeOffDate.sendKeys(Keys.TAB);
 	Thread.sleep(5000);
 	dropdown.selectByIndex(timeOffPeriod, 0);
@@ -426,7 +426,9 @@ public void employeeSelfServiceApplyTimeOff() throws Exception {
 	String path =System.getProperty("user.dir")+ File.separator +"jiviewsDocument"+File.separator+"timeOffTestDocument.txt";
 	timeOffAttachment.sendKeys(path);
 	Thread.sleep(500);
-	saveTimeOff.click();
+	webAction.clickUsingJavaScript(saveTimeOff);
+	//saveTimeOff.click();
+	Thread.sleep(5000);
 
 	
 }

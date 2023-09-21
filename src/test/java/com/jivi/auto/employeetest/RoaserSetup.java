@@ -56,7 +56,7 @@ public class RoaserSetup extends BaseTest{
 	WebElement shifitBandDefinition;
 
 	
-	public RoaserSetup()   {
+	public RoaserSetup() throws FileNotFoundException   {
 	//	getDriver();
 	//	login = new LoginPage();
 		//excelObject = new excelUtilities();
@@ -90,30 +90,19 @@ public class RoaserSetup extends BaseTest{
 	
 	@Test 
 	public void createShiftBandDefinition() throws Exception {
-		System.out.println("testing roaster");
+		System.out.println("Create Shift Band Difinition");
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
 		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
-	
-		
 		String userId=dataTable.get("UserId");
 		String loginpwd=dataTable.get("pwd");
-	
 		jiviewsHomePage.Login(userId, loginpwd);
 		webAction.waitForPageLoad(2000);
-			
-	//	menuNavigation.waitforLoadingIcon();
-		
 		menuNavigation.navigateToRoasterSetup();
-	//	menuNavigation.navigateToRoasterSetup();
-	//	String shiftBndNm=dataTable.get("EmpId");
-	//	System.out.println(shiftBndNm);
 		roaster.createShiftBand();
 		Assert.assertTrue(roaster.verifyShiftbandCreation(), "ShiftBand Creation");
-		
-		//ExtentTestManager.getTest().log(Status.PASS, "ShiftBand Created Sucessfully");
 	}
 	
 	
@@ -243,8 +232,8 @@ public class RoaserSetup extends BaseTest{
 		
 		setupTest(this.getClass().getPackage(), this.getClass().toString(), methodName);
 		JiViewsEmployeeAdministration jiviewsHomePage=PageFactory.initElements(driver, JiViewsEmployeeAdministration.class);
-		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 		MenuNavigation menuNavigation=PageFactory.initElements(driver, MenuNavigation.class);
+		Roaster roaster=PageFactory.initElements(driver, Roaster.class);
 	
 		
 		String userId=dataTable.get("UserId");

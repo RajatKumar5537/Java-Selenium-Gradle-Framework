@@ -533,7 +533,7 @@ public class RTGPlanning extends BaseTest {
 		Thread.sleep(2000);
 		dtPlanning.clear();
 		Thread.sleep(2000);
-		dtPlanning.sendKeys(date);
+		dtPlanning.sendKeys("22-08-2023");
 		dtPlanning.sendKeys(Keys.TAB);
 		
 		Thread.sleep(2000);
@@ -578,7 +578,7 @@ public class RTGPlanning extends BaseTest {
 	
 public void createRTGPlanningwithSignOff() throws Exception {
 		
-		System.out.println("R Planning");
+		System.out.println("RTG Planning");
 		Date d = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 		String date = formatter.format(d);
@@ -586,7 +586,7 @@ public void createRTGPlanningwithSignOff() throws Exception {
 		Thread.sleep(2000);
 		dtPlanning.clear();
 		Thread.sleep(2000);
-		dtPlanning.sendKeys(date);
+		dtPlanning.sendKeys("22-08-2023");
 		dtPlanning.sendKeys(Keys.TAB);
 		
 		Thread.sleep(2000);
@@ -658,7 +658,7 @@ public void createRTGPlanningwithSignOff() throws Exception {
 
 		Date d = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-		String date = formatter.format(d);
+		String date = formatter.format("22-08-2023");
 
 		Thread.sleep(500);
 		Thread.sleep(500);
@@ -786,7 +786,7 @@ public void createRTGPlanningwithSignOff() throws Exception {
 		Thread.sleep(500);
 		Thread.sleep(500);
 		dtPlanningRTGFinalBookingReport.clear();
-		dtPlanningRTGFinalBookingReport.sendKeys(date);
+		dtPlanningRTGFinalBookingReport.sendKeys("22-08-2023");
 		Thread.sleep(1000);
 
 		// This Shift Band id already signed Off
@@ -842,7 +842,7 @@ public void createRTGPlanningwithSignOff() throws Exception {
 		Thread.sleep(500);
 		Thread.sleep(500);
 		dtPlanningRTGFinalBookingReport.clear();
-		dtPlanningRTGFinalBookingReport.sendKeys(date);
+		dtPlanningRTGFinalBookingReport.sendKeys("22-08-2023");
 		Thread.sleep(1000);
 
 		// This Shift Band id already signed Off
@@ -889,7 +889,7 @@ public void createRTGPlanningwithSignOff() throws Exception {
 
 		Thread.sleep(500);
 		dtPlanningRTGFinalBookingReport.clear();
-		dtPlanningRTGFinalBookingReport.sendKeys(date);
+		dtPlanningRTGFinalBookingReport.sendKeys("22-08-2023");
 		Thread.sleep(1000);
 
 		List<WebElement> listShiftBand = lstShiftBandSelection
@@ -932,13 +932,13 @@ public void createRTGPlanningwithSignOff() throws Exception {
 
 		Thread.sleep(500);
 		// This Shift Band id already signed Off
-		String shiftBandNews = "Auto Band code 85139";
+		String shiftBandNews = "Auto Band code 82220";
 
 		Thread.sleep(500);
 
 		Thread.sleep(500);
 		dtPlanningRTGFinalBookingReport.clear();
-		dtPlanningRTGFinalBookingReport.sendKeys(date);
+		dtPlanningRTGFinalBookingReport.sendKeys("22-08-2023");
 		Thread.sleep(1000);
 
 		webAction.setText(bookingDate, date);
@@ -1109,7 +1109,7 @@ public void createRTGPlanningwithSignOff() throws Exception {
 
 		Thread.sleep(500);
 		dtPlanningRTGFinalBookingReport.clear();
-		dtPlanningRTGFinalBookingReport.sendKeys(date);
+		dtPlanningRTGFinalBookingReport.sendKeys("22-08-2023");
 		Thread.sleep(1000);
 
 		Thread.sleep(500);
@@ -1212,7 +1212,7 @@ public void createRTGPlanningwithSignOff() throws Exception {
 
 		Thread.sleep(500);
 		dtPlanningRTGFinalBookingReport.clear();
-		dtPlanningRTGFinalBookingReport.sendKeys(date);
+		dtPlanningRTGFinalBookingReport.sendKeys("22-08-2023");
 		Thread.sleep(1000);
 
 		Thread.sleep(500);

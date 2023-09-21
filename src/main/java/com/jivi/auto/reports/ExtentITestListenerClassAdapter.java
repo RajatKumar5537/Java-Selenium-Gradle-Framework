@@ -21,6 +21,7 @@ public class ExtentITestListenerClassAdapter extends TestListenerAdapter {
 	public ExtentTest logger;
 
 	public void onStart(ITestContext testContext) {
+
 		if (!System.getProperty("os.name").contains("Linux")) {
 			htmlReporter = new ExtentSparkReporter(
 					GlobalVariables.configData.get("ReportPath") + GlobalVariables.configData.get("Project Name")
@@ -29,11 +30,15 @@ public class ExtentITestListenerClassAdapter extends TestListenerAdapter {
 		} else {
 			htmlReporter = new ExtentSparkReporter(GlobalVariables.configData.get("ReportPath")
 					+ GlobalVariables.configData.get("Project Name") + " - " + "AutomationTestReport" + ".html");
+
 		}
+
 		extent = new ExtentReports();
 		// extent.setSystemInfo("Browser", "Chrome");
 		extent.attachReporter(htmlReporter);
 		htmlReporter.config().setDocumentTitle(GlobalVariables.configData.get("Project Name")); // Title of report
+		// htmlReporter.config().setDocumentTitle(System.getenv("ReportName"));
+
 		htmlReporter.config()
 				.setReportName("Release - " + GlobalVariables.configData.get("Release") + " Build - "
 						+ GlobalVariables.configData.get("Release") + " Environment - "
@@ -50,6 +55,7 @@ public class ExtentITestListenerClassAdapter extends TestListenerAdapter {
 																							// with GREEN color
 																							// highlighted
 	}
+
 	public void onTestFailedWithTimeout(ITestResult tr) {
 		logger = extent.createTest(tr.getName()); // create new entry in th report
 		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.RED)); // send the passed information

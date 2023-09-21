@@ -43,7 +43,7 @@ public class GlobalVariables {
 	public static String NumberThree;
 	public static String NumberFour;
 	public static String NumberFive;
-	public static String shiftBandNew;
+	public static String shiftBandNew="Auto Band code 82220";
 	public static String RosterGroupNameforRosterCreation;
 	
 }

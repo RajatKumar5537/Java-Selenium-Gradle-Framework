@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import com.aventstack.extentreports.ExtentReports;
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	public static Properties prop;
@@ -32,7 +32,7 @@ public class BaseTest {
 	
 	
 	public WebDriver getDriver() {
-		WebDriverManager.chromedriver().setup();
+	//	WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
