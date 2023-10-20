@@ -1,2 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite"><listeners><listener class-name="com.jivi.auto.reports.ExtentITestListenerClassAdapter"/></listeners><test name="Test1"><classes><class name="com.jivi.auto.employeetest.JiViewsEmployeeAdministrationTest"><methods><include name="VerifyEmpAddinEmpProfile"/><include name="VerifyEmpAddinEmpProfileAlreadyExist"/><include name="VerifEmpIDSerach"/><include name="VerifEmpNameSearch"/><include name="VerifyEmpUpdate"/><include name="VerifyEmpUpdateDuplicate"/><include name="VerifyEmpUpdateContactsPositive"/><include name="VerifyEmpUpdateContactsNegative"/><include name="VerifyEmpUpdateExcludedSkillsPositive"/><include name="VerifyEmpUpdateExcludedSkillsNegative"/><include name="VerifyEmpUpdateAddRolesPositive"/><include name="VerifyEmpUpdateAddRolesNegative"/><include name="VerifyEmpUpdateSecurity"/><include name="VerifyEmpUpdateESS"/><include name="VerifyEmpUpdateMisc"/><include name="VerifyLoginwithNewEmployee"/><include name="VerifyEmpProCreationFiveEmp"/></methods></class></classes></test></suite>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

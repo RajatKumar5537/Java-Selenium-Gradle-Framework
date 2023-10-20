@@ -1272,7 +1272,7 @@ public class JiViewsEmployeeAdministration extends BaseTest{
 				webAction.clickUsingJavaScript(saveEmployees);
 					 //webAction.clickUsingJavaScript(saveEmployees);
 					 Thread.sleep(1000);
-					
+				//	 webAction.waitUntilElementIsVisible(AddLeaveProfile);
 				// webAction.clickUsingJavaScript(saveEmployees);
 					 //Thread.sleep(5000);
 				  String Ex="Update Skill Competency - Success"; 

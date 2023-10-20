@@ -52,14 +52,19 @@ public class Roaster extends BaseTest {
 
 	@FindBy(id = "btnAddNew")
 	WebElement btnAddNew;
+	
 	@FindBy(id = "txtShtBandName")
 	WebElement txtShtBandName;
+	
 	@FindBy(id = "txtShiftbandDesc")
 	WebElement txtShiftbandDesc;
+	
 	@FindBy(id = "txtShiftBandCode")
 	WebElement txtShiftBandCode;
+	
 	@FindBy(id = "txtColorCode")
 	WebElement txtColorCode;
+	
 	@FindBy(id = "txtShiftCounter")
 	WebElement txtShiftCounter;
 

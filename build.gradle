@@ -1,6 +1,8 @@
 apply plugin: 'application'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
+apply plugin: 'maven'
+apply plugin: 'java'
 
 group = 'application'
 version = '0.0.1'

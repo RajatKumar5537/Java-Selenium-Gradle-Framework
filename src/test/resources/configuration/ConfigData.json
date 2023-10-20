@@ -1,0 +1,24 @@
+{
+	"Project Name": "Jiviews Site",
+	"Application Name": "JiviewsApplication",
+	"Release": "v 4.22.0.150",
+	"Build": "150",
+	"Environment": "DEMO",
+	"Browser": "chrome",
+	"SeleniumManager": "Yes",
+	"implicitWait": "40",
+	"ExplicitWait": "50",
+	"ObjectRepositoryFileType": "Propertiesfile",
+	"TestDataPath": "src/test/resources/testdata/TestData.xlsx",
+	"DownloadPath": "src/test/resources/configuration",
+	"ApplicationURL": "https://www.jiviews.com/DEMO/Home",
+	"ReportPath": "src/test/resources/",
+	"base64": "Yes",
+	"Grid": "No",
+	"GridHost": "http://localhost:4444",
+	"ThreadCount": "1",
+	"highlight": "No",
+	"proxyServer": "",
+	"proxyBypassList": ""
+
+}
